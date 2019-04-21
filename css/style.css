@@ -18,7 +18,7 @@ ul, ol {
 /* login.php */
 main {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 500px;
 }
 
 h1 {
@@ -26,11 +26,11 @@ h1 {
 }
 
 input {
-  width: 98.7%;
-  margin: 1% 0 2.3%;
+  width: 94.8%;
+  margin: 3% 0 10%;
   padding: 10px;
   border-radius: 3px;
-  border: rgb(177, 148, 101) solid 1px;
+  border: #ccc solid 1px;
 }
 
 .ingreso-forgot {
@@ -39,7 +39,7 @@ input {
 
 button {
   font-size: 17px;
-  padding: 1% 1.2%;
+  padding: 10px 20px;
   color: #fff;
   background-color: rgb(177, 148, 101);
   border: rgb(177, 148, 101) solid 1px;
@@ -53,11 +53,15 @@ button {
 }
 
 hr {
-  margin: 5% 5%;
+  margin: 20% 5% 10%;
 }
 
 .registro {
   text-align: center;
+}
+
+.registro h2 {
+  margin-bottom: 10%;
 }
 
 .registrate {
@@ -66,4 +70,24 @@ hr {
   font-size: 17px;
   border-radius: 5px;
   padding: 10px 15px;
+}
+
+/* Pantalla M: 992px */
+@media (min-width: 992px) {
+  main {
+    max-width: 700px;
+  }
+
+  input {
+    width: 94.8%;
+    margin: 2% 0 4%;
+  }
+
+  hr {
+    margin: 10% 5% 5%;
+  }
+
+  .registro h2 {
+    margin-bottom: 5%;
+  }
 }
