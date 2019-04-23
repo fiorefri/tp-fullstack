@@ -15,9 +15,9 @@ ul, ol {
   list-style-type: none;
 }
 
-/* login.php */
+/* login.php y registro.php */
 main {
-  margin: 0 auto;
+  margin: 80px auto;
   max-width: 500px;
 }
 
@@ -33,8 +33,12 @@ input {
   border: #ccc solid 1px;
 }
 
-.ingreso-forgot {
+.ingreso-forgot, .ingreso-tyc {
   text-align: center;
+}
+
+.ingreso-tyc input {
+  width: auto;
 }
 
 button {
@@ -56,15 +60,15 @@ hr {
   margin: 20% 5% 10%;
 }
 
-.registro {
+.registro, .iniciar-sesion {
   text-align: center;
 }
 
-.registro h2 {
+.registro h2, .iniciar-sesion h2 {
   margin-bottom: 10%;
 }
 
-.registrate {
+.registrate, .ingresa {
   background-color: rgb(177, 148, 101);
   color: #fff;
   font-size: 17px;
@@ -79,7 +83,7 @@ hr {
   }
 
   input {
-    width: 94.8%;
+    width: 96.7%;
     margin: 2% 0 4%;
   }
 
@@ -87,7 +91,7 @@ hr {
     margin: 10% 5% 5%;
   }
 
-  .registro h2 {
+  .registro h2, .iniciar-sesion h2 {
     margin-bottom: 5%;
   }
 }
