@@ -9,7 +9,7 @@
   </head>
   <body>
     <main>
-      <h1>Iniciar Sesion</h1>
+      <h1>Iniciar Sesión</h1>
       <form class="" action="index.php" method="post">
         <label for="email">E-mail</label>
         <input type="text" name="email" value="" placeholder="E-mail">
@@ -23,7 +23,7 @@
       <hr>
       <section class="registro">
         <h2>¿No tenes cuenta?</h2>
-        <a href="#registro.php" class="registrate">Registrate</a>
+        <a href="registro.php" class="registrate">Registrate</a>
       </section>
     </main>
   </body>
