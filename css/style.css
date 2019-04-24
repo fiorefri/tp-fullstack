@@ -16,9 +16,15 @@ ul, ol {
 }
 
 /* login.php y registro.php */
+body {
+  background-image: url(../img/fon.jpg);
+}
+
 main {
+  background-color: #fff;
   margin: 80px auto;
   max-width: 500px;
+  padding: 10%;
 }
 
 h1 {
@@ -80,6 +86,7 @@ hr {
 @media (min-width: 992px) {
   main {
     max-width: 700px;
+    padding: 5%;
   }
 
   input {
