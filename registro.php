@@ -8,7 +8,7 @@
     <title>REGISTRO</title>
   </head>
   <body>
-    <main class="formulario">
+    <div class="formulario">
       <h1>Crear una cuenta</h1>
       <form class="" action="index.php" method="post">
         <label for="nombre">Nombre</label>
@@ -30,6 +30,6 @@
         <h2>¿Ya tenes cuenta?</h2>
         <a href="login.php" class="ingresa">Ingresa</a>
       </section>
-    </main>
+    </div>
   </body>
 </html>
