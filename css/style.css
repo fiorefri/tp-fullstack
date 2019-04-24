@@ -15,90 +15,78 @@ ul, ol {
   list-style-type: none;
 }
 
-/* login.php y registro.php */
-body {
-  background-image: url(../img/fon.jpg);
+
+/* Cabecera --------*/
+header{
+  /* position: fixed;
+  top: 0;
+  z-index: 999; */
+  padding: 15px 0 30px 0;
+  margin-bottom: 25px;
+  width: 100%;
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: aqua;
 }
-
-main {
-  background-color: #fff;
-  margin: 80px auto;
-  max-width: 500px;
-  padding: 10%;
+.login-container{
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-
-h1 {
-  text-align: center;
+.login-container li{
+  margin: 0 10px;
 }
-
-input {
-  width: 94.8%;
-  margin: 3% 0 10%;
-  padding: 10px;
-  border-radius: 3px;
-  border: #ccc solid 1px;
+.inicio-registro ul,
+.redes {
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-
-.ingreso-forgot, .ingreso-tyc {
-  text-align: center;
+.redes{
+  margin-left: 30px;
 }
-
-.ingreso-tyc input {
-  width: auto;
+.logo-marca{
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-button {
-  font-size: 17px;
-  padding: 10px 20px;
-  color: #fff;
-  background-color: rgb(177, 148, 101);
-  border: rgb(177, 148, 101) solid 1px;
-  border-radius: 5px;
+.logo-marca a{
+  /* flex */
+  flex-basis: 5%;
 }
-
-.forgot {
-  font-size: 17px;
-  padding-left: 3%;
-  color: rgb(177, 148, 101);
+.logo{
+  width: 100%;
 }
-
-hr {
-  margin: 20% 5% 10%;
+.navigation {
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.registro, .iniciar-sesion {
-  text-align: center;
+.parent {
+  position: relative;
 }
-
-.registro h2, .iniciar-sesion h2 {
-  margin-bottom: 10%;
+.parent ul {
+  display: none;
 }
-
-.registrate, .ingresa {
-  background-color: rgb(177, 148, 101);
-  color: #fff;
-  font-size: 17px;
-  border-radius: 5px;
-  padding: 10px 15px;
+.parent ul li{
+  width: 220px;
 }
-
-/* Pantalla M: 992px */
-@media (min-width: 992px) {
-  main {
-    max-width: 700px;
-    padding: 5%;
-  }
-
-  input {
-    width: 96.7%;
-    margin: 2% 0 4%;
-  }
-
-  hr {
-    margin: 10% 5% 5%;
-  }
-
-  .registro h2, .iniciar-sesion h2 {
-    margin-bottom: 5%;
-  }
+.parent:hover ul{
+  display: block;
+  position: absolute;
+  top:30px;
+  left: 20px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 999;
+  background:#fff;
 }
