@@ -15,7 +15,7 @@ a{
 
 /*estilos generales*/
 body{
-background-image: url(DH_Cremas/images/fon.jpg);
+background-image: url(../img/fon.jpg);
 font-family: 'Libre Franklin', sans-serif;
 }
 .container{
