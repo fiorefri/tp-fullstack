@@ -8,7 +8,7 @@
     <title>LOGIN</title>
   </head>
   <body>
-    <main>
+    <main class="formulario">
       <h1>Iniciar Sesión</h1>
       <form class="" action="index.php" method="post">
         <label for="email">E-mail</label>

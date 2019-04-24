@@ -8,7 +8,7 @@
     <title>REGISTRO</title>
   </head>
   <body>
-    <main>
+    <main class="formulario">
       <h1>Crear una cuenta</h1>
       <form class="" action="index.php" method="post">
         <label for="nombre">Nombre</label>

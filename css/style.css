@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 20px;
+  background-image: url(../img/fon.jpg);
 }
 
 a {
@@ -93,11 +94,7 @@ header{
 
 
 /* login.php y registro.php */
-body {
-  background-image: url(../img/fon.jpg);
-}
-
-main {
+.formulario {
   background-color: #fff;
   margin: 80px auto;
   max-width: 500px;
