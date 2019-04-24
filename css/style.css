@@ -90,3 +90,92 @@ header{
   z-index: 999;
   background:#fff;
 }
+
+
+/* login.php y registro.php */
+body {
+  background-image: url(../img/fon.jpg);
+}
+
+main {
+  background-color: #fff;
+  margin: 80px auto;
+  max-width: 500px;
+  padding: 10%;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 94.8%;
+  margin: 3% 0 10%;
+  padding: 10px;
+  border-radius: 3px;
+  border: #ccc solid 1px;
+}
+
+.ingreso-forgot, .ingreso-tyc {
+  text-align: center;
+}
+
+.ingreso-tyc input {
+  width: auto;
+}
+
+button {
+  font-size: 17px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgb(177, 148, 101);
+  border: rgb(177, 148, 101) solid 1px;
+  border-radius: 5px;
+}
+
+.forgot {
+  font-size: 17px;
+  padding-left: 3%;
+  color: rgb(177, 148, 101);
+}
+
+hr {
+  margin: 20% 5% 10%;
+}
+
+.registro, .iniciar-sesion {
+  text-align: center;
+}
+
+.registro h2, .iniciar-sesion h2 {
+  margin-bottom: 10%;
+}
+
+.registrate, .ingresa {
+  background-color: rgb(177, 148, 101);
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+/* Pantalla M: 992px */
+@media (min-width: 992px) {
+  main {
+    max-width: 700px;
+    padding: 5%;
+  }
+
+  input {
+    width: 96.7%;
+    margin: 2% 0 4%;
+  }
+
+  hr {
+    margin: 10% 5% 5%;
+  }
+
+  .registro h2, .iniciar-sesion h2 {
+    margin-bottom: 5%;
+  }
+}
