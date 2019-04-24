@@ -93,6 +93,17 @@ header{
 }
 
 
+.carousel-item { /* Eliminar si cambia la altura de las fotos */
+  height: 300px;
+}
+
+.carousel-item img { /* Eliminar si cambia la altura de las fotos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
 /* login.php y registro.php */
 .formulario {
   background-color: #fff;
