@@ -86,15 +86,15 @@
             <a href="#">Serum antiarrugas</a>
           </div>
           <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="DH_Cremas/images/cremas 1.jpg" alt="">
+          <img class="img-fluid"src="img/cremas 1.jpg" alt="">
           <a href="#">Crema con ácido hialurónico</a>
         </div>
           <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="DH_Cremas/images/cremas 2.jpg" alt="">
+          <img class="img-fluid"src="img/cremas 2.jpg" alt="">
           <a href="#">Crema de día con Vitamina C</a>
         </div>
           <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="DH_Cremas/images/receta serum antiarrugas antiedad casero.jpg" alt="">
+          <img class="img-fluid"src="img/receta serum antiarrugas antiedad casero.jpg" alt="">
           <a href="#">Serum antiarrugas</a>
         </div>
           </div>
