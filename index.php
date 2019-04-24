@@ -25,21 +25,21 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="DH_Cremas/images/6.jpg" class="d-block w-100 banner" alt="">
+                <img src="img/6.jpg" class="d-block w-100 banner" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Nombre de la marca</h5>
                   <p>Somos una marca joven, enfocados en crear verdadera cosmética natural, cuidando hasta los mas mínimos detalles en cuanto a ingredientes, producción y envasado, utilizando materias primas naturales de la mas alta calidad.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="DH_Cremas/images/8.jpg" class="d-block w-100 banner" alt="">
+                <img src="img/8.jpg" class="d-block w-100 banner" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Cruelty Free</h5>
                   <p>Nuestros productos están certificados por ANMAT, certificados SIN TACC, no testeamos en animales y no utilizamos parabenos.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="DH_Cremas/images/10.jpg" class="d-block w-100 banner" alt="">
+                <img src="img/10.jpg" class="d-block w-100 banner" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Cosmética Natural</h5>
                   <p>Evitamos en todo proceso y en nuestras formulas materia primas derivadas del petróleo, tales como parafina, vaselina, siliconas, entre otras.</p>
@@ -58,11 +58,11 @@
         </div>
         <div class="producto row">
           <div class=" col-xs-12 col-lg-6">
-            <img class=" item img-fluid"src="DH_Cremas/images/5.jpg" alt="">
+            <img class=" item img-fluid"src="img/5.jpg" alt="">
             <a href="more">Rostro</a>
           </div>
           <div class=" col-xs-12 col-lg-6">
-            <img class=" item img-fluid"src="DH_Cremas/images/piernas--z.jpg" alt="">
+            <img class=" item img-fluid"src="img/piernas--z.jpg" alt="">
             <a href="more">Cuerpo</a>
           </div>
         </div>
@@ -72,27 +72,27 @@
         </div>
         <div class="articulosMasVendidos row">
             <div class=" col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="DH_Cremas/images/cremas 1.jpg" alt="">
+            <img class="img-fluid"src="img/cremas 1.jpg" alt="">
             <a href="#">Crema con ácido hialurónico</a>
           </div>
             <div class=" col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="DH_Cremas/images/cremas 2.jpg" alt="">
+            <img class="img-fluid"src="img/cremas 2.jpg" alt="">
             <a href="#">Crema de día con Vitamina C</a>
           </div>
             <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="DH_Cremas/images/receta serum antiarrugas antiedad casero.jpg" alt="">
+            <img class="img-fluid"src="img/receta serum antiarrugas antiedad casero.jpg" alt="">
             <a href="#">Serum antiarrugas</a>
           </div>
           <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="DH_Cremas/images/cremas 1.jpg" alt="">
+          <img class="img-fluid"src="img/cremas 1.jpg" alt="">
           <a href="#">Crema con ácido hialurónico</a>
         </div>
           <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="DH_Cremas/images/cremas 2.jpg" alt="">
+          <img class="img-fluid"src="img/cremas 2.jpg" alt="">
           <a href="#">Crema de día con Vitamina C</a>
         </div>
           <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="DH_Cremas/images/receta serum antiarrugas antiedad casero.jpg" alt="">
+          <img class="img-fluid"src="img/receta serum antiarrugas antiedad casero.jpg" alt="">
           <a href="#">Serum antiarrugas</a>
         </div>
           </div>
