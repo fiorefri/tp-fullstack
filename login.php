@@ -9,7 +9,9 @@
     <title>LOGIN</title>
   </head>
   <body>
-    <?php include_once "header.php" ?>
+    <div class="header-login-registro">
+      <?php include_once "header.php" ?>
+    </div>
     <div class="formulario">
       <h1>Iniciar Sesión</h1>
       <form class="" action="index.php" method="post">
