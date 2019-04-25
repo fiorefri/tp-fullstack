@@ -2,7 +2,7 @@
   <section class="social">
     <h3>Menu</h3>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="#">Quienes somos</a></li>
       <li><a href="#">Productos</a></li>
       <li><a href="#">Preguntas frecuentes</a></li>
@@ -28,8 +28,8 @@
     </ul>
     <ul>
       <div class="sesion-registrarse">
-        <li><a href="#">Iniciar Sesion</a></li>
-        <li><a href="#">Registrarse</a></li>
+        <li><a href="login.php">Iniciar Sesion</a></li>
+        <li><a href="registro.php">Registrarse</a></li>
       </div>
     </ul>
   </section>

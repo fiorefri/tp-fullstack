@@ -35,5 +35,6 @@
         <a href="login.php" class="ingresa">Ingresa</a>
       </section>
     </div>
+    <?php include_once "footer.php" ?>
   </body>
 </html>
