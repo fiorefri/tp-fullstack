@@ -104,6 +104,52 @@ header{
     min-height: 300px;
 }
 
+/* footer --------*/
+footer{
+  padding: 15px 0 30px 0;
+  margin-bottom: 25px;
+  width: 100%;
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(255,255,255, 0.6);
+
+}
+.social {
+  width: 30%;
+}
+.tarjeta{
+  width: 30%;
+  text-align: center;
+}
+.redes-login{
+  width: 30%;
+
+
+}
+.redes-login ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+
+}
+footer h3{
+  text-align: center;
+}
+
+.sesion-registrarse{
+  border-top: #000 solid 2px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+
+
 /* login.php y registro.php */
 .formulario {
   background-color: #fff;

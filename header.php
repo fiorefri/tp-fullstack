@@ -27,8 +27,8 @@
            <li><a href="#">Quienes somos</a></li>
            <li class="parent"><a href="#">Productos</a>
             <ul>
+              <li><a href="#">Cremas Rostro</a></li>
               <li><a href="#">Cremas Cuerpo</a></li>
-              <li><a href="#">Cremas Piernas</a></li>
             </ul>
            </li>
            <li><a href="#">Preguntas frecuentes</a></li>
