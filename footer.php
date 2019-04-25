@@ -14,7 +14,7 @@
   <section class="tarjeta">
     <h3>Formas de Pago</h3>
     <ul>
-      <li><a href="#"><i class="far fa-credit-card"></i></a></li>
+      <li><a href="#"><i class="far fa-credit-card fa-2x"></i></a></li>
     </ul>
   </section>
 
