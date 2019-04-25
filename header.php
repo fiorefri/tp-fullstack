@@ -3,8 +3,8 @@
 		<div class="login-container">
 			<nav class="inicio-registro">
 	      <ul>
-	        <li><a href="#">Inicio</a></li>
-	        <li><a href="#">registro</a></li>
+	        <li><a href="login.php">Iniciar Sesión</a></li>
+	        <li><a href="registro.php">Registrarse</a></li>
 	      </ul>
 	     </nav>
 	     <ul class="redes">
