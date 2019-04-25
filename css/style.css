@@ -4,11 +4,17 @@ body {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 20px;
   background-image: url(../img/fon.jpg);
+  margin: 0;
 }
 
 a {
   color: #000;
   text-decoration: none;
+}
+
+a:hover {
+  color: rgb(177, 148, 101);
+  text-decoration: underline;
 }
 
 ul, ol {
@@ -17,12 +23,12 @@ ul, ol {
 }
 
 
-/* Cabecera --------*/
+/* Cabecera */
 header{
   /* position: fixed;
   top: 0;
   z-index: 999; */
-  padding: 15px 0 30px 0;
+    padding: 15px 0 30px 0;
   margin-bottom: 25px;
   width: 100%;
   /* flex */
@@ -71,7 +77,7 @@ header{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .parent {
   position: relative;
@@ -151,6 +157,10 @@ footer h3{
 
 
 /* login.php y registro.php */
+.header-login-registro header {
+  padding: 0;
+}
+
 .formulario {
   background-color: #fff;
   margin: 80px auto;
@@ -193,7 +203,7 @@ button {
   color: rgb(177, 148, 101);
 }
 
-hr {
+.divisor {
   margin: 20% 5% 10%;
 }
 
