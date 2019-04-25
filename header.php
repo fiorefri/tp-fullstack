@@ -23,7 +23,7 @@
    	<div class="menu">
       <nav class="main-navigation">
          <ul class="navigation">
-           <li><a href="#">Home</a></li>
+           <li><a href="index.php">Home</a></li>
            <li><a href="#">Quienes somos</a></li>
            <li class="parent"><a href="#">Productos</a>
             <ul>
