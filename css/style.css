@@ -112,7 +112,7 @@ header{
 
 /* footer --------*/
 footer{
-  padding: 15px 0 30px 0;
+  padding: 30px 0 15px 0;
   margin-top: 25px;
   width: 100%;
   /* flex */
@@ -164,17 +164,18 @@ footer h3{
 .formulario {
   background-color: #fff;
   margin: 80px auto;
-  max-width: 500px;
+  max-width: 600px;
   padding: 10%;
 }
 
-h1 {
+.formulario h1 {
   text-align: center;
+  padding-bottom: 5%;
 }
 
 input {
   width: 94.8%;
-  margin: 3% 0 10%;
+  margin: 0 0 10%;
   padding: 10px;
   border-radius: 3px;
   border: #ccc solid 1px;
@@ -226,13 +227,13 @@ button {
 /* Pantalla M: 992px */
 @media (min-width: 992px) {
   .formulario {
-    max-width: 700px;
+    max-width: 800px;
     padding: 5%;
   }
 
   input {
     width: 96.7%;
-    margin: 2% 0 4%;
+    margin: 0 0 4%;
   }
 
   .divisor {
