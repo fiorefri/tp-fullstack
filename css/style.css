@@ -109,14 +109,42 @@ header{
     left: 0;
     min-height: 300px;
 }*/
-.producto {
-  margin-top: 40px;
-  
+
+.pagina-principal {
+  background-color: #fff;
+  margin: 30px 0;
+  padding: 30px;
 }
+
+.producto {
+  margin: 40px 50px;
+}
+
+.rostro, .cuerpo {
+  position: relative;
+}
+
+.rostro a, .cuerpo a {
+  position: absolute;
+  left: 70px;
+  bottom: 135px;
+  color: #fff;
+}
+
+.rostro img:hover, .cuerpo img:hover {
+  opacity: 0.5;
+}
+
 
 .separator h2{
   text-align: center;
+  padding: 30px 0 0;
 }
+
+.articulosMasVendidos {
+  padding-bottom: 15px;
+}
+
 .articulosMasVendidos articulo{
   margin-top: 35px;
   padding-top: 10px;
@@ -176,8 +204,6 @@ footer h3{
   justify-content: space-around;
   padding-top: 30px;
 }
-
-
 
 /* login.php y registro.php */
 .formulario {
