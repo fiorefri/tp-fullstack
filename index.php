@@ -72,28 +72,28 @@
         </div>
         <div class="articulosMasVendidos row">
             <div class=" col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="img/cremas 1.jpg" alt="">
-            <a href="#">Crema con ácido hialurónico</a>
+            <img class="img-fluid"src="img/crema-para-pies.jpg" alt="">
+            <a href="#">Crema para pies con aceite de coco</a>
           </div>
             <div class=" col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="img/cremas 2.jpg" alt="">
-            <a href="#">Crema de día con Vitamina C</a>
+            <img class="img-fluid"src="img/kit-cremas-cuerpo-y-pelo.jpg" alt="">
+            <a href="#">Kit cremas cuerpo y pelo</a>
           </div>
             <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="img/receta serum antiarrugas antiedad casero.jpg" alt="">
-            <a href="#">Serum antiarrugas</a>
+            <img class="img-fluid"src="img/serum-antiarrugas.jpg" alt="">
+            <a href="#">Serum antiarrugas con retinol</a>
           </div>
           <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/cremas 1.jpg" alt="">
-          <a href="#">Crema con ácido hialurónico</a>
+          <img class="img-fluid"src="img/crema-pelo.jpg" alt="">
+          <a href="#">Marcarilla para el pelo con aceite de oliva</a>
         </div>
           <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/cremas 2.jpg" alt="">
-          <a href="#">Crema de día con Vitamina C</a>
+          <img class="img-fluid"src="img/mascarilla-carbon.jpg" alt="">
+          <a href="#">Mascarilla de carbon reductora de poros</a>
         </div>
           <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/receta serum antiarrugas antiedad casero.jpg" alt="">
-          <a href="#">Serum antiarrugas</a>
+          <img class="img-fluid"src="img/tonico-facial.jpg" alt="">
+          <a href="#">Tónico de caléndula para piel sensible</a>
         </div>
           </div>
         </div>
