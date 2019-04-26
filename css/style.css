@@ -224,6 +224,7 @@ input {
   padding: 10px;
   border-radius: 3px;
   border: #ccc solid 1px;
+  font-size: 15px;
 }
 
 .ingreso-forgot, .ingreso-tyc {
