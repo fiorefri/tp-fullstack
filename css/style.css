@@ -161,10 +161,6 @@ footer h3{
 
 
 /* login.php y registro.php */
-.header-login-registro header {
-  padding: 0;
-}
-
 .formulario {
   background-color: #fff;
   margin: 80px auto;
@@ -239,7 +235,7 @@ button {
     margin: 2% 0 4%;
   }
 
-  hr {
+  .divisor {
     margin: 10% 5% 5%;
   }
 
