@@ -58,11 +58,11 @@
         </div>
         <div class="producto row">
           <div class=" col-xs-12 col-lg-6">
-            <img class=" item img-fluid"src="img/5.jpg" alt="">
+            <img class=" item img-fluid"src="img/categoria-rostro.jpg" alt="">
             <a href="more">Rostro</a>
           </div>
           <div class=" col-xs-12 col-lg-6">
-            <img class=" item img-fluid"src="img/crema-cuerpo.jpg" alt="">
+            <img class=" item img-fluid"src="img/categoria-cuerpo.jpg" alt="">
             <a href="more">Cuerpo</a>
           </div>
         </div>
