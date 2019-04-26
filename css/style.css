@@ -131,10 +131,9 @@ header{
   color: #fff;
 }
 
-.rostro img:hover, .cuerpo img:hover {
+.rostro:hover, .cuerpo:hover {
   opacity: 0.5;
 }
-
 
 .separator h2{
   text-align: center;
