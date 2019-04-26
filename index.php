@@ -57,11 +57,11 @@
           </div>
         </div>
         <div class="producto row">
-          <div class=" col-xs-12 col-lg-6">
+          <div class="categoria col-xs-12 col-lg-6">
             <img class=" item img-fluid"src="img/categoria-rostro.jpg" alt="">
             <a href="more">Rostro</a>
           </div>
-          <div class=" col-xs-12 col-lg-6">
+          <div class="categoria col-xs-12 col-lg-6">
             <img class=" item img-fluid"src="img/categoria-cuerpo.jpg" alt="">
             <a href="more">Cuerpo</a>
           </div>
@@ -71,30 +71,30 @@
           <h2>Productos Destacados</h2>
         </div>
         <div class="articulosMasVendidos row">
-            <div class=" col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="img/crema-para-pies.jpg" alt="">
-            <a href="#">Crema para pies con aceite de coco</a>
-          </div>
-            <div class=" col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="img/kit-cremas-cuerpo-y-pelo.jpg" alt="">
-            <a href="#">Kit cremas cuerpo y pelo</a>
-          </div>
-            <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-            <img class="img-fluid"src="img/serum-antiarrugas.jpg" alt="">
-            <a href="#">Serum antiarrugas con retinol</a>
-          </div>
-          <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/crema-pelo.jpg" alt="">
-          <a href="#">Marcarilla para el pelo con aceite de oliva</a>
-        </div>
-          <div class=" col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/mascarilla-carbon.jpg" alt="">
-          <a href="#">Mascarilla de carbon reductora de poros</a>
-        </div>
-          <div class="articulosMasVendidos col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/tonico-facial.jpg" alt="">
-          <a href="#">Tónico de caléndula para piel sensible</a>
-        </div>
+            <div class="articulo col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="img/crema-para-pies.jpg" alt="">
+              <a href="#">Crema para pies con aceite de coco</a>
+            </div>
+            <div class="articulo col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="img/kit-cremas-cuerpo-y-pelo.jpg" alt="">
+              <a href="#">Kit cremas cuerpo y pelo</a>
+            </div>
+            <div class="articulo col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="img/serum-antiarrugas.jpg" alt="">
+              <a href="#">Serum antiarrugas con retinol</a>
+            </div>
+            <div class="articulo  col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="img/crema-pelo.jpg" alt="">
+              <a href="#">Marcarilla para el pelo con aceite de oliva</a>
+            </div>
+            <div class="articulo col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="img/mascarilla-carbon.jpg" alt="">
+              <a href="#">Mascarilla de carbon reductora de poros</a>
+            </div>
+            <div class="articulo col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="img/tonico-facial.jpg" alt="">
+              <a href="#">Tónico de caléndula para piel sensible</a>
+            </div>
           </div>
         </div>
       </main>
