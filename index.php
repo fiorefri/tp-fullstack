@@ -25,23 +25,23 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/6.jpg" class="d-block w-100 banner" alt="">
+                <img src="img/carousel-1.jpg" class="d-block w-100 banner" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Nombre de la marca</h5>
+                  <h5></h5>
                   <p>Somos una marca joven, enfocados en crear verdadera cosmética natural, cuidando hasta los mas mínimos detalles en cuanto a ingredientes, producción y envasado, utilizando materias primas naturales de la mas alta calidad.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/8.jpg" class="d-block w-100 banner" alt="">
+                <img src="img/carousel-2.jpg" class="d-block w-100 banner" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Cruelty Free</h5>
+                  <h5></h5>
                   <p>Nuestros productos están certificados por ANMAT, certificados SIN TACC, no testeamos en animales y no utilizamos parabenos.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/10.jpg" class="d-block w-100 banner" alt="">
+                <img src="img/carousel-3.jpg" class="d-block w-100 banner" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Cosmética Natural</h5>
+                  <h5></h5>
                   <p>Evitamos en todo proceso y en nuestras formulas materia primas derivadas del petróleo, tales como parafina, vaselina, siliconas, entre otras.</p>
                 </div>
               </div>
