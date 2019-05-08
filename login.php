@@ -1,6 +1,30 @@
 <?php
- include_once "funciones.php";
+ require_once "funciones.php";
+ if(usuarioLogueado()){
+   header("Location:index.php");
+   exit;
+ }
+   $errores = [];
 
+
+ //Si viene por POST
+ if($_POST){
+   //Validar Login
+   $errores = validarLogin($_POST);
+//    var_dump($errores);
+//    exit;
+
+   //Si no hay errores
+   if(empty($errores)){
+     //logueamos al user => necesitamos session_start al incio de todos nuestros archivos. Ojo con los include/ require.
+     loguearUsuario($_POST["email"]);
+     var_dump($_SESSION);
+     //redirigimos a home
+     header("Location:index.php");
+     exit;
+   }
+
+ }
  ?>
 
 <!DOCTYPE html>

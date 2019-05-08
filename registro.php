@@ -1,11 +1,19 @@
 <?php
- include_once "funciones.php";
+ include "funciones.php";
+$errores=[
+  "nombre" => "",
+  "email" => "",
+  "pass" => ""
+];
+
  if($_POST){
     var_dump ($errores = validarRegistro($_POST));
 
-
+    if(empty($errores)){
+        $usuario = armarUsuario();
+        guardarUsuario($usuario);
      }
-
+}
  ?>
 
 
@@ -27,14 +35,19 @@
       <form class="" action="" method="post">
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" value="" placeholder="Nombre">
-        <?= $errores ["nombre"] ?>
+        <?php if($errores["nombre"] == ""){
+        echo " ";
+      } else {
+        echo $errores ["nombre"];
+      } ?>
         <label for="email">E-mail</label>
         <input type="text" name="email" value="" placeholder="E-mail">
         <?= $errores ["email"] ?>
         <label for="pass">Contraseña</label>
-        <input type="pass" name="pass" value="" placeholder="Contraseña">
+        <input type="password" name="pass" value="" placeholder="Contraseña">
         <label for="pass2">Confirmar contraseña</label>
-        <input type="pass" name="pass2" value="" placeholder="Confirmar contraseña">
+        <input type="password" name="pass2" value="" placeholder="Confirmar contraseña">
+        <?= $errores ["pass"] ?>
         <section class="ingreso-tyc">
           <input type="checkbox" name="tyc" value="" required>
           <label for="tyc">Acepto los terminos y condiciones</label><br>

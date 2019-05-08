@@ -1,10 +1,28 @@
+<?php
+  include_once "funciones.php";
+  $usuario = traerUsuarioLogueado();
+  $usuarioLogueado = usuarioLogueado();
+
+?>
+
 <header>
   <div class="container-full">
 		<div class="login-container">
 			<nav class="inicio-registro">
 	      <ul>
-	        <li><a href="login.php">Iniciar Sesión</a></li>
-	        <li><a href="registro.php">Registrarse</a></li>
+
+          <?php if (usuarioLogueado()): ?>
+            <span><?= "Hola, " . $usuario["nombre"] ?></span>
+            <li><a href="registro.php">Ver/ editar usuario</a></li>
+          <?php else: ?>
+            <li><a href="registro.php">Registrarse</a></li>
+          <?php endif; ?>
+          <?php if (usuarioLogueado()): ?>
+            <li><a href="login.php">Cerrar Sesión</a></li>
+          <?php else: ?>
+    	       <li><a href="login.php">Iniciar Sesión</a></li>
+          <?php endif; ?>
+
 	      </ul>
 	     </nav>
 	     <ul class="redes">
