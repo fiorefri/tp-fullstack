@@ -34,8 +34,7 @@
         <label for="pass">Contraseña</label>
         <input type="pass" name="pass" value="" placeholder="Contraseña">
         <label for="pass2">Confirmar contraseña</label>
-        <input type="pass" name="pass2" value="" placeholder="Apellido">
-        <?= $errores ["pass2"] ?>
+        <input type="pass" name="pass2" value="" placeholder="Confirmar contraseña">
         <section class="ingreso-tyc">
           <input type="checkbox" name="tyc" value="" required>
           <label for="tyc">Acepto los terminos y condiciones</label><br>
