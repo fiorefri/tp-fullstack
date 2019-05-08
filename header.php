@@ -21,6 +21,8 @@
      	<h3>Nature</h3>
    	</div>
    	<div class="menu">
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><i class="fas fa-bars fa-2x"></i></label>
       <nav class="main-navigation">
          <ul class="navigation">
            <li><a href="index.php">Home</a></li>

@@ -17,7 +17,7 @@
       <main>
         <div class="container">
           <div class="bd-example">
-          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
