@@ -1,5 +1,10 @@
 <?php
  include_once "funciones.php";
+ if($_POST){
+    var_dump ($errores = validarRegistro($_POST));
+
+
+     }
 
  ?>
 
@@ -19,15 +24,18 @@
     <?php include_once "header.php" ?>
     <div class="formulario">
       <h1>Crear una cuenta</h1>
-      <form class="" action="index.php" method="post">
+      <form class="" action="" method="post">
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" value="" placeholder="Nombre">
+        <?= $errores ["nombre"] ?>
         <label for="email">E-mail</label>
         <input type="text" name="email" value="" placeholder="E-mail">
+        <?= $errores ["email"] ?>
         <label for="pass">Contraseña</label>
         <input type="pass" name="pass" value="" placeholder="Contraseña">
         <label for="pass2">Confirmar contraseña</label>
         <input type="pass" name="pass2" value="" placeholder="Apellido">
+        <?= $errores ["pass2"] ?>
         <section class="ingreso-tyc">
           <input type="checkbox" name="tyc" value="" required>
           <label for="tyc">Acepto los terminos y condiciones</label><br>

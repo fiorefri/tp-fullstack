@@ -19,8 +19,8 @@ function validarRegistro($datos){
         $errores["email"] = "Por favor complete el campo email.";
       } elseif (!filter_var($datosFinales["email"], FILTER_VALIDATE_EMAIL)) {
         $errores["email"] = "Por favor ingrese un email con formato válido.";
-      } if(file_exists("db.json") && existeUsuario($datosFinales["email"])){ //TODO agergar validación de usaurio existente.
-        $errores["email"] = "El email ya se encuentra registrado.";
+      // } if(file_exists("db.json") && existeUsuario($datosFinales["email"])){ //TODO agergar validación de usaurio existente.
+      //   $errores["email"] = "El email ya se encuentra registrado.";
       }
 
       if(strlen($datosFinales["pass"]) == 0){
