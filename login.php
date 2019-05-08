@@ -22,7 +22,7 @@
         <label for="email">E-mail</label>
         <input type="pass" name="email" value="" placeholder="E-mail">
         <label for="contraseña">Contraseña</label>
-        <input type="pass" name="pass" value="" placeholder="Contraseña">
+        <input type="password" name="pass" value="" placeholder="Contraseña">
         <section class="ingreso-forgot">
           <button type="submit">Ingresar</button>
           <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
