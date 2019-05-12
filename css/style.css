@@ -160,7 +160,12 @@ header label:hover{
   }
   #btn-menu:checked ~ .main-navigation {
     margin: 0;
-  }
+    }
+    .fa-bars{
+      position: absolute;
+      top: 20%;
+      left: 90%;
+    }
 }
 
 /* main --------*/
@@ -268,7 +273,11 @@ footer h3{
   justify-content: space-around;
   padding-top: 30px;
 }
-
+@media (max-width:768px){
+h3{
+  font-size: 1em ;
+}
+}
 /* login.php y registro.php */
 .formulario {
   background-color: #fff;

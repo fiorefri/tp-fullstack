@@ -1,31 +1,34 @@
 <?php
   include_once "funciones.php";
+
   $usuario = traerUsuarioLogueado();
   $usuarioLogueado = usuarioLogueado();
+  var_dump($_SESSION);
 
 ?>
 
 <header>
   <div class="container-full">
-		<div class="login-container">
-			<nav class="inicio-registro">
+		<div class="login-container ">
+			<nav class="inicio-registro d-none d-md-inline-flex">
 	      <ul>
 
           <?php if (usuarioLogueado()): ?>
             <span><?= "Hola, " . $usuario["nombre"] ?></span>
-            <li><a href="registro.php">Ver/ editar usuario</a></li>
+            <li><a href="listado.php">Ver/ editar usuario</a></li>
           <?php else: ?>
-            <li><a href="registro.php">Registrarse</a></li>
+            <li><a  class="btn btn-warning" href="registro.php">Registrarse</a></li>
           <?php endif; ?>
+
           <?php if (usuarioLogueado()): ?>
-            <li><a href="login.php">Cerrar Sesión</a></li>
+            <li><a class="btn btn-danger" href="logout.php">Cerrar Sesión</a></li>
           <?php else: ?>
-    	       <li><a href="login.php">Iniciar Sesión</a></li>
+    	       <li><a class="btn btn-success" href="login.php">Iniciar Sesión</a></li>
           <?php endif; ?>
 
 	      </ul>
 	     </nav>
-	     <ul class="redes">
+	     <ul class="redes d-none d-md-inline-flex">
 	     	<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
 					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
