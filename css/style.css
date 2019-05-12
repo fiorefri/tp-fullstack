@@ -124,7 +124,7 @@ header label:hover{
 }
 .parent ul a{
   color: #000;
-  background: rgb(177, 148, 101);
+  background-color: rgba(177, 148, 101,0.8);
 }
 .parent ul {
   display: none;
@@ -137,10 +137,13 @@ header label:hover{
   position: absolute;
   top:30px;
   left: 20px;
-  box-shadow: 0 14px 28px rgb(177, 148, 101), 0 10px 10px rgba(0,0,0,0.22);
   z-index: 999;
-  background:#fff;
 }
+.parent li a:hover{
+background: rgba(177,148,101,0.7);
+color: #000;
+}
+
 @media (max-width:768px){
   header label{
     display: block;
@@ -151,6 +154,9 @@ header label:hover{
     width: 70%;
     margin-left: -70%;
     transition: all 0.5s;
+    display: block;
+    top:180px;
+    z-index: 999;
   }
   .main-navigation ul{
     flex-direction: column;
@@ -165,6 +171,14 @@ header label:hover{
       position: absolute;
       top: 20%;
       left: 90%;
+    }
+    .parent ul a:hover{
+      background-color: rgb(177, 148, 101);
+      color: #000;
+    }
+
+    .parent li a:hover{
+    background: rgba(177,148,101,0.6);
     }
 }
 
