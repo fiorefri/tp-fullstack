@@ -36,7 +36,7 @@
 	     </ul>
 		</div>
   	<div class="logo-marca">
-    	<a href="#">
+    	<a href="index.php">
       	<img src="img/logo.png" alt="logotipo" class="logo">
      	</a>
      	<h3>Nature</h3>
@@ -56,6 +56,8 @@
            </li>
            <li><a href="#">Preguntas frecuentes</a></li>
            <li><a href="#">Promos</a></li>
+           <li><a href="login.php">Iniciar Sesión</a></li>
+           <li><a href="registro.php">Registrarse</a></li>
          </ul>
        </nav>
      </div>

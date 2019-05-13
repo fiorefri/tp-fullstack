@@ -39,19 +39,17 @@ $errores=[
       <form class="" action="" method="post">
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" value="" placeholder="Nombre">
-        <?php if($errores["nombre"] == ""){
-        echo " ";
-      } else {
-        echo $errores ["nombre"];
-      } ?>
         <label for="email">E-mail</label>
         <input type="text" name="email" value="" placeholder="E-mail">
-        <?= $errores ["email"] ?>
         <label for="pass">Contraseña</label>
         <input type="password" name="pass" value="" placeholder="Contraseña">
         <label for="pass2">Confirmar contraseña</label>
         <input type="password" name="pass2" value="" placeholder="Confirmar contraseña">
-        <?= $errores ["pass"] ?>
+        <ul class="errores alert alert-danger">
+          <?php foreach ($errores as $error) : ?>
+            <li><?= $error ?></li>
+          <?php endforeach ?>
+        </ul>
         <section class="ingreso-tyc">
           <input type="checkbox" name="tyc" value="" required>
           <label for="tyc">Acepto los terminos y condiciones</label><br>
