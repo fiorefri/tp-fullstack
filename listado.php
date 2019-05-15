@@ -5,7 +5,7 @@ $usuario = traerUsuarioLogueado();
 $usuarioLogueado = usuarioLogueado();
 $usuarios = listaUsuarios();
 //var_dump($_SESSION);
-if (null !== $usuario["email"] . "." . '*') {
+if (null !== $usuario["email"]) {
   $img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
   //var_dump($img);
 }
