@@ -1,5 +1,5 @@
 <footer>
-  <section class="social">
+  <section class="social d-none d-md-block">
     <h3>Menu</h3>
     <ul>
       <li><a href="index.php">Home</a></li>
@@ -27,7 +27,7 @@
        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
     </ul>
     <ul>
-      <div class="sesion-registrarse">
+      <div class="sesion-registrarse d-none d-md-block">
         <li><a href="login.php">Iniciar Sesion</a></li>
         <li><a href="registro.php">Registrarse</a></li>
       </div>

@@ -1,4 +1,13 @@
 {
     "usuarios": [
+<<<<<<< HEAD
+=======
+        {
+            "id": 1,
+            "nombre": "Judith",
+            "email": "judith.betina.grau@gmail.com",
+            "pass": "$2y$10$lPTpx9s0pDbc\/WPcTPUOY.uJwznUmkeOdULoY7RQKHyIb2JVyvck."
+        }
+>>>>>>> 2605f0c6d37bdc2e213147dac3ec611d957bf158
     ]
 }
