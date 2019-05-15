@@ -26,6 +26,8 @@ $errores=[
         move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
       }
    }
+   header("Location:index.php");
+   exit;
  }
 
  ?>
