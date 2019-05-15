@@ -1,12 +1,3 @@
-<?php
-  include_once "funciones.php";
-
-  $usuario = traerUsuarioLogueado();
-  $usuarioLogueado = usuarioLogueado();
-  var_dump($_SESSION);
-
-?>
-
 <header>
   <div class="container-full">
 		<div class="login-container ">

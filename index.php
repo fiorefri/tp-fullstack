@@ -1,5 +1,9 @@
 <?php
 require 'funciones.php';
+
+$usuario = traerUsuarioLogueado();
+$usuarioLogueado = usuarioLogueado();
+
  ?>
 
  <!DOCTYPE html>

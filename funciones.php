@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 function validarRegistro($datos){
     $errores=[];
     $datosFinales = [];
@@ -10,9 +11,12 @@ function validarRegistro($datos){
         $datosFinales[$posicion] = trim($valores);
       }
     }
+      if($_FILES["avatar"]["error"] !== 0){
+        $errores["avatar"]="Hubo un error. Por favor, vuelva a subir la imagen";
+      }
       if(strlen($datosFinales["nombre"]) == 0){
         $errores["nombre"] = "Por favor complete el campo nombre.";
-      } elseif(ctype_alpha($datosFinales["nombre"]) == false){
+      } elseif(preg_match('/^[A-Za-z\s]+$/', $datosFinales["nombre"]) == false){
         $errores["nombre"] = "El nombre debe contener solo letras..";
       }
       if(strlen($datosFinales["email"]) == 0){
@@ -103,7 +107,7 @@ function validarRegistro($datos){
       $errores["email"] = "Por favor complete el campo email.";
     } elseif (!filter_var($datos["email"], FILTER_VALIDATE_EMAIL)) {
       $errores["email"] = "Por favor ingrese un email con formato válido.";
-    } if(!existeUsuario($datos["email"])){ //TODO agergar validación de usaurio existente.
+    } if(!existeUsuario($datos["email"])){ //TODO agergar validación de usuario existente.
       $errores["email"] = "El email no se encuentra registrado.";
     }
 

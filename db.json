@@ -1,10 +1,5 @@
 {
     "usuarios": [
-        {
-            "id": 1,
-            "nombre": "Judith",
-            "email": "judith.betina.grau@gmail.com",
-            "pass": "$2y$10$lPTpx9s0pDbc\/WPcTPUOY.uJwznUmkeOdULoY7RQKHyIb2JVyvck."
-        }
+        
     ]
 }

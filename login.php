@@ -1,5 +1,6 @@
 <?php
  require_once "funciones.php";
+
  if(usuarioLogueado()){
    header("Location:index.php");
    exit;
@@ -15,16 +16,16 @@
 //    exit;
 
    //Si no hay errores
-   if(empty($errores)){
+    if(empty($errores)){
      //logueamos al user => necesitamos session_start al incio de todos nuestros archivos. Ojo con los include/ require.
-     loguearUsuario($_POST["email"]);
-     var_dump($_SESSION);
+      loguearUsuario($_POST["email"]);
+  
      //redirigimos a home
-     header("Location:index.php");
-     exit;
-   }
+      header("Location:index.php");
+      exit;
+    }
 
- }
+  }
  ?>
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@
     <?php include_once "header.php" ?>
     <div class="formulario">
       <h1>Iniciar Sesión</h1>
-      <form class="" action="index.php" method="post">
+      <form class="" action="login.php" method="post">
         <label for="email">E-mail</label>
         <input type="pass" name="email" value="" placeholder="E-mail">
         <label for="contraseña">Contraseña</label>
