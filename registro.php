@@ -45,11 +45,16 @@ $errores=[
         <input type="password" name="pass" value="" placeholder="Contraseña">
         <label for="pass2">Confirmar contraseña</label>
         <input type="password" name="pass2" value="" placeholder="Confirmar contraseña">
-        <ul class="errores alert alert-danger">
-          <?php foreach ($errores as $error) : ?>
-            <li><?= $error ?></li>
-          <?php endforeach ?>
-        </ul>
+        <?php if ($errores == ["nombre" => "", "email" => "", "pass" => ""]): ?>
+          <ul class="errores alert alert-danger d-none">
+          </ul>
+        <?php else: ?>
+          <ul class="errores alert alert-danger">
+            <?php foreach ($errores as $error): ?>
+              <li><?= $error ?></li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
         <section class="ingreso-tyc">
           <input type="checkbox" name="tyc" value="" required>
           <label for="tyc">Acepto los terminos y condiciones</label><br>
