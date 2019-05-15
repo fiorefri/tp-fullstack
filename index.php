@@ -4,8 +4,10 @@ require 'funciones.php';
 $usuario = traerUsuarioLogueado();
 $usuarioLogueado = usuarioLogueado();
 
-$img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
-//var_dump($img);
+if ($_FILES) {
+  $img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
+  //var_dump($img);
+}
 
  ?>
 
