@@ -5,6 +5,18 @@
             "nombre": "Judith",
             "email": "judith.betina.grau@gmail.com",
             "pass": "$2y$10$lPTpx9s0pDbc\/WPcTPUOY.uJwznUmkeOdULoY7RQKHyIb2JVyvck."
+        },
+        {
+            "id": 2,
+            "nombre": "flor",
+            "email": "flor@gmail.com",
+            "pass": "$2y$10$aD5r67FhPQI.SNSnTLswKerJx5N8YzewfJnt7Eb7aalmIzcOv\/Fq2"
+        },
+        {
+            "id": 3,
+            "nombre": "flor",
+            "email": "flor@gmail.com",
+            "pass": "$2y$10$4ucPZfAU\/yQBm3CbLJ0itulSmFHbRZecDzTwLphJA5G0C4I3MXjgS"
         }
     ]
 }
