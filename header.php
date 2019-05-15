@@ -5,6 +5,7 @@
 	      <ul>
 
           <?php if (usuarioLogueado()): ?>
+            <img class="foto" src= "<?= $img ?>"  alt="">
             <span><?= "Hola, " . $usuario["nombre"] ?></span>
             <li><a href="listado.php">Ver/ editar usuario</a></li>
           <?php else: ?>

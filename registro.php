@@ -7,17 +7,27 @@
 $errores=[
   "nombre" => "",
   "email" => "",
-  "pass" => ""
+  "pass" => "",
+  "avatar" => ""
 ];
 
  if($_POST){
-    var_dump ($errores = validarRegistro($_POST));
+    $errores = validarRegistro($_POST);
 
     if(empty($errores)){
-        $usuario = armarUsuario();
+      $usuario = armarUsuario();
+      if(!existeUsuario($_POST["email"])){
         guardarUsuario($usuario);
-     }
-}
+//var_dump(dirname(__FILE__));
+        //subir imagen;
+        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        // var_dump($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext));
+        // exit;
+        move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
+      }
+   }
+ }
+
  ?>
 
 
@@ -36,7 +46,7 @@ $errores=[
     <?php include_once "header.php" ?>
     <div class="formulario">
       <h1>Crear una cuenta</h1>
-      <form class="" action="" method="post">
+      <form class="" action="" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" value="" placeholder="Nombre">
         <label for="email">E-mail</label>
@@ -45,7 +55,9 @@ $errores=[
         <input type="password" name="pass" value="" placeholder="Contraseña">
         <label for="pass2">Confirmar contraseña</label>
         <input type="password" name="pass2" value="" placeholder="Confirmar contraseña">
-        <?php if ($errores == ["nombre" => "", "email" => "", "pass" => ""]): ?>
+        <label for="avatar">Imagen de perfil</label>
+        <input type="file" id="avatar" class="form-control" name="avatar">
+        <?php if ($errores == ["nombre" => "", "email" => "", "pass" => "", "avatar" => ""]): ?>
           <ul class="errores alert alert-danger d-none">
           </ul>
         <?php else: ?>

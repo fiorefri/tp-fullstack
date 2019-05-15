@@ -11,9 +11,7 @@ function validarRegistro($datos){
         $datosFinales[$posicion] = trim($valores);
       }
     }
-      if($_FILES["avatar"]["error"] !== 0){
-        $errores["avatar"]="Hubo un error. Por favor, vuelva a subir la imagen";
-      }
+
       if(strlen($datosFinales["nombre"]) == 0){
         $errores["nombre"] = "Por favor complete el campo nombre.";
       } elseif(preg_match('/^[A-Za-z\s]+$/', $datosFinales["nombre"]) == false){
@@ -33,6 +31,12 @@ function validarRegistro($datos){
         $errores["pass"] = "Por favor repita su contraseña.";
       } elseif($datosFinales["pass"] !== $datosFinales["pass2"]){
         $errores["pass"] = "Las contraseñas no coinciden.";
+      }
+
+      if($_FILES) {
+        if ($_FILES["avatar"]["error"] !== 0){
+          $errores["avatar"]="Hubo un error. Por favor, vuelva a subir la imagen";
+        }
       }
 
       return $errores;
@@ -63,9 +67,9 @@ function validarRegistro($datos){
     return [
       "id" => nextId(),
       "nombre" => trim($_POST["nombre"]),
-
       "email" => trim($_POST["email"]),
       "pass" => password_hash($_POST["pass"], PASSWORD_DEFAULT),
+      "avatar" => "ruta de la imagen o nombre del archivo"
 
     ];
 
