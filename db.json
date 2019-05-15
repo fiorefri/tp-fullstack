@@ -1,34 +1,4 @@
 {
     "usuarios": [
-        {
-            "id": 1,
-            "nombre": "Judith",
-            "email": "judith.betina.grau@gmail.com",
-            "pass": "$2y$10$FgrJp5o0EeiUYEuEXONDCehF3QkNkhuZ.XXVsMvL\/bb3dbF5th4.m"
-        },
-        {
-            "id": 2,
-            "nombre": "flori",
-            "email": "flor@gmail.com",
-            "pass": "$2y$10$4HzQLsGPNQIrPln6kcer.ejkUfu6VFeG7IBOrNOrLo4gesOdDvU92"
-        },
-        {
-            "id": 3,
-            "nombre": "Fiore",
-            "email": "fiorefri@gmail.com",
-            "pass": "$2y$10$ysYnmXZI5GhKHzv7KbNyseaB3TQR3CffrTbSbZ9QIEqgvrIrge7ea"
-        },
-        {
-            "id": 4,
-            "nombre": "Fiore",
-            "email": "fiorefri@gmail.com",
-            "pass": "$2y$10$wJohdwHriMEcO9KYRk1Ul.hVj2oNC3VFSPe2CHPuDDD8ksBUZM3ku"
-        },
-        {
-            "id": 5,
-            "nombre": "Fiore",
-            "email": "fiorefri@gmail.com",
-            "pass": "$2y$10$bS5uF23bvy\/3S\/lMi8TPqebVefka1lyo1Td\/U\/\/dHef5Dy\/vCTJSO"
-        }
     ]
 }
