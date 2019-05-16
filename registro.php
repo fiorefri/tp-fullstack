@@ -11,23 +11,23 @@ $errores=[
   "avatar" => ""
 ];
 
- if($_POST){
-    $errores = validarRegistro($_POST);
+if($_POST){
+  $errores = validarRegistro($_POST);
 
-    if(empty($errores)){
-      $usuario = armarUsuario();
-      if(!existeUsuario($_POST["email"])){
-        guardarUsuario($usuario);
-//var_dump(dirname(__FILE__));
+  if(empty($errores)){
+    $usuario = armarUsuario();
+    if(!existeUsuario($_POST["email"])){
+      guardarUsuario($usuario);
         //subir imagen;
-        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-        // var_dump($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext));
+      $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+      //var_dump($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext));
         // exit;
-        move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
-      }
+      move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
+      
+      header("Location:index.php");
+      exit;
+    }
    }
-   header("Location:index.php");
-   exit;
  }
 
  ?>
