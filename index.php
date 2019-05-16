@@ -97,7 +97,7 @@ if (null !== $usuario["email"]) {
               </div>
               <div class="articulo  col-xs-12 col-md-6 col-lg-4">
                 <img class="img-fluid"src="img/crema-pelo.jpg" alt="">
-                <a href="#">Marcarilla para el pelo con aceite de oliva</a>
+                <a href="#">Mascarilla para el pelo con aceite de oliva</a>
               </div>
               <div class="articulo col-xs-12 col-md-6 col-lg-4">
                 <img class="img-fluid"src="img/mascarilla-carbon.jpg" alt="">
