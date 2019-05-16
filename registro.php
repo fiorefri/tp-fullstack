@@ -59,7 +59,7 @@ if($_POST){
         <?php endif; ?>
 
         <label for="email">E-mail</label>
-        <?php if(isset($errores["$email"])): ?>
+        <?php if(isset($errores["email"])): ?>
           <input type="text" name="email" id="email" value="" placeholder="E-mail">
         <?php else: ?>
             <input type="text" name="$email" id="nombre" value="<?= $emailOk ?>" placeholder="">
