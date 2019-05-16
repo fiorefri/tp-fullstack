@@ -4,7 +4,6 @@ require 'funciones.php';
 $usuario = traerUsuarioLogueado();
 $usuarioLogueado = usuarioLogueado();
 $usuarios = listaUsuarios();
-//var_dump($_SESSION);
 if (null !== $usuario["email"]) {
   $img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
   //var_dump($img);
@@ -26,4 +25,4 @@ if (null !== $usuario["email"]) {
     <?php include_once "header.php" ?>
   </body>
 </html>
-<?php var_dump($usuarios);?>
+<?php var_dump($usuario);?>
