@@ -69,7 +69,7 @@ if (null !== $usuario["email"]) {
         </div>
         <section class="pagina-principal">
           <div class="producto row d-flex justify-content-around">
-            <div class="rostro categoria col-xs-3">
+            <div class="rostro categoria col-xs-3 pb-5">
               <img class="item img-fluid"src="img/categoria-rostro.jpg" alt="">
               <a href="more">Rostro</a>
             </div>
