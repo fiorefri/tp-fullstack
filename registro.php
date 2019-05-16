@@ -13,6 +13,8 @@ $errores=[
 
 if($_POST){
   $errores = validarRegistro($_POST);
+  $nombreOk = trim($_POST["nombre"]);
+  $emailOk = trim ($_POST["email"]);
 
   if(empty($errores)){
     $usuario = armarUsuario();
@@ -23,7 +25,7 @@ if($_POST){
       //var_dump($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext));
         // exit;
       move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
-      
+
       header("Location:index.php");
       exit;
     }
@@ -50,15 +52,28 @@ if($_POST){
       <h1>Crear una cuenta</h1>
       <form class="" action="" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre y Apellido</label>
-        <input type="text" name="nombre" value="" placeholder="Nombre">
+        <?php if(isset($errores["nombre"])): ?>
+          <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre">
+        <?php else: ?>
+            <input type="text" name="nombre" id="nombre" value="<?= $nombreOk ?>" placeholder="">
+        <?php endif; ?>
+
         <label for="email">E-mail</label>
-        <input type="text" name="email" value="" placeholder="E-mail">
+        <?php if(isset($errores["$email"])): ?>
+          <input type="text" name="email" id="email" value="" placeholder="E-mail">
+        <?php else: ?>
+            <input type="text" name="$email" id="nombre" value="<?= $emailOk ?>" placeholder="">
+        <?php endif; ?>
+
         <label for="pass">Contraseña</label>
-        <input type="password" name="pass" value="" placeholder="Contraseña">
+        <input type="password" name="pass" id="pass" value="" placeholder="Contraseña">
+
         <label for="pass2">Confirmar contraseña</label>
-        <input type="password" name="pass2" value="" placeholder="Confirmar contraseña">
+        <input type="password" name="pass2" id="pass2" value="" placeholder="Confirmar contraseña">
+
         <label for="avatar">Imagen de perfil</label>
         <input type="file" id="avatar" class="form-control" name="avatar">
+
         <?php if ($errores == ["nombre" => "", "email" => "", "pass" => "", "avatar" => ""]): ?>
           <ul class="errores alert alert-danger d-none">
           </ul>
@@ -69,12 +84,14 @@ if($_POST){
             <?php endforeach; ?>
           </ul>
         <?php endif; ?>
+
         <section class="ingreso-tyc">
-          <input type="checkbox" name="tyc" value="" required>
+          <input type="checkbox" name="tyc" value="" id="tyc" required>
           <label for="tyc">Acepto los terminos y condiciones</label><br>
           <button type="submit">Crear cuenta</button>
         </section>
       </form>
+
       <hr class="divisor">
       <section class="iniciar-sesion">
         <h2>¿Ya tenes cuenta?</h2>

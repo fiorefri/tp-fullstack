@@ -19,7 +19,7 @@
     if(empty($errores)){
      //logueamos al user => necesitamos session_start al incio de todos nuestros archivos. Ojo con los include/ require.
       loguearUsuario($_POST["email"]);
-  
+
      //redirigimos a home
       header("Location:index.php");
       exit;
@@ -44,16 +44,21 @@
     <div class="formulario">
       <h1>Iniciar Sesión</h1>
       <form class="" action="login.php" method="post">
+
         <label for="email">E-mail</label>
-        <input type="pass" name="email" value="" placeholder="E-mail">
-        <label for="contraseña">Contraseña</label>
-        <input type="password" name="pass" value="" placeholder="Contraseña">
+        <input type="pass" name="email" id="email" value="" placeholder="E-mail">
+
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" id="pass" value="" placeholder="Contraseña">
+
         <section class="ingreso-forgot">
           <button type="submit">Ingresar</button>
           <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
         </section>
       </form>
+      
       <hr class="divisor">
+
       <section class="registro">
         <h2>¿No tenes cuenta?</h2>
         <a href="registro.php" class="registrate">Registrate</a>
