@@ -255,6 +255,10 @@ color: #000;
     .inicio-registro {
       display: block;
     }
+
+    .footer-listado {
+      padding-top: 350px;
+    }
 }
 
 /* main --------*/
@@ -389,9 +393,13 @@ footer h3{
   padding-top: 30px;
 }
 @media (max-width:768px){
-h3{
-  font-size: 80% ;
-}
+  h3{
+    font-size: 80% ;
+  }
+
+  body {
+    padding-top: 150px;
+  }
 }
 /* login.php y registro.php */
 .formulario {
