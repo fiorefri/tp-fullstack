@@ -4,7 +4,7 @@ body {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 20px;
   background-image: url(../img/fon.jpg);
-  margin: 0;
+  margin: 0 auto;
 }
 
 a {
@@ -25,12 +25,14 @@ ul, ol {
 
 /* Cabecera */
 header{
-  /* position: fixed;
+  position: fixed;
   top: 0;
-  z-index: 999; */
-    padding: 15px 0 30px 0;
+  left: 0;
+  right: 0;
+  z-index: 990;
+  padding: 15px 0 30px 0;
   margin-bottom: 25px;
-  width: 100%;
+  max-width: 100%;
   /* flex */
   display: flex;
   flex-wrap: wrap;
@@ -225,6 +227,17 @@ color: #000;
     left: 0;
     min-height: 300px;
 }*/
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 250px;
+  max-width: 1500px;
+}
 
 .carousel-indicators li  {
   width: 10px;
