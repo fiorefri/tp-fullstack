@@ -87,6 +87,8 @@ function validarRegistro($datos){
     $array = json_encode($array, JSON_PRETTY_PRINT);
 
     file_put_contents("db.json", $array);
+
+    // INSERT INTO usuarios VALUES();
   }
 
   function buscarUsuarioPorMail($email){
@@ -99,6 +101,9 @@ function validarRegistro($datos){
       }
     }
     return null;
+
+    //SELECT * FROM usuarios WHERE $email = usuario.email
+
   }
 
   function existeUsuario($email){
@@ -130,6 +135,12 @@ function validarRegistro($datos){
 
   function loguearUsuario($email){
     $_SESSION["email"] = $email;
+
+    if(isset($_POST["recordarme"])){
+      $usuario = buscarUsuarioPorMail($email);
+      setcookie ("nombre", $usuario["nombre"], time() + 1000);
+      setcookie ("email", $_POST["email"], time() + 1000);
+    }
   }
 
   function usuarioLogueado(){
@@ -140,8 +151,6 @@ function validarRegistro($datos){
     // Si está logueado trae los datos del usuario
     if(isset($_SESSION["email"])) {
       $usuario = buscarUsuarioPorMail($_SESSION["email"]);
-      setcookie ("nombre", $usuario["nombre"], time () + 1000);
-      setcookie ("email", $usuario["email"], time () + 1000);
       return $usuario;
     } else {
       // Sino: FALSE

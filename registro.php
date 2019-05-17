@@ -1,5 +1,10 @@
 <?php
  include "funciones.php";
+
+ if (isset($_COOKIE["email"])){
+   loguearUsuario($_COOKIE["email"]);
+ }
+
  if(usuarioLogueado()){
    header("Location:index.php");
    exit;
@@ -34,7 +39,7 @@ if($_POST){
         header("Location:index.php");
         exit;
       }
-      
+
     }
    }
  }

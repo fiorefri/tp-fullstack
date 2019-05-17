@@ -1,6 +1,10 @@
 <?php
 require 'funciones.php';
 
+if (isset($_COOKIE["email"])){
+  loguearUsuario($_COOKIE["email"]);
+}
+
 $usuario = traerUsuarioLogueado();
 $usuarioLogueado = usuarioLogueado();
 
@@ -10,11 +14,6 @@ if (null !== $usuario["email"]) {
   //var_dump($img);
 }
 
-if (isset($_COOKIE["email"])){
-  setcookie("email", $usuario["email"]);
-  loguearUsuario($_COOKIE["email"]);
-  $img = glob("avatar-usuarios/" . $_COOKIE['email'] . '*')[0];
-}
 
 
  ?>

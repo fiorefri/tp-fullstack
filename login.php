@@ -1,6 +1,10 @@
 <?php
  require_once "funciones.php";
 
+ if (isset($_COOKIE["email"])){
+   loguearUsuario($_COOKIE["email"]);
+ }
+
  if(usuarioLogueado()){
    header("Location:index.php");
    exit;
@@ -54,6 +58,9 @@ $errores = ["nombre" => "", "email" => ""];
 
         <label for="pass">Contraseña</label>
         <input type="password" name="pass" id="pass" value="" placeholder="Contraseña">
+
+        <label for="">Recordarme</label>
+        <input type="checkbox" name="recordarme" value="ok">
 
         <?php if ($errores == ["nombre" => "", "email" => ""]): ?>
           <ul class="errores alert alert-danger d-none">

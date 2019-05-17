@@ -3,20 +3,13 @@
 		<div class="login-container ">
 			<nav class="inicio-registro d-none d-md-inline-flex">
 	      <ul>
-            <?php if  (isset($_COOKIE["email"])) : ?>
-              <?php setcookie("email" ,$usuario["email"]); ?>
-              <img class="foto" src= "<?= $img ?>"  alt="">
-              <span><?= "Hola, " . $_COOKIE["nombre"] ?></span>
-              <li><a href="listado.php">Ver/ editar usuario</a></li>
-            <?php else: ?>
-              <?php if (usuarioLogueado()): ?>
-                <img class="foto" src= "<?= $img ?>"  alt="">
-                <span><?= "Hola, " . $usuario["nombre"] ?></span>
-                <li><a href="listado.php">Ver/ editar usuario</a></li>
-              <?php else: ?>
-                <li><a  class="btn btn-warning" href="registro.php">Registrarse</a></li>
-            <?php endif; ?>
-          <?php endif; ?>
+          <?php if (usuarioLogueado()): ?>
+            <img class="foto" src= "<?= $img ?>"  alt="">
+            <span><?= "Hola, " . $usuario["nombre"] ?></span>
+            <li><a href="listado.php">Ver/ editar usuario</a></li>
+          <?php else: ?>
+            <li><a  class="btn btn-warning" href="registro.php">Registrarse</a></li>
+        <?php endif; ?>
 
           <?php if (usuarioLogueado()): ?>
             <li><a class="btn btn-danger" href="logout.php">Cerrar Sesión</a></li>
