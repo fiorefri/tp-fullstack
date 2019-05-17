@@ -159,13 +159,19 @@ color: #000;
   display: none;
 }
 .lista_De_Usuarios{
-  background-color: #aed581;
+  background-color: #fff;
   width: 60%;
   border-radius: 1%;
   position: absolute;
   top: 250px;
   left: 20%;
+  padding: 30px;
 }
+.lista_De_Usuarios h3 {
+  padding-bottom: 20px;
+  color: rgb(177, 148, 101);
+}
+
 @media (max-width:768px){
   header label{
     display: block;
