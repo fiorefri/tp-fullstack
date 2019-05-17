@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+// var_dump ($_COOKIE);
 function validarRegistro($datos){
     $errores=[];
     $datosFinales = [];
@@ -140,11 +140,14 @@ function validarRegistro($datos){
     // Si está logueado trae los datos del usuario
     if(isset($_SESSION["email"])) {
       $usuario = buscarUsuarioPorMail($_SESSION["email"]);
+      setcookie ("nombre", $usuario["nombre"], time () + 1000);
+      setcookie ("email", $usuario["email"], time () + 1000);
       return $usuario;
     } else {
       // Sino: FALSE
       return false;
     }
+
   }
 
   function listaUsuarios(){

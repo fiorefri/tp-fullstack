@@ -10,6 +10,13 @@ if (null !== $usuario["email"]) {
   //var_dump($img);
 }
 
+if (isset($_COOKIE["email"])){
+  setcookie("email", $usuario["email"]);
+  loguearUsuario($_COOKIE["email"]);
+  $img = glob("avatar-usuarios/" . $_COOKIE['email'] . '*')[0];
+}
+
+
  ?>
 
  <!DOCTYPE html>
