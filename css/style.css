@@ -156,7 +156,14 @@ color: #000;
 .inicio-registro {
   display: none;
 }
-
+.lista_De_Usuarios{
+  background-color: #aed581;
+  width: 60%;
+  border-radius: 1%;
+  position: absolute;
+  top: 250px;
+  left: 20%;
+}
 @media (max-width:768px){
   header label{
     display: block;

@@ -23,6 +23,10 @@ if (null !== $usuario["email"]) {
   </head>
   <body>
     <?php include_once "header.php" ?>
+    <div class="lista_De_Usuarios">
+      <h3>Ver/Editar Usuario</h3>
+      <?php var_dump($usuario);?>
+    </div>
+
   </body>
 </html>
-<?php var_dump($usuario);?>
