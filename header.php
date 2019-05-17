@@ -1,9 +1,8 @@
 <header>
   <div class="container-full">
 		<div class="login-container ">
-			<nav class="inicio-registro d-md-inline-flex">
+			<nav class="inicio-registro d-none d-md-inline-flex">
 	      <ul>
-
           <?php if (usuarioLogueado()): ?>
             <img class="foto" src= "<?= $img ?>"  alt="">
             <span><?= "Hola, " . $usuario["nombre"] ?></span>
@@ -48,6 +47,27 @@
            </li>
            <li><a href="#">Preguntas frecuentes</a></li>
            <li><a href="#">Promos</a></li>
+           <?php if (usuarioLogueado()): ?>
+             <div class="botones-inicio-registro-registrado d-block d-md-none">
+               <li><img class="foto" src= "<?= $img ?>"  alt="">
+               <span><?= "Hola, " . $usuario["nombre"] ?></span>
+               <a href="listado.php">Ver/ editar usuario</a></li>
+             </div>
+           <?php else: ?>
+             <div class="botones-inicio-registro d-block d-md-none">
+               <li><a  class="btn btn-warning" href="registro.php">Registrarse</a></li>
+             </div>
+           <?php endif; ?>
+
+           <?php if (usuarioLogueado()): ?>
+             <div class="botones-inicio-registro d-block d-md-none">
+               <li><a class="btn btn-danger" href="logout.php">Cerrar Sesión</a></li>
+             </div>
+           <?php else: ?>
+             <div class="botones-inicio-registro d-block d-md-none">
+               <li><a class="btn btn-success" href="login.php">Iniciar Sesión</a></li>
+             </div>
+           <?php endif; ?>
          </ul>
        </nav>
      </div>
