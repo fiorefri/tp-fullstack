@@ -431,12 +431,16 @@ input {
   font-size: 15px;
 }
 
-.ingreso-forgot, .ingreso-tyc {
-  text-align: center;
+#recordarme {
+  width: auto;
 }
 
 .ingreso-tyc input {
   width: auto;
+}
+
+.ingreso-forgot, .ingreso-registro {
+  text-align: center;
 }
 
 button {

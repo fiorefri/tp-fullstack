@@ -59,8 +59,10 @@ $errores = ["nombre" => "", "email" => ""];
         <label for="pass">Contraseña</label>
         <input type="password" name="pass" id="pass" value="" placeholder="Contraseña">
 
-        <label for="">Recordarme</label>
-        <input type="checkbox" name="recordarme" value="ok">
+        <section class="recordar-login">
+          <input type="checkbox" name="recordarme" value="ok" id="recordarme">
+          <label for="recordarme">Recordarme</label>
+        </section>
 
         <?php if ($errores == ["nombre" => "", "email" => ""]): ?>
           <ul class="errores alert alert-danger d-none">
