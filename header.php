@@ -30,7 +30,7 @@
     	<a href="index.php">
       	<img src="img/logo.png" alt="logotipo" class="logo">
      	</a>
-     	<h3>Nature</h3>
+     	<h3><a href="index.php">Nature</h3></a>
    	</div>
    	<div class="menu">
       <input type="checkbox" id="btn-menu">
