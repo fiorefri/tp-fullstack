@@ -1,7 +1,7 @@
 <header>
   <div class="container-full">
 		<div class="login-container ">
-			<nav class="inicio-registro d-none d-md-inline-flex">
+			<nav class="inicio-registro d-md-inline-flex">
 	      <ul>
 
           <?php if (usuarioLogueado()): ?>
