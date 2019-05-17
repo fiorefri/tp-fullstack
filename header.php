@@ -48,8 +48,6 @@
            </li>
            <li><a href="#">Preguntas frecuentes</a></li>
            <li><a href="#">Promos</a></li>
-           <li class="inicio-registro"><a href="login.php">Iniciar Sesión</a></li>
-           <li class="inicio-registro"><a href="registro.php">Registrarse</a></li>
          </ul>
        </nav>
      </div>
