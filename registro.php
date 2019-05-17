@@ -25,9 +25,16 @@ if($_POST){
       //var_dump($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext));
         // exit;
       move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
+      //loguea al usuario cuando se regisgtra
+      if(empty($errores)){
+       //logueamos al user => necesitamos session_start al incio de todos nuestros archivos. Ojo con los include/ require.
+        loguearUsuario($_POST["email"]);
 
-      header("Location:index.php");
-      exit;
+       //redirigimos a home
+        header("Location:index.php");
+        exit;
+      }
+      
     }
    }
  }
