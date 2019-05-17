@@ -158,6 +158,8 @@ color: #000;
 .inicio-registro {
   display: none;
 }
+
+/* listado.php */
 .lista_De_Usuarios{
   background-color: #fff;
   width: 60%;
@@ -167,9 +169,25 @@ color: #000;
   left: 20%;
   padding: 30px;
 }
+
 .lista_De_Usuarios h3 {
   padding-bottom: 20px;
   color: rgb(177, 148, 101);
+}
+
+.edicion-usuario {
+  float: inherit;
+}
+
+.edicion-usuario ul {
+  float: left;
+}
+
+.edicion-usuario img {
+  float: right;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 @media (max-width:768px){

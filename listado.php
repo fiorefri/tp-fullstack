@@ -25,10 +25,13 @@ if (null !== $usuario["email"]) {
     <?php include_once "header.php" ?>
     <div class="lista_De_Usuarios">
       <h3>Ver/Editar Usuario</h3>
-      <ul>
-        <li><?= $usuario["nombre"];?></li>
-        <li><?= $usuario["email"];?></li>
-      </ul>
+      <section class="edicion-usuario">
+        <ul>
+          <li><?= $usuario["nombre"];?></li>
+          <li><?= $usuario["email"];?></li>
+        </ul>
+        <img class="" src= "<?= $img ?>"  alt="">
+      </section>
     </div>
 
   </body>
