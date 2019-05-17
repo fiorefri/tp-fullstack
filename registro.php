@@ -86,6 +86,11 @@ if($_POST){
         <label for="avatar">Imagen de perfil</label>
         <input type="file" id="avatar" class="form-control" name="avatar">
 
+        <section class="ingreso-tyc">
+          <input type="checkbox" name="tyc" value="" id="tyc">
+          <label for="tyc">Acepto los terminos y condiciones</label><br>
+        </section>
+        
         <?php if ($errores == ["nombre" => "", "email" => "", "pass" => "", "avatar" => ""]): ?>
           <ul class="errores alert alert-danger d-none">
           </ul>
@@ -97,11 +102,6 @@ if($_POST){
           </ul>
         <?php endif; ?>
 
-        <section class="ingreso-tyc">
-          <input type="checkbox" name="tyc" value="" id="tyc">
-          <label for="tyc">Acepto los terminos y condiciones</label><br>
-        </section>
-        
         <section class="ingreso-registro">
           <button type="submit">Crear cuenta</button>
         </section>
