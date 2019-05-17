@@ -98,7 +98,7 @@ if($_POST){
         <?php endif; ?>
 
         <section class="ingreso-tyc">
-          <input type="checkbox" name="tyc" value="" id="tyc" required>
+          <input type="checkbox" name="tyc" value="" id="tyc">
           <label for="tyc">Acepto los terminos y condiciones</label><br>
         </section>
         
