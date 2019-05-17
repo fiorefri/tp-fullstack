@@ -211,7 +211,10 @@ color: #000;
   .botones-inicio-registro-registrado a {
     float: right;
   }
-
+  .botones-inicio-registro-registrado li a:hover {
+    background: rgba(255,255,255, 0.6);
+    text-decoration: underline;
+  }
   .logo-marca a {
     min-width: 12%;
   }
