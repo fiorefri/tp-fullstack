@@ -195,6 +195,23 @@ color: #000;
     display: block;
     }
 
+  .botones-inicio-registro-registrado {
+    float: inherit;
+  }
+
+  .botones-inicio-registro-registrado img {
+    display: none;
+  }
+
+  .botones-inicio-registro-registrado span {
+    float: left;
+    margin: 15px;
+  }
+
+  .botones-inicio-registro-registrado a {
+    float: right;
+  }
+
   .logo-marca a {
     min-width: 12%;
   }
@@ -205,11 +222,11 @@ color: #000;
   .main-navigation {
     position: absolute;
     background: rgb(177, 148, 101);
-    width: 70%;
-    margin-left: -70%;
+    width: 100%;
+    margin-left: -100%;
     transition: all 0.5s;
     display: block;
-    top:180px;
+    top:100px;
     z-index: 999;
   }
   .main-navigation ul{
@@ -223,7 +240,7 @@ color: #000;
     }
     .fa-bars{
       position: absolute;
-      top: 40%;
+      top: 20%;
       left: 90%;
     }
     .parent ul a:hover{
