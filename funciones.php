@@ -39,6 +39,10 @@ function validarRegistro($datos){
         }
       }
 
+      if(!isset($datosFinales["tyc"])) {
+        $errores["tyc"]="Debe aceptar los terminos y condiciones para continuar.";
+      }
+
       return $errores;
   }
 
