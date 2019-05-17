@@ -5,12 +5,12 @@
    header("Location:index.php");
    exit;
  }
-   $errores = [];
+$errores = ["nombre" => "", "email" => ""];
 
 
  //Si viene por POST
  if($_POST){
-   //Validar Login
+   $emailOk = trim ($_POST["email"]);
    $errores = validarLogin($_POST);
 //    var_dump($errores);
 //    exit;
@@ -46,17 +46,32 @@
       <form class="" action="login.php" method="post">
 
         <label for="email">E-mail</label>
-        <input type="pass" name="email" id="email" value="" placeholder="E-mail">
+        <?php if(isset($errores["email"])): ?>
+          <input type="text" name="email" id="email" value="" placeholder="E-mail">
+        <?php else: ?>
+            <input type="text" name="email" id="nombre" value="<?= $emailOk ?>" placeholder="">
+        <?php endif; ?>
 
         <label for="pass">Contraseña</label>
         <input type="password" name="pass" id="pass" value="" placeholder="Contraseña">
+
+        <?php if ($errores == ["nombre" => "", "email" => ""]): ?>
+          <ul class="errores alert alert-danger d-none">
+          </ul>
+        <?php else: ?>
+          <ul class="errores alert alert-danger">
+            <?php foreach ($errores as $error): ?>
+              <li><?= $error ?></li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
 
         <section class="ingreso-forgot">
           <button type="submit">Ingresar</button>
           <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
         </section>
       </form>
-      
+
       <hr class="divisor">
 
       <section class="registro">
