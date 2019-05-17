@@ -33,6 +33,8 @@ if (null !== $usuario["email"]) {
         <img class="" src= "<?= $img ?>"  alt="">
       </section>
     </div>
-
+    <div class="footer-listado">
+      <?php include_once "footer.php"; ?>
+    </div>
   </body>
 </html>
