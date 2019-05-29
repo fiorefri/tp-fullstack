@@ -1,6 +1,7 @@
 <?php
 session_start();
 // var_dump ($_COOKIE);
+include_once "pdo.php";
 function validarRegistro($datos){
     $errores=[];
     $datosFinales = [];
@@ -69,7 +70,7 @@ function validarRegistro($datos){
 
   function armarUsuario(){
     return [
-      "id" => nextId(),
+      //"id" => nextId(),
       "nombre" => trim($_POST["nombre"]),
       "email" => trim($_POST["email"]),
       "pass" => password_hash($_POST["pass"], PASSWORD_DEFAULT),
@@ -79,35 +80,52 @@ function validarRegistro($datos){
 
   }
   function guardarUsuario($usuario){
-    if(!file_exists("db.json")){
-      $json = "";
-    } else {
-      $json = file_get_contents("db.json");
-    }
+  //  if(!file_exists("db.json")){
+    //  $json = "";
+    //} else {
+    //  $json = file_get_contents("db.json");
+    //}
   //  $json = file_get_contents("db.json");
-    $array = json_decode($json, true);
+  //  $array = json_decode($json, true);
 
-    $array["usuarios"][] = $usuario;
-    $array = json_encode($array, JSON_PRETTY_PRINT);
+    //$array["usuarios"][] = $usuario;
+    //$array = json_encode($array, JSON_PRETTY_PRINT);
 
-    file_put_contents("db.json", $array);
+    //file_put_contents("db.json", $array);
 
     // INSERT INTO usuarios VALUES();
+    global $db;
+    $stmt = $db->prepare("INSERT INTO usuarios VALUES(default, :nombre, :email, :pass)");
+    $stmt->bindValue(":nombre",$usuario["nombre"]);
+    $stmt->bindValue(":email",$usuario["email"]);
+    $stmt->bindValue(":pass",$usuario["pass"]);
+
+    $stmt->execute();
+
   }
 
   function buscarUsuarioPorMail($email){
-    $json = file_get_contents("db.json");
-    $array = json_decode($json, true);
+    //$json = file_get_contents("db.json");
+    //$array = json_decode($json, true);
 
-    foreach($array["usuarios"] as $usuario){
-      if($usuario["email"] == $email){
-        return $usuario;
-      }
-    }
-    return null;
+    //foreach($array["usuarios"] as $usuario){
+      //if($usuario["email"] == $email){
+      //  return $usuario;
+      //}
+    //}
+    //return null;
 
     //SELECT * FROM usuarios WHERE $email = usuario.email
+    global $db;
+    $stmt = $db->prepare("SELECT * FROM usuarios WHERE email = :email");
+    $stmt->bindValue(":email",$email);
+    $stmt->execute();
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    if($usuario){
+      return $usuario;
+    }
+    return NULL;
   }
 
   function existeUsuario($email){
@@ -164,9 +182,17 @@ function validarRegistro($datos){
   }
 
   function listaUsuarios(){
-    $json = file_get_contents("db.json");
-    $array = json_decode($json, true);
+    // $json = file_get_contents("db.json");
+    // $array = json_decode($json, true);
+    //
+    // return $array["usuarios"];
 
-    return $array["usuarios"];
+    global $db;
+    $stmt = $db->prepare("SELECT * FROM listaUsuarios");
+    $stmt->execute();
+
+    $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $usuarios;
   }
  ?>

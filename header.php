@@ -5,7 +5,7 @@
 	      <ul>
           <?php if (usuarioLogueado()): ?>
             <img class="foto" src= "<?= $img ?>"  alt="">
-            <span><?= "Hola, " . $usuario["nombre"] ?></span>
+            <span><?= "Hola, " . $usuario["nombre_apellido"] ?></span>
             <li><a href="listado.php">Ver/ editar usuario</a></li>
           <?php else: ?>
             <li><a  class="btn btn-warning" href="registro.php">Registrarse</a></li>

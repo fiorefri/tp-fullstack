@@ -23,6 +23,7 @@ if($_POST){
 
   if(empty($errores)){
     $usuario = armarUsuario();
+
     if(!existeUsuario($_POST["email"])){
       guardarUsuario($usuario);
         //subir imagen;
@@ -90,7 +91,7 @@ if($_POST){
           <input type="checkbox" name="tyc" value="" id="tyc">
           <label for="tyc">Acepto los terminos y condiciones</label><br>
         </section>
-        
+
         <?php if ($errores == ["nombre" => "", "email" => "", "pass" => "", "avatar" => ""]): ?>
           <ul class="errores alert alert-danger d-none">
           </ul>

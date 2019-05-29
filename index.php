@@ -1,5 +1,7 @@
 <?php
+
 require 'funciones.php';
+
 
 if (isset($_COOKIE["email"])){
   loguearUsuario($_COOKIE["email"]);
