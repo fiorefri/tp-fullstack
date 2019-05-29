@@ -38,7 +38,7 @@
       <nav class="main-navigation">
          <ul class="navigation">
            <li><a href="index.php">Home</a></li>
-           <li><a href="#">Quienes somos</a></li>
+           <li><a href="quienesSomos.php">Quienes somos</a></li>
            <li class="parent"><a href="#">Productos</a>
             <ul>
               <li><a href="#">Cremas Rostro</a></li>
