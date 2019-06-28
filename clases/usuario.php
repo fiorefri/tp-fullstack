@@ -41,7 +41,7 @@ class Usuario
     $this->pass = $pass;
     return $this;
   }
-  public function setImagen($avatar)
+  public function setImagen($imagen)
   {
     $this->imagen = $imagen;
     return $this;

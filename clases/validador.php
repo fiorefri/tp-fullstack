@@ -3,8 +3,8 @@
 class Validador {
 
   public static function validarRegistro($datos){
-    var_dump($datos);
-    var_dump($_FILES);
+    // var_dump($datos);
+    // var_dump($_FILES);
       global $dbAll;
 
       $errores=[];
@@ -28,7 +28,7 @@ class Validador {
 
       if(strlen($datosFinales["nombre"]) == 0){
         $errores["nombre"] = "Por favor complete el campo nombre.";
-      } elseif(ctype_alpha($datosFinales["nombre"]) == false){
+      } elseif(preg_match('/^[A-Za-z\s]+$/', $datosFinales["nombre"]) == false){
         $errores["nombre"] = "El nombre debe contener solo letras..";
       }
 
