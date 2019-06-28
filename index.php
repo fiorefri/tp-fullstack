@@ -1,18 +1,18 @@
 <?php
 
-require 'funciones.php';
+// require 'funciones.php';
+include "init.php";//Creamos el archivo init.php para evitar conflictos en el llamado de las clases e instancias que necesitamos llamar en cada página.
 
+$usuario = $dbAll->traerUsuarioLogueado();
+$usuarioLogueado = $auth->usuarioLogueado();
 
 if (isset($_COOKIE["email"])){
-  loguearUsuario($_COOKIE["email"]);
+  $auth->loguearUsuario($_COOKIE["email"]);
 }
 
-$usuario = traerUsuarioLogueado();
-$usuarioLogueado = usuarioLogueado();
-
 //var_dump($_FILES);
-if (null !== $usuario["email"]) {
-  $img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
+if ($usuarioLogueado) {
+  $img = glob("imagen-usuario/" . $usuario->getEmail() . '*')[0]; // busca un patron dentro de carpetas o directorios
   //var_dump($img);
 }
 

@@ -1,11 +1,13 @@
 <?php
- require_once "funciones.php";
+ // require_once "funciones.php";
+ include "init.php";//Creamos el archivo init.php para evitar conflictos en el llamado de las clases e instancias que necesitamos llamar en cada página.
+
 
  if (isset($_COOKIE["email"])){
-   loguearUsuario($_COOKIE["email"]);
+   $auth->loguearUsuario($_COOKIE["email"]);
  }
 
- if(usuarioLogueado()){
+ if($auth->usuarioLogueado()){
    header("Location:index.php");
    exit;
  }
@@ -15,14 +17,14 @@ $errores = ["nombre" => "", "email" => ""];
  //Si viene por POST
  if($_POST){
    $emailOk = trim ($_POST["email"]);
-   $errores = validarLogin($_POST);
+   $errores = Validador::validarLogin($_POST);
 //    var_dump($errores);
 //    exit;
 
    //Si no hay errores
     if(empty($errores)){
      //logueamos al user => necesitamos session_start al incio de todos nuestros archivos. Ojo con los include/ require.
-      loguearUsuario($_POST["email"]);
+      $auth->loguearUsuario($_POST["email"]);
 
      //redirigimos a home
       header("Location:index.php");

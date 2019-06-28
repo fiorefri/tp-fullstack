@@ -1,11 +1,12 @@
 <?php
-require 'funciones.php';
+// require 'funciones.php';
+include 'init.php';
 
-$usuario = traerUsuarioLogueado();
-$usuarioLogueado = usuarioLogueado();
-$usuarios = listaUsuarios();
-if (null !== $usuario["email"]) {
-  $img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
+$usuario = $dbAll->traerUsuarioLogueado();
+$usuarioLogueado = $auth->usuarioLogueado();
+// $usuarios = $usuario->listaUsuarios();
+if ($usuarioLogueado) {
+  $img = glob("imagen-usuario/" . $usuario->getEmail() . '*')[0]; // busca un patron dentro de carpetas o directorios
   //var_dump($img);
 }
 ?>
@@ -27,8 +28,8 @@ if (null !== $usuario["email"]) {
       <h3>Ver/Editar Usuario</h3>
       <section class="edicion-usuario">
         <ul>
-          <li><?= $usuario["nombre"];?></li>
-          <li><?= $usuario["email"];?></li>
+          <li><?= $usuario->getNombre() ?></li>
+          <li><?= $usuario->getEmail() ?></li>
         </ul>
         <img class="" src= "<?= $img ?>"  alt="">
       </section>

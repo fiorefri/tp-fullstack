@@ -1,11 +1,12 @@
 <?php
- include "funciones.php";
+ // include "funciones.php";
+ include "init.php";//Creamos el archivo init.php para evitar conflictos en el llamado de las clases e instancias que necesitamos llamar en cada página.
 
  if (isset($_COOKIE["email"])){
-   loguearUsuario($_COOKIE["email"]);
+   $auth->loguearUsuario($_COOKIE["email"]);
  }
 
- if(usuarioLogueado()){
+ if($auth->usuarioLogueado()){
    header("Location:index.php");
    exit;
  }
@@ -13,28 +14,28 @@ $errores=[
   "nombre" => "",
   "email" => "",
   "pass" => "",
-  "avatar" => ""
+  "imagen" => ""
 ];
 
 if($_POST){
-  $errores = validarRegistro($_POST);
+  $errores = Validador::validarRegistro($_POST);
   $nombreOk = trim($_POST["nombre"]);
   $emailOk = trim ($_POST["email"]);
 
   if(empty($errores)){
-    $usuario = armarUsuario();
+    $usuario = new Usuario($_POST);
 
-    if(!existeUsuario($_POST["email"])){
-      guardarUsuario($usuario);
-        //subir imagen;
-      $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-      //var_dump($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext));
-        // exit;
-      move_uploaded_file($_FILES["avatar"]["tmp_name"], dirname(__FILE__) . "/avatar-usuarios/". $_POST["email"] . "." . $ext);
+    if(!$dbAll->existeUsuario($_POST["email"])){
+      $dbAll->guardarUsuario($usuario);
+
+      $ext = pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION);
+      $imagenUsuario = dirname(__FILE__) . "/imagen-usuario/". $_POST["email"] . "." . $ext;
+      move_uploaded_file($_FILES["imagen"]["tmp_name"], $imagenUsuario);
+
       //loguea al usuario cuando se regisgtra
       if(empty($errores)){
        //logueamos al user => necesitamos session_start al incio de todos nuestros archivos. Ojo con los include/ require.
-        loguearUsuario($_POST["email"]);
+        $auth->loguearUsuario($_POST["email"]);
 
        //redirigimos a home
         header("Location:index.php");
@@ -84,15 +85,15 @@ if($_POST){
         <label for="pass2">Confirmar contraseña</label>
         <input type="password" name="pass2" id="pass2" value="" placeholder="Confirmar contraseña">
 
-        <label for="avatar">Imagen de perfil</label>
-        <input type="file" id="avatar" class="form-control" name="avatar">
+        <label for="imagen">Imagen de perfil</label>
+        <input type="file" id="imagen" class="form-control" name="imagen">
 
         <section class="ingreso-tyc">
           <input type="checkbox" name="tyc" value="" id="tyc">
           <label for="tyc">Acepto los terminos y condiciones</label><br>
         </section>
 
-        <?php if ($errores == ["nombre" => "", "email" => "", "pass" => "", "avatar" => ""]): ?>
+        <?php if ($errores == ["nombre" => "", "email" => "", "pass" => "", "imagen" => ""]): ?>
           <ul class="errores alert alert-danger d-none">
           </ul>
         <?php else: ?>

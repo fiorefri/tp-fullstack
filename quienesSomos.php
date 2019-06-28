@@ -1,16 +1,17 @@
 <?php
-require 'funciones.php';
+// require 'funciones.php';
+include 'init.php';
 
 if (isset($_COOKIE["email"])){
   loguearUsuario($_COOKIE["email"]);
 }
 
-$usuario = traerUsuarioLogueado();
-$usuarioLogueado = usuarioLogueado();
+$usuario = $dbAll->traerUsuarioLogueado();
+$usuarioLogueado = $auth->usuarioLogueado();
 
 //var_dump($_FILES);
-if (null !== $usuario["email"]) {
-  $img = glob("avatar-usuarios/" . $usuario['email'] . '*')[0]; // busca un patron dentro de carpetas o directorios
+if ($usuarioLogueado) {
+  $img = glob("imagen-usuario/" . $usuario->getEmail() . '*')[0]; // busca un patron dentro de carpetas o directorios
   //var_dump($img);
 }
 
