@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2019 a las 08:02:38
+-- Tiempo de generación: 10-07-2019 a las 15:11:55
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.27
 
@@ -35,6 +35,23 @@ CREATE TABLE `categorias` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `direcciones`
+--
+
+CREATE TABLE `direcciones` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `id_usuario` int(10) UNSIGNED DEFAULT NULL,
+  `calle` varchar(100) NOT NULL,
+  `altura` int(10) UNSIGNED NOT NULL,
+  `piso` int(10) UNSIGNED DEFAULT NULL,
+  `depto` varchar(50) DEFAULT NULL,
+  `codigo_postal` int(10) UNSIGNED NOT NULL,
+  `ciudad` varchar(200) NOT NULL
+) ;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `estados`
 --
 
@@ -52,6 +69,22 @@ CREATE TABLE `estados` (
 CREATE TABLE `formas_de_pagos` (
   `id` int(10) UNSIGNED NOT NULL,
   `nombre` varchar(100) NOT NULL
+) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos`
+--
+
+CREATE TABLE `productos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `nombre` varchar(200) NOT NULL,
+  `descripcion` varchar(300) DEFAULT NULL,
+  `precio` decimal(10,1) UNSIGNED NOT NULL,
+  `stock` int(10) UNSIGNED DEFAULT NULL,
+  `id_categoria` int(10) UNSIGNED DEFAULT NULL,
+  `imagen` varchar(200) DEFAULT NULL
 ) ;
 
 -- --------------------------------------------------------
@@ -80,6 +113,13 @@ CREATE TABLE `usuarios` (
 ) ;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `pass`, `imagen`) VALUES
+(1, 'Fiorella', 'fiorefri@gmail.com', '$2y$10$AhyRG87nZo3WSzqETjXnd.cBAlHi0M1JIije/O5xdOXtull8nWaSm', '');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -88,6 +128,13 @@ CREATE TABLE `usuarios` (
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `direcciones`
+--
+ALTER TABLE `direcciones`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `estados`
@@ -100,6 +147,13 @@ ALTER TABLE `estados`
 --
 ALTER TABLE `formas_de_pagos`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_categoria` (`id_categoria`);
 
 --
 -- Indices de la tabla `promos`
@@ -125,6 +179,12 @@ ALTER TABLE `categorias`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `direcciones`
+--
+ALTER TABLE `direcciones`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `estados`
 --
 ALTER TABLE `estados`
@@ -134,6 +194,12 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `formas_de_pagos`
 --
 ALTER TABLE `formas_de_pagos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -147,6 +213,22 @@ ALTER TABLE `promos`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `direcciones`
+--
+ALTER TABLE `direcciones`
+  ADD CONSTRAINT `direcciones_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
