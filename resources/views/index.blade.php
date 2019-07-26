@@ -13,21 +13,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/carousel-1.jpg" class="d-block w-100 banner" alt="">
+          <img src="/img/carousel-1.jpg" class="d-block w-100 banner" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5></h5>
             <p>Somos una marca joven, enfocados en crear verdadera cosmética natural, cuidando hasta los mas mínimos detalles en cuanto a ingredientes, producción y envasado, utilizando materias primas naturales de la mas alta calidad.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/carousel-2.jpg" class="d-block w-100 banner" alt="">
+          <img src="/img/carousel-2.jpg" class="d-block w-100 banner" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5></h5>
             <p>Nuestros productos están certificados por ANMAT, certificados SIN TACC, no testeamos en animales y no utilizamos parabenos.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/carousel-3.jpg" class="d-block w-100 banner" alt="">
+          <img src="/img/carousel-3.jpg" class="d-block w-100 banner" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5></h5>
             <p>Evitamos en todo proceso y en nuestras formulas materia primas derivadas del petróleo, tales como parafina, vaselina, siliconas, entre otras.</p>
@@ -47,11 +47,11 @@
   <section class="pagina-principal">
     <div class="producto row d-flex justify-content-around">
       <div class="rostro categoria col-xs-3 pb-5 pb-md-0">
-        <img class="item img-fluid"src="img/categoria-rostro.jpg" alt="">
+        <img class="item img-fluid"src="/img/categoria-rostro.jpg" alt="">
         <a href="more">Rostro</a>
       </div>
       <div class="cuerpo categoria col-xs-3">
-        <img class="item img-fluid"src="img/categoria-cuerpo.jpg" alt="">
+        <img class="item img-fluid"src="/img/categoria-cuerpo.jpg" alt="">
         <a href="more">Cuerpo</a>
       </div>
     </div>
@@ -61,27 +61,27 @@
     </div>
     <div class="articulosMasVendidos row">
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/crema-para-pies.jpg" alt="">
+          <img class="img-fluid"src="/img/crema-para-pies.jpg" alt="">
           <a href="#">Crema para pies con aceite de coco</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/kit-cremas-cuerpo-y-pelo.jpg" alt="">
+          <img class="img-fluid"src="/img/kit-cremas-cuerpo-y-pelo.jpg" alt="">
           <a href="#">Kit cremas cuerpo y pelo</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/serum-antiarrugas.jpg" alt="">
+          <img class="img-fluid"src="/img/serum-antiarrugas.jpg" alt="">
           <a href="#">Serum antiarrugas con retinol</a>
         </div>
         <div class="articulo  col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/crema-pelo.jpg" alt="">
+          <img class="img-fluid"src="/img/crema-pelo.jpg" alt="">
           <a href="#">Mascarilla para el pelo con aceite de oliva</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/mascarilla-carbon.jpg" alt="">
+          <img class="img-fluid"src="/img/mascarilla-carbon.jpg" alt="">
           <a href="#">Mascarilla de carbon reductora de poros</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="img/tonico-facial.jpg" alt="">
+          <img class="img-fluid"src="/img/tonico-facial.jpg" alt="">
           <a href="#">Tónico de caléndula para piel sensible</a>
         </div>
       </div>
