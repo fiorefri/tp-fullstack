@@ -80,8 +80,8 @@
         </ul>
         <ul>
           <div class="sesion-registrarse d-none d-md-block">
-            <li><a href="login.php">Iniciar Sesion</a></li>
-            <li><a href="registro.php">Registrarse</a></li>
+            <li><a href="login">Iniciar Sesion</a></li>
+            <li><a href="register">Registrarse</a></li>
           </div>
         </ul>
       </section>
