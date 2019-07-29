@@ -44,7 +44,6 @@
                </li>
                <li><a href="preg_frecuentes.php">Preguntas frecuentes</a></li>
                <li><a href="#">Contacto</a></li>
-               
              </ul>
            </nav>
          </div>
@@ -59,21 +58,19 @@
       <section class="social d-none d-md-block">
         <h3>Menu</h3>
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <!-- <li><a href="index.php">Home</a></li> -->
           <li><a href="#">Quienes somos</a></li>
           <li><a href="#">Productos</a></li>
           <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Promos</a></li>
+          <li><a href="#">Contacto</a></li>
         </ul>
       </section>
-
       <section class="tarjeta">
         <h3>Formas de Pago</h3>
         <ul>
           <li><a href="#"><i class="far fa-credit-card fa-2x"></i></a></li>
         </ul>
       </section>
-
       <section class="redes-login">
         <h3>Redes</h3>
         <ul class="redes">
