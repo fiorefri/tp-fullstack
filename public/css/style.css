@@ -2,7 +2,7 @@
 body {
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   /* background-image: url(../img/leaves.jpg); */
   margin: 0 auto;
 }
@@ -84,7 +84,7 @@ header label:hover{
 }
 .main-navigation li:hover{
   background: rgba(255,255,255, 0.6);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .main-navigation li a{
   display: block;
@@ -96,8 +96,7 @@ header label:hover{
   /* flex */
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
 }
 .login-container li{
   margin: 0 10px;
@@ -105,6 +104,7 @@ header label:hover{
 .inicio-registro ul,
 .redes {
   /* flex */
+  font-size: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -112,8 +112,9 @@ header label:hover{
 .redes{
   margin-left: 30px;
 }
-.logo-marca{
+.logo-marca {
   /* flex */
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -192,7 +193,7 @@ color: #1aa086;
 }
 .btn{
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 17px;
+  font-size: 15px;
 }
 .edicion-usuario {
   float: inherit;
@@ -237,12 +238,6 @@ color: #1aa086;
   .botones-inicio-registro-registrado li a:hover {
     background: rgba(255,255,255, 0.6);
 
-  }
-  .logo-marca a {
-    min-width: 12%;
-  }
-  .logo-marca h3{
-    font-size: 30px;
   }
 
   .main-navigation {
@@ -442,7 +437,12 @@ color: #1aa086;
 
 }
 footer h3{
+  font-size: 21px;
   text-align: center;
+}
+
+footer a:hover {
+  text-decoration: none;
 }
 
 .sesion-registrarse{
@@ -455,7 +455,7 @@ footer h3{
 }
 @media (max-width:768px){
   h3{
-    font-size: 80% ;
+    font-size: 21px;
   }
 
   body {
@@ -475,7 +475,8 @@ footer h3{
   background-color: inherit;
   border-color: inherit;
   text-align: center;
-  font-size: 30px;
+  font-size: 21px;
+  font-weight: bold;
   color: #148c75;
 }
 .login{
