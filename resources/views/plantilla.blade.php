@@ -14,21 +14,21 @@
     <header>
       <div class="container-full">
     		<div class="login-container ">
-    			<nav class="inicio-registro d-none d-md-inline-flex">
+    			{{-- <nav class="inicio-registro d-none d-md-inline-flex">
 
-    	     </nav>
-    	     <ul class="redes d-none d-md-inline-flex">
+    	     </nav> --}}
+           <ul class="redes d-none d-md-inline-flex">
     	     	<!-- <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
     					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
     					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li> -->
     					<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
+           <div class="logo-marca">
+           	<a href="index.php">
+             	<img src="img/nature_logo.png" alt="logotipo" class="logo">
+            	</a>
+          	</div>
     		</div>
-      	<div class="logo-marca">
-        	<a href="index.php">
-          	<img src="img/nature_logo.png" alt="logotipo" class="logo">
-         	</a>
-       	</div>
        	<div class="menu">
           <input type="checkbox" id="btn-menu">
           <label for="btn-menu"><i class="fas fa-bars fa-2x"></i></label>
