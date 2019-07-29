@@ -2,11 +2,11 @@
   <section class="social d-none d-md-block">
     <h3>Menu</h3>
     <ul>
-      <li><a href="index.php">Home</a></li>
+      <!-- <li><a href="index.php">Home</a></li> -->
       <li><a href="#">Quienes somos</a></li>
       <li><a href="#">Productos</a></li>
       <li><a href="#">Preguntas frecuentes</a></li>
-      <li><a href="#">Promos</a></li>
+      <li><a href="#">Contacto</a></li>
     </ul>
   </section>
 

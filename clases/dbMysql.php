@@ -10,10 +10,10 @@ class DbMysql extends Db
   function __construct()
   {
     //Gestionar la conexión a DB
-    $dsn = "mysql:host=localhost;dbname=tp_fullstack;port=3306";
+    $dsn = "mysql:host=localhost;dbname=proy;port=3306";
     //$dsn = "mysql:host=127.0.0.1;dbname=movies_db;port=3306";
     $user = "root";
-    $pass = "root";
+    $pass = "1975Judith";
 
     //$db = new PDO($dsn, $user, $pass);
 

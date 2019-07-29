@@ -2,8 +2,8 @@
 body {
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 20px;
-  background-image: url(../img/leaves.jpg);
+  font-size: 17px;
+  /* background-image: url(../img/leaves.jpg); */
   margin: 0 auto;
 }
 
@@ -13,8 +13,8 @@ a {
 }
 
 a:hover {
-  color: rgb(177, 148, 101);
-  text-decoration: underline;
+  color: #1aa086;
+
 }
 
 ul, ol {
@@ -31,16 +31,20 @@ header{
   right: 0;
   z-index: 990;
   padding: 15px 0 30px 0;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   max-width: 100%;
   /* flex */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: rgba(255,255,255, 0.6);
+  background-color: rgba(255,255,255, 0.9);
 }
+
 #btn-menu{
   display: none;
+}
+.fa-user:hover{
+  color: #1aa086;
 }
 .fa-bars{
   width: 20px;
@@ -55,10 +59,16 @@ header label{
 }
 header label:hover{
   cursor: pointer;
-  background: rgba(255,255,255, 0.6);
+  /* background: rgba(255,255,255, 0.9); */
+}
+.inicio-registro d-none d-md-inline-flex{
+  padding-bottom: none;
 }
 .navigation li a:hover{
-  color: rgb(177, 148, 101);
+  color: #1aa086;
+}
+.fa-shopping-cart:hover{
+  color: #1aa086;
 }
 .main-navigation ul{
   margin:0;
@@ -66,8 +76,11 @@ header label:hover{
   padding: 0;
   display: flex;
 }
-.main-navigation li{
+/* .main-navigation li{
   border-right: 1px solid #fff;
+} */
+.container-full{
+  height: 200;
 }
 .main-navigation li:hover{
   background: rgba(255,255,255, 0.6);
@@ -108,11 +121,8 @@ header label:hover{
   align-items: center;
 }
 .logo-marca a{
-  /* flex */
-  flex-basis: 5%;
-  color: #000;
-  text-decoration: none;
-
+  width: 15%;
+  padding: 10px;
 }
 .logo{
   width: 100%;
@@ -125,18 +135,23 @@ header label:hover{
   flex-direction: row;
   justify-content: space-around;
 }
-.parent {
+/* .parent {
   position: relative;
 }
 .parent ul a{
   color: #000;
-  background-color: rgba(177, 148, 101,0.8);
-}
+  /* background-color: rgba(177, 148, 101,0.8); */
+
+/* } */
+
 .parent ul {
   display: none;
 }
 .parent ul li{
-  width: 220px;
+  width: 190px;
+  position: relative;
+  top:160px;
+  left:475px;
 }
 .parent:hover ul{
   display: block;
@@ -144,11 +159,12 @@ header label:hover{
   top:30px;
   left: 20px;
   z-index: 999;
+  background: rgba(255,255,255, 0.6);
 }
 .parent li a:hover{
-background: rgba(177,148,101,0.7);
-color: #000;
-}
+
+color: #1aa086;
+} */
 
 .foto{
   border-radius: 90%;
@@ -176,7 +192,10 @@ color: #000;
   padding-bottom: 20px;
   color: rgb(177, 148, 101);
 }
-
+.btn{
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 17px;
+}
 .edicion-usuario {
   float: inherit;
 }
@@ -219,7 +238,7 @@ color: #000;
   }
   .botones-inicio-registro-registrado li a:hover {
     background: rgba(255,255,255, 0.6);
-    text-decoration: underline;
+
   }
   .logo-marca a {
     min-width: 12%;
@@ -230,7 +249,7 @@ color: #000;
 
   .main-navigation {
     position: absolute;
-    background: rgb(177, 148, 101);
+    /* background: rgb(177, 148, 101); */
     width: 100%;
     margin-left: -100%;
     transition: all 0.5s;
@@ -239,9 +258,15 @@ color: #000;
   }
   .main-navigation ul{
     flex-direction: column;
+
+    background: rgba(255,255,255);
+    color: #1aa086;
+
   }
   .main-navigation li{
     border-top: 1px solid #fff;
+    text-align: center;
+
   }
   #btn-menu:checked ~ .main-navigation {
     margin: 0;
@@ -251,14 +276,17 @@ color: #000;
       top: 20%;
       left: 90%;
     }
-    .parent ul a:hover{
-      background-color: rgb(177, 148, 101);
+
+     .parent ul a:hover{
+      background-color: #fff;
       color: #000;
     }
 
     .parent li a:hover{
     background: rgba(177,148,101,0.6);
     }
+
+
 
     .inicio-registro {
       display: block;
@@ -280,6 +308,18 @@ color: #000;
     left: 0;
     min-height: 300px;
 }*/
+@media only screen and (max-width:992px){
+  .parent ul li{
+    width: 190px;
+    position: relative;
+    top:130px;
+    left:190px;
+  }
+  /* body{
+    background-color: blue;
+  } */
+}
+
 
 body {
   position: absolute;
@@ -378,6 +418,9 @@ footer{
   background-color: rgba(255,255,255, 0.6);
 
 }
+.forgot:hover{
+color: #1aa086;
+}
 .social {
   width: 30%;
 }
@@ -459,17 +502,18 @@ button {
   font-size: 17px;
   padding: 10px 20px;
   color: #fff;
-  background-color: rgb(177, 148, 101);
-  border: rgb(177, 148, 101) solid 1px;
+  background-color: #44d3a3;
   border-radius: 5px;
 }
 
 .forgot {
   font-size: 17px;
   padding-left: 3%;
-  color: rgb(177, 148, 101);
+  color: #000;
 }
-
+.forgot:hover{
+color: #1aa086;
+}
 .divisor {
   margin: 20% 5% 10%;
 }
@@ -483,7 +527,7 @@ button {
 }
 
 .registrate, .ingresa {
-  background-color: rgb(177, 148, 101);
+  background-color: #44d3a3;
   color: #fff;
   font-size: 17px;
   border-radius: 5px;
@@ -514,4 +558,19 @@ button {
   .registro h2, .iniciar-sesion h2 {
     margin-bottom: 5%;
   }
+}
+.preg_frecuentes{
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 17px;
+  /* background-image: url(../img/leaves.jpg); */
+  margin: 0 auto;
+
+}
+.preg_frecuentes h3{
+  color: #1aa086;
+  text-align: center;
+}
+.preg_frecuentes h5{
+  color: #1aa086;
 }
