@@ -421,97 +421,28 @@ footer h3{
     padding-top: 150px;
   }
 }
+
 /* login.php y registro.php */
 .formulario {
-  background-color: #fff;
-  margin: 80px auto;
-  max-width: 600px;
-  padding: 10%;
+  background-color: rgba(250, 250, 250, 0.75);
+  margin: auto;
+  padding: 5%;
+  border-color: #fff;
 }
 
-.formulario h1 {
+.titulo {
+  background-color: inherit;
+  border-color: inherit;
   text-align: center;
-  padding-bottom: 5%;
+  font-size: 30px;
+  color: #148c75;
 }
 
-input {
-  width: 94.8%;
-  margin: 0 0 10%;
-  padding: 10px;
-  border-radius: 3px;
-  border: #ccc solid 1px;
-  font-size: 15px;
+.ingresar-crear {
+  background-color: #148c75;
+  border-color: #148c75;
 }
 
-#recordarme {
-  width: auto;
-}
-
-.ingreso-tyc input {
-  width: auto;
-}
-
-.ingreso-forgot, .ingreso-registro {
-  text-align: center;
-}
-
-button {
-  font-size: 17px;
-  padding: 10px 20px;
-  color: #fff;
-  background-color: rgb(177, 148, 101);
-  border: rgb(177, 148, 101) solid 1px;
-  border-radius: 5px;
-}
-
-.forgot {
-  font-size: 17px;
-  padding-left: 3%;
-  color: rgb(177, 148, 101);
-}
-
-.divisor {
-  margin: 20% 5% 10%;
-}
-
-.registro, .iniciar-sesion {
-  text-align: center;
-}
-
-.registro h2, .iniciar-sesion h2 {
-  margin-bottom: 10%;
-}
-
-.registrate, .ingresa {
-  background-color: rgb(177, 148, 101);
-  color: #fff;
-  font-size: 17px;
-  border-radius: 5px;
-  padding: 10px 15px;
-}
-
-.errores {
-  width: 96.8%;
-  font-size: 15px;
-}
-
-/* Pantalla M: 992px */
-@media (min-width: 992px) {
-  .formulario {
-    max-width: 800px;
-    padding: 5%;
-  }
-
-  input {
-    width: 96.7%;
-    margin: 0 0 4%;
-  }
-
-  .divisor {
-    margin: 10% 5% 5%;
-  }
-
-  .registro h2, .iniciar-sesion h2 {
-    margin-bottom: 5%;
-  }
+.olvidaste {
+  color: #148c75;
 }
