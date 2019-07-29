@@ -478,7 +478,9 @@ footer h3{
   font-size: 30px;
   color: #148c75;
 }
-
+.login{
+  background-image:url("img/cuerpo/aceiteCorporal.png") no-repeat scroll 10px 10px;
+}
 .ingresar-crear {
   background-color: #148c75;
   border-color: #148c75;
