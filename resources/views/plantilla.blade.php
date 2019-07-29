@@ -15,40 +15,36 @@
       <div class="container-full">
     		<div class="login-container ">
     			<nav class="inicio-registro d-none d-md-inline-flex">
-    	      <ul>
 
-
-    	      </ul>
     	     </nav>
     	     <ul class="redes d-none d-md-inline-flex">
-    	     	<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+    	     	<!-- <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
     					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-    					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+    					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li> -->
     					<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
     		</div>
       	<div class="logo-marca">
         	<a href="index.php">
-          	<img src="/img/logo.png" alt="logotipo" class="logo">
+          	<img src="img/nature_logo.png" alt="logotipo" class="logo">
          	</a>
-         	<h3><a href="index.php">Nature</a></h3>
        	</div>
        	<div class="menu">
           <input type="checkbox" id="btn-menu">
           <label for="btn-menu"><i class="fas fa-bars fa-2x"></i></label>
           <nav class="main-navigation">
              <ul class="navigation">
-               <li><a href="index.php">Home</a></li>
+               <!-- <li><a href="index.php">Home</a></li> -->
                <li><a href="quienesSomos.php">Quienes somos</a></li>
-               <li class="parent"><a href="#">Productos</a>
+               <li class="parent"> <a href="#">Productos</a>
                 <ul>
-                  <li><a href="#">Cremas Rostro</a></li>
-                  <li><a href="#">Cremas Cuerpo</a></li>
+                  <li><a href="crema_rostro.php">Cremas Rostro</a></li>
+                  <li><a href="crema_cuerpo.php">Cremas Cuerpo</a></li>
                 </ul>
                </li>
-               <li><a href="#">Preguntas frecuentes</a></li>
-               <li><a href="#">Promos</a></li>
-
+               <li><a href="preg_frecuentes.php">Preguntas frecuentes</a></li>
+               <li><a href="#">Contacto</a></li>
+               
              </ul>
            </nav>
          </div>
