@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-12 text-center">
                                 <button type="submit" class="ingresar-crear btn btn-primary">
                                     {{ __('Crear Cuenta') }}
                                 </button>
