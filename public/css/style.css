@@ -30,8 +30,8 @@ header{
   left: 0;
   right: 0;
   z-index: 990;
-  padding: 15px 0 30px 0;
-  margin-bottom: 5px;
+  padding: 15px 0 15px 0;
+  /* margin-bottom: 5px; */
   max-width: 100%;
   /* flex */
   display: flex;
@@ -80,7 +80,7 @@ header label:hover{
   border-right: 1px solid #fff;
 } */
 .container-full{
-  height: 200;
+  height: 92px;
 }
 .main-navigation li:hover{
   background: rgba(255,255,255, 0.6);
@@ -114,7 +114,7 @@ header label:hover{
 }
 .logo-marca {
   /* flex */
-  width: 90%;
+  min-width: 90%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -136,12 +136,15 @@ header label:hover{
   flex-direction: row;
   justify-content: space-around;
 }
-/* .parent {
+.parent {
   position: relative;
 }
 .parent ul a{
   color: #000;
-  background-color: rgba(227, 254, 195,0.8);
+  background-color: rgba(250, 250, 250, 0.8);
+}
+.parent ul a:hover {
+  color: #1aa086;
 }
 .parent ul {
   display: none;
@@ -149,8 +152,8 @@ header label:hover{
 .parent ul li{
   width: 190px;
   position: relative;
-  top:160px;
-  left:475px;
+  display: block;
+  cursor: pointer;
 }
 .parent:hover ul{
   display: block;
@@ -161,9 +164,8 @@ header label:hover{
   background: rgba(255,255,255, 0.6);
 }
 .parent li a:hover{
-
-color: #1aa086;
-} */
+  color: #1aa086;
+}
 
 .foto{
   border-radius: 90%;
@@ -215,6 +217,16 @@ color: #1aa086;
 }
 
 @media (max-width:768px){
+  .container-full{
+    height: 70px;
+  }
+  .login-container {
+    justify-content: center;
+  }
+  .logo-marca a {
+    text-align: left;
+    min-width: 30%;
+  }
   header label{
     display: block;
     }
@@ -263,10 +275,11 @@ color: #1aa086;
   }
   #btn-menu:checked ~ .main-navigation {
     margin: 0;
+    top: 100%;
     }
     .fa-bars{
       position: absolute;
-      top: 20%;
+      top: 40%;
       left: 90%;
     }
 
@@ -321,7 +334,7 @@ body {
   left: 0;
   bottom: 0;
   margin: auto;
-  padding-top: 250px;
+  padding-top: 150px;
   max-width: 1500px;
 }
 

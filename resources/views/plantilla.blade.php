@@ -36,7 +36,7 @@
              <ul class="navigation">
                <!-- <li><a href="index.php">Home</a></li> -->
                <li><a href="quienesSomos.php">Quienes somos</a></li>
-               <li class="parent"> <a href="#">Productos</a>
+               <li class="parent"> <a href="#">Productos  <i class="fa fa-angle-down"></i></a>
                 <ul>
                   <li><a href="crema_rostro.php">Cremas Rostro</a></li>
                   <li><a href="crema_cuerpo.php">Cremas Cuerpo</a></li>
