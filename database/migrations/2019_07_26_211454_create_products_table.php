@@ -19,8 +19,10 @@ class CreateProductsTable extends Migration
           $table->string('descripcion');
           $table->string('precio');
           $table->string('stock');
-          $table->foreign('id_categories')->references('id')->on('categories');
-          $table->foreign('id_offers')->references('id')->on('offers');
+          $table->bigInteger('id_category')->unsigned();
+          $table->foreign('id_category')->references('id')->on('categories');
+          $table->bigInteger('id_offer')->unsigned();
+          $table->foreign('id_offer')->references('id')->on('offers');
           $table->string('imagen');
           $table->rememberToken();
           $table->timestamps();
