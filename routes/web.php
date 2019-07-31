@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
 Auth::routes();
 
+<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/products', 'ProductController@index'); //Listamos productos
@@ -35,3 +32,17 @@ Route::get('/category/{id?}', 'ProductController@index');//categorias de product
 Route::get('/cart', 'CartController@show');//mostrar carrito
 
 Route::get('/home', 'QuienesSomosController@index')->name('home')
+=======
+Route::get('/', 'UserController@index');
+Route::get('/index', 'UserController@index');
+
+Route::get('/carrito', 'CartController@index');
+
+Route::get('/quienes_somos', 'UserController@quienes_somos');
+
+Route::get('/faq', 'UserController@faq');
+
+Route::get('/productos', 'ProductController@index');
+
+Route::get('/contacto', 'UserController@contacto');
+>>>>>>> e937a2bd3d7d2922d833ee32bbe381c17f3716f0

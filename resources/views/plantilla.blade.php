@@ -21,10 +21,10 @@
     	     	<!-- <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
     					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
     					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li> -->
-    					<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+    					<li><a href="carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
            <div class="logo-marca">
-           	<a href="index.php">
+           	<a href="/">
              	<img src="img/nature_logo.png" alt="logotipo" class="logo">
             	</a>
           	</div>
@@ -35,15 +35,10 @@
           <nav class="main-navigation">
              <ul class="navigation">
                <!-- <li><a href="index.php">Home</a></li> -->
-               <li><a href="quienesSomos.php">Quienes somos</a></li>
-               <li class="parent"> <a href="#">Productos  <i class="fa fa-angle-down"></i></a>
-                <ul>
-                  <li><a href="crema_rostro.php">Cremas Rostro</a></li>
-                  <li><a href="crema_cuerpo.php">Cremas Cuerpo</a></li>
-                </ul>
-               </li>
-               <li><a href="preg_frecuentes.php">Preguntas frecuentes</a></li>
-               <li><a href="#">Contacto</a></li>
+               <li><a href="quienes_somos">Quienes somos</a></li>
+               <li><a href="productos">Productos</a></li>
+               <li><a href="faq">Preguntas frecuentes</a></li>
+               <li><a href="contacto">Contacto</a></li>
              </ul>
            </nav>
          </div>
@@ -59,10 +54,10 @@
         <h3>Menu</h3>
         <ul>
           <!-- <li><a href="index.php">Home</a></li> -->
-          <li><a href="#">Quienes somos</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Preguntas frecuentes</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="quienes_somos">Quienes somos</a></li>
+          <li><a href="productos">Productos</a></li>
+          <li><a href="faq">Preguntas frecuentes</a></li>
+          <li><a href="contacto">Contacto</a></li>
         </ul>
       </section>
       <section class="tarjeta">
