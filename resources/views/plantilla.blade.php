@@ -21,10 +21,10 @@
     	     	<!-- <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
     					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
     					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li> -->
-    					<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+    					<li><a href="carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
            <div class="logo-marca">
-           	<a href="index.php">
+           	<a href="/">
              	<img src="img/nature_logo.png" alt="logotipo" class="logo">
             	</a>
           	</div>
@@ -38,7 +38,7 @@
                <li><a href="quienes_somos">Quienes somos</a></li>
                <li><a href="productos">Productos</a></li>
                <li><a href="faq">Preguntas frecuentes</a></li>
-               <li><a href="#">Contacto</a></li>
+               <li><a href="contacto">Contacto</a></li>
              </ul>
            </nav>
          </div>
@@ -57,7 +57,7 @@
           <li><a href="quienes_somos">Quienes somos</a></li>
           <li><a href="productos">Productos</a></li>
           <li><a href="faq">Preguntas frecuentes</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="contacto">Contacto</a></li>
         </ul>
       </section>
       <section class="tarjeta">
