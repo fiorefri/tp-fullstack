@@ -12,9 +12,15 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category = null)
     {
-        return view('productos');
+      if($category){
+        $products = Product::all()->where('category', $category);
+        return view('products', compact('products'));
+      } else {
+      $products = Product::all(); //Traemos todos los productos.
+      return view('products', compact('products')); //Pasamos el array a la vista.
+      }
     }
 
     /**
@@ -44,9 +50,11 @@ class ProductController extends Controller
      * @param  \App\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(product $product)
+    public function show($id)
     {
-        //
+      $product = Product::find($id); //Identificamos el producto que queremos mostrar.
+      return view('product', compact('product')); //Pasamos el dato a la vista.
+    }
     }
 
     /**

@@ -21,6 +21,7 @@
     	     	<!-- <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
     					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
     					<li><a href="#"><i class="fab fa-twitter-square"></i></a></li> -->
+              <li><a href=""><i class="fas fa-user"></i></a></li> 
     					<li><a href="carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
            <div class="logo-marca">
