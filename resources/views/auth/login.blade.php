@@ -3,7 +3,7 @@
 @section('titulo', 'Iniciar Sesión')
 
 @section('principal')
-<body class="login">
+<body class="login-register">
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">

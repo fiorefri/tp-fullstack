@@ -13,7 +13,6 @@
 
 Auth::routes();
 
-<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/products', 'ProductController@index'); //Listamos productos

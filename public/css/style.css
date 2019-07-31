@@ -14,7 +14,6 @@ a {
 
 a:hover {
   color: #1aa086;
-
 }
 
 ul, ol {
@@ -494,9 +493,9 @@ footer a:hover {
   font-weight: bold;
   color: #148c75;
 }
-.login{
-  background-image: url("../img/9824wide.jpg");
-  background-size: 100%;
+.login-register{
+  background-image: url("../img/flowerswallpaper-1900x1080.jpg");
+  background-size: strech;
 }
 .ingresar-crear {
   background-color: #148c75;
