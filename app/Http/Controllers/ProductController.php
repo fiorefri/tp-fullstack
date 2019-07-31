@@ -55,7 +55,6 @@ class ProductController extends Controller
       $product = Product::find($id); //Identificamos el producto que queremos mostrar.
       return view('product', compact('product')); //Pasamos el dato a la vista.
     }
-    }
 
     /**
      * Show the form for editing the specified resource.
