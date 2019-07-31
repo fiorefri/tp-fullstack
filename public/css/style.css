@@ -80,7 +80,7 @@ header label:hover{
   border-right: 1px solid #fff;
 } */
 .container-full{
-  height: 92px;
+  height: 107px;
 }
 .main-navigation li:hover{
   background: rgba(255,255,255, 0.6);
@@ -495,8 +495,8 @@ footer a:hover {
   color: #148c75;
 }
 .login{
-  background-image:url("../img/hojas tropicales.jpg");
-  background-repeat: round;
+  background-image: url("../img/9824wide.jpg");
+  background-size: 100%;
 }
 .ingresar-crear {
   background-color: #148c75;
