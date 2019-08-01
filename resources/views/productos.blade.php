@@ -2,6 +2,8 @@
 
 @section('titulo', 'Productos')
 
+@section('class-body', 'container')
+
 @section('principal')
   <div class="crema_cuerpo row">
     <div class="articulo col-xs-12 col-md-6 col-lg-4">
@@ -33,16 +35,6 @@
       <br>
       <a href="#">Gel de ducha</a>
     </div>
-    <div class="articulo col-xs-12 col-md-6 col-lg-4">
-      <img class="img-fluid"src="img/cuerpo/kit-cremas-cuerpo-y-pelo.jpg" alt="">
-      <br>
-      <a href="#">Kit cremas cuerpo y pelo</a>
-    </div>
-    <div class="articulo col-xs-12 col-md-6 col-lg-4">
-      <img class="img-fluid"src="img/cuerpo/crema-para-pies.jpg" alt="">
-      <br>
-      <a href="#">Crema para pies</a>
-    </div>
   </div>
 
   <div class="crema_rostro row">
@@ -71,16 +63,6 @@
       <a href="#">Crema gel de noche</a>
     </div>
     <div class="articulo col-xs-12 col-md-6 col-lg-4">
-      <img class="img-fluid"src="img/rostro/macarilla-carbon.jpg" alt="">
-      <br>
-      <a href="#">Mascarilla carbón</a>
-    </div>
-    <div class="articulo col-xs-12 col-md-6 col-lg-4">
-      <img class="img-fluid"src="img/rostro/serum-antiarrugas.JPG" alt="">
-      <br>
-      <a href="#">Serum anti-arrugas</a>
-    </div>
-    <div class="articulo col-xs-12 col-md-6 col-lg-4">
       <img class="img-fluid"src="img/rostro/serumAcidoHialuronico.png" alt="">
       <br>
       <a href="#">Serum acido hialurónico</a>
@@ -90,13 +72,5 @@
       <br>
       <a href="#">Serum de caléndula</a>
     </div>
-    <div class="articulo col-xs-12 col-md-6 col-lg-4">
-      <img class="img-fluid"src="img/rostro/tonico-facial.JPG" alt="">
-      <br>
-      <a href="#">Tónico facial</a>
-    </div>
   </div>
-
-
-
 @endsection
