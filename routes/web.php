@@ -27,6 +27,7 @@ Route::get('/productos', 'ProductController@index');
 Route::get('/contacto', 'UserController@contacto');
 
 Route::get('/cuenta', 'UserController@cuenta')->middleware('auth');
+
 Route::get('/direcciones', 'AddressController@index')->middleware('auth');
 
 // Aca va productos

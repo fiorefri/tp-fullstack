@@ -15,13 +15,13 @@ class CreateCartsTable extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
-            $table->bigInteger('id_address')->unsigned();
-            $table->foreign('id_address')->references('id')->on('addresses');
-            $table->bigInteger('id_payment')->unsigned();
-            $table->foreign('id_payment')->references('id')->on('payments');
+            $table->bigInteger('address_id')->unsigned();
+            $table->foreign('address_id')->references('id')->on('addresses');
+            $table->bigInteger('payment_id')->unsigned();
+            $table->foreign('payment_id')->references('id')->on('payments');
             $table->string('close_at');
             $table->softDeletes();
         });

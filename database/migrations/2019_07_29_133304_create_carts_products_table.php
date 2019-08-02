@@ -16,10 +16,10 @@ class CreateCartsProductsTable extends Migration
         Schema::create('carts_products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->bigInteger('id_cart')->unsigned();
-            $table->foreign('id_cart')->references('id')->on('carts');
-            $table->bigInteger('id_product')->unsigned();
-            $table->foreign('id_product')->references('id')->on('products');
+            $table->bigInteger('cart_id')->unsigned();
+            $table->foreign('cart_id')->references('id')->on('carts');
+            $table->bigInteger('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products');
             $table->string('cant_product');
             $table->string('precio_total');
         });
