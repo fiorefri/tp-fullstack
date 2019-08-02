@@ -11,28 +11,32 @@
 |
 */
 
+// INDEX
 Route::get('/', 'UserController@index');
 Route::get('/index', 'UserController@index');
 
+// LOGIN Y REGISTRO
 Auth::routes();
 
+// CARRITO
 Route::get('/carrito', 'CartController@index');
 
+// QUIENES SOMOS
 Route::get('/quienes_somos', 'UserController@quienes_somos');
 
+// PREGUNTAS FRECUENTES
 Route::get('/faq', 'UserController@faq');
 
-Route::get('/productos', 'ProductController@index');
-Route::get('/productosAgregar', 'ProductController@create');
-
+// CONTACTO
 Route::get('/contacto', 'UserController@contacto');
 
+// MI CUENTA
 Route::get('/cuenta', 'UserController@cuenta')->middleware('auth');
 
+// DIRECCIONES
 Route::get('/direcciones', 'AddressController@index')->middleware('auth');
+Route::get('/direcciones/agregar', 'AddressController@create');
 
-// Aca va productos
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// PRODUCTOS
+Route::get('/productos', 'ProductController@index');
+Route::get('/productosAgregar', 'ProductController@create');
