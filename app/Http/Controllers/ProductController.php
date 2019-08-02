@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -25,8 +26,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('formproductos');
+    {   $categorias = Category::all();
+        return view('formproductos', compact('categorias'));
     }
 
     /**
@@ -49,7 +50,7 @@ class ProductController extends Controller
       $producto->id_category = $request->id_category;
       $producto->id_offer = $request->id_offer;
       $producto->imagen = $request->imagen;
-
+      dd($producto);
       $producto->save();
       return view('/productosAgregar');
     }
