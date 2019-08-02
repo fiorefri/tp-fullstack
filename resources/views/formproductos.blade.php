@@ -21,9 +21,12 @@
     <input type="number" name="stock" value="" placeholder="stock">
   </p>
   <p>
-    <input type="text" name="id_category" value="" placeholder="categoria">
-    select
-    foreach que recorra categories y por cada vuelta un option con los datos de cada categoria.
+    <select class="" name="id_category">
+      @foreach($categorias as $categoria)
+      <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+      @endforeach
+
+    </select>
   </p>
   <p>
     <input type="text" name="id_offer" value="" placeholder="productos en oferta">
