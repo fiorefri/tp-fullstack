@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Playfair+Display" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>@yield('titulo')</title>
   </head>
 
@@ -26,7 +26,7 @@
     	     </ul>
            <div class="logo-marca">
            	<a href="/">
-             	<img src="img/nature_logo.png" alt="logotipo" class="logo">
+             	<img src="/img/nature_logo.png" alt="logotipo" class="logo">
             	</a>
           	</div>
     		</div>
@@ -36,10 +36,10 @@
           <nav class="main-navigation">
              <ul class="navigation">
                <!-- <li><a href="index.php">Home</a></li> -->
-               <li><a href="quienes_somos">Quienes somos</a></li>
-               <li><a href="productos">Productos</a></li>
-               <li><a href="faq">Preguntas frecuentes</a></li>
-               <li><a href="contacto">Contacto</a></li>
+               <li><a href="/quienes_somos">Quienes somos</a></li>
+               <li><a href="/productos">Productos</a></li>
+               <li><a href="/faq">Preguntas frecuentes</a></li>
+               <li><a href="/contacto">Contacto</a></li>
              </ul>
            </nav>
          </div>
@@ -55,10 +55,10 @@
         <h3>Menu</h3>
         <ul>
           <!-- <li><a href="index.php">Home</a></li> -->
-          <li><a href="quienes_somos">Quienes somos</a></li>
-          <li><a href="productos">Productos</a></li>
-          <li><a href="faq">Preguntas frecuentes</a></li>
-          <li><a href="contacto">Contacto</a></li>
+          <li><a href="/quienes_somos">Quienes somos</a></li>
+          <li><a href="/productos">Productos</a></li>
+          <li><a href="/faq">Preguntas frecuentes</a></li>
+          <li><a href="/contacto">Contacto</a></li>
         </ul>
       </section>
       <section class="tarjeta">
@@ -76,8 +76,8 @@
         </ul>
         <ul>
           <div class="sesion-registrarse d-none d-md-block">
-            <li><a href="login">Iniciar Sesion</a></li>
-            <li><a href="register">Registrarse</a></li>
+            <li><a href="/login">Iniciar Sesion</a></li>
+            <li><a href="/register">Registrarse</a></li>
           </div>
         </ul>
       </section>
