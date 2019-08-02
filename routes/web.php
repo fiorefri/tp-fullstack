@@ -19,7 +19,7 @@ Route::get('/index', 'UserController@index');
 Auth::routes();
 
 // CARRITO
-Route::get('/carrito', 'CartController@index');
+Route::get('/carrito', 'CartController@index')->middleware('auth');
 
 // QUIENES SOMOS
 Route::get('/quienes_somos', 'UserController@quienes_somos');
