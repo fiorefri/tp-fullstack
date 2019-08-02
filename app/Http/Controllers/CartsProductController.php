@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\cartsProduct;
+use App\CartsProduct;
 use Illuminate\Http\Request;
 
 class CartsProductController extends Controller

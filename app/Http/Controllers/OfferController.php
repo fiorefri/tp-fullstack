@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\offer;
+use App\Offer;
 use Illuminate\Http\Request;
 
 class OfferController extends Controller

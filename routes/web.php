@@ -11,12 +11,10 @@
 |
 */
 
-Auth::routes();
-
 Route::get('/', 'UserController@index');
 Route::get('/index', 'UserController@index');
 
-// Aca va registro/login
+Auth::routes();
 
 Route::get('/carrito', 'CartController@index');
 
@@ -28,6 +26,15 @@ Route::get('/productos', 'ProductController@index');
 
 Route::get('/contacto', 'UserController@contacto');
 
-// Aca va el user
+Route::get('/cuenta', 'UserController@cuenta')->middleware('auth');
+Route::get('/direcciones', 'AddressController@index')->middleware('auth');
 
 // Aca va productos
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

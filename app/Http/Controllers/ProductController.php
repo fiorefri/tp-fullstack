@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\product;
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,12 +12,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function index() 
-     {
-       return view('productos');
-     }
-    // public function index($category = null)
-    // {
+    public function index($category = null)
+    {
+      return view('productos');
+    }
     //   if($category){
     //     $products = Product::all()->where('category', $category);
     //     return view('products', compact('products'));
