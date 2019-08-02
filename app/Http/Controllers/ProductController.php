@@ -37,7 +37,21 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // $reglas=[];
+      // $mensajes=[];
+      // $this->validate($request, $reglas, $mensajes);
+      //
+      $producto = new Product;
+      $producto->nombre = $request->nombre
+      $producto->descripcion = $request->descripcion
+      $producto->precio = $request->precio
+      $producto->stock = $request->stock
+      $producto->id_category = $request->id_category
+      $producto->id_offer = $request->id_offer
+      $producto->imagen = $request->imagen
+
+      $producto->save();
+      return view('/productosAgregar');
     }
 
     /**
