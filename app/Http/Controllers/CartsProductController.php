@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\CartsProduct;
+use App\Product;
 use Illuminate\Http\Request;
+use Auth;
 
 class CartsProductController extends Controller
 {
@@ -35,7 +37,20 @@ class CartsProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      $product = Product::find($request->id);
+
+      $cart = new CartsProduct; //Recordar que cada Cart es un item dentro del carrito.
+      $cart->id_product = $product->id;
+      $cart->name = $product->nombre;
+      $cart->price = $product->precio;
+      $cart->cant_producto = $request->quantity;
+      $cart->user_id = Auth::user()->id;
+
+      dd($cart);
+      $cart->save();
+      return redirect('/products');
+
     }
 
     /**

@@ -19,7 +19,7 @@ Route::get('/index', 'UserController@index');
 Auth::routes();
 
 // CARRITO
-Route::get('/carrito', 'CartController@index');
+Route::get('/carrito', 'CartController@index')->middleware('auth');
 
 // QUIENES SOMOS
 Route::get('/quienes_somos', 'UserController@quienes_somos');
@@ -27,7 +27,6 @@ Route::get('/quienes_somos', 'UserController@quienes_somos');
 // PREGUNTAS FRECUENTES
 Route::get('/faq', 'UserController@faq');
 
-// CONTACTO
 Route::get('/contacto', 'UserController@contacto');
 
 // MI CUENTA
@@ -41,3 +40,6 @@ Route::post('/direcciones/agregar', 'AddressController@store')->middleware('auth
 // PRODUCTOS
 Route::get('/productos', 'ProductController@index');
 Route::get('/productosAgregar', 'ProductController@create');
+Route::post('/productosAgregar', 'ProductController@store');
+Route::get('/product-detail/{id}', 'ProductController@show')->name('product-detail');
+Route::post('/cart-add', 'CartsProductController@store')->name('cart-add')->middleware('auth');
