@@ -28,7 +28,7 @@
     <input type="text" name="id_offer" value="" placeholder="productos en oferta">
   </p>
   <p>
-    <input type="image" name="imagen" value="">
+    <input type="file" name="imagen" value="">
   </p>
   <p>
     <input type="text" name="remember_token" value="" placeholder="">
