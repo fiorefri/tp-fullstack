@@ -23,6 +23,7 @@ Route::get('/quienes_somos', 'UserController@quienes_somos');
 Route::get('/faq', 'UserController@faq');
 
 Route::get('/productos', 'ProductController@index');
+Route::get('/productosAgregar', 'ProductController@create');
 
 Route::get('/contacto', 'UserController@contacto');
 
@@ -31,10 +32,6 @@ Route::get('/cuenta', 'UserController@cuenta')->middleware('auth');
 Route::get('/direcciones', 'AddressController@index')->middleware('auth');
 
 // Aca va productos
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
