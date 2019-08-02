@@ -35,7 +35,8 @@ Route::get('/cuenta', 'UserController@cuenta')->middleware('auth');
 
 // DIRECCIONES
 Route::get('/direcciones', 'AddressController@index')->middleware('auth');
-Route::get('/direcciones/agregar', 'AddressController@create');
+Route::get('/direcciones/agregar', 'AddressController@create')->middleware('auth');
+Route::post('/direcciones/agregar', 'AddressController@store')->middleware('auth');
 
 // PRODUCTOS
 Route::get('/productos', 'ProductController@index');

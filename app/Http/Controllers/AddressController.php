@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AddressController extends Controller
 {
@@ -14,7 +15,9 @@ class AddressController extends Controller
      */
     public function index()
     {
-        return view('direcciones');
+        $user_id = Auth::user()->id;
+        $address = Address::where('user_id', '=', $user_id);
+        return view('direcciones', compact('address'));
     }
 
     /**
@@ -24,7 +27,7 @@ class AddressController extends Controller
      */
     public function create()
     {
-        //
+        return view('agregar_direcciones');
     }
 
     /**
@@ -35,7 +38,28 @@ class AddressController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $rules = [
+        "calle" => "filled|string",
+        "altura" => "filled|string",
+        "piso" => "filled|integer",
+        "depto" => "filled|string",
+        "codigo_postal" => "filled|integer|max:4",
+        "ciudad" => "filled|string"
+      ];
+
+      $this->validate($request, $rules);
+
+      $address = new Address;
+      $address->user_id = Auth::user()->id;
+      $address->calle = $request->calle;
+      $address->altura = $request->altura;
+      $address->piso = $request->piso;
+      $address->depto = $request->depto;
+      $address->codigo_postal = $request->codigo_postal;
+      $address->ciudad = $request->ciudad;
+
+      $address->save();
+      return redirect("direcciones");
     }
 
     /**
