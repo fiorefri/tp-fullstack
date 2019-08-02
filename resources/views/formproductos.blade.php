@@ -21,7 +21,7 @@
     <input type="number" name="stock" value="" placeholder="stock">
   </p>
   <p>
-    <select class="" name="id_category">
+    <select class="" name="category_id">
       @foreach($categorias as $categoria)
       <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
       @endforeach
@@ -29,7 +29,7 @@
     </select>
   </p>
   <p>
-    <input type="text" name="id_offer" value="" placeholder="productos en oferta">
+    <input type="text" name="offer_id" value="" placeholder="productos en oferta">
   </p>
   <p>
     <input type="file" name="imagen" value="">

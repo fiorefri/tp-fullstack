@@ -51,8 +51,8 @@ class ProductController extends Controller
       $producto->descripcion = $request->descripcion;
       $producto->precio = $request->precio;
       $producto->stock = $request->stock;
-      $producto->id_category = $request->id_category;
-      $producto->id_offer = $request->id_offer;
+      $producto->category_id = $request->category_id;
+      $producto->offer_id = $request->offer_id;
       $producto->imagen = $file;
       $producto->save();
       return redirect('/productosAgregar');
