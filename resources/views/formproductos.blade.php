@@ -6,8 +6,7 @@
 
 @section('principal')
 @csrf
-{{-- {{csrf_field()}} --}}
-<form class="" action="/productosAgregar" method="post">
+<form class="" action="/productosAgregar" method="post" enctype="multipart/form-data">
 
   <p>
     <input type="text" name="nombre" value="" placeholder="nombre producto">

@@ -24,6 +24,7 @@ Route::get('/faq', 'UserController@faq');
 
 Route::get('/productos', 'ProductController@index');
 Route::get('/productosAgregar', 'ProductController@create');
+Route::post('/productosAgregar', 'ProductController@store')
 
 Route::get('/contacto', 'UserController@contacto');
 
