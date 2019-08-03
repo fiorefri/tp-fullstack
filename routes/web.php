@@ -46,5 +46,6 @@ Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy')->middlewar
 Route::get('/productos', 'ProductController@index');
 Route::get('/productosAgregar', 'ProductController@create');
 Route::post('/productosAgregar', 'ProductController@store');
+Route::post('/products/edit/{id}', 'ProductController@edit');
 Route::get('/product-detail/{id}', 'ProductController@show')->name('product-detail');
 Route::post('/cart-add', 'CartsProductController@store')->name('cart-add')->middleware('auth');

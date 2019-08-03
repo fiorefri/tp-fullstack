@@ -5,17 +5,17 @@
 @section('class-body', 'container')
 
 @section('principal')
-<h2>Agregar producto producto</h2>
-<form class="" action="/productosAgregar" method="post" enctype="multipart/form-data">
+<h2>Editar producto</h2>
+<form class="" action="/product/edit/{{$product->id}}" method="post" enctype="multipart/form-data">
   @csrf
   <p>
-    <input type="text" name="nombre" value="" placeholder="nombre producto">
+    <input type="text" name="nombre" value="{{$product->name}}" placeholder="nombre producto">
   </p>
   <p>
-    <input type="text" name="descripcion" value="" placeholder="descripción producto">
+    <input type="text" name="descripcion" value="{{$product->description}}" placeholder="descripción producto">
   </p>
   <p>
-    <input type="number_format" name="precio" value="" placeholder="precio producto">
+    <input type="number_format" name="precio" value="{{$product->price}}" placeholder="precio producto">
   </p>
   <p>
     <input type="number" name="stock" value="" placeholder="stock">
@@ -34,12 +34,10 @@
   <p>
     <input type="file" name="imagen" value="">
   </p>
-
+  <p>Imagen actual</p>
+  <img src="/storage/products/{{$product->featured_img}}" alt="">
   <button type="submit">Enviar</button>
   {{-- <button type="reset">Limpiar</button> --}}
 </form>
 
-
-
-</form>
 @endsection
