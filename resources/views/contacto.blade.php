@@ -3,7 +3,7 @@
 @section('titulo', 'Contacto')
 @section('class-body', 'quienessomos container')
 @section('principal')
-<div class="about-us d-flex justify-content-center">
+<div class="about-us row d-flex justify-content-center">
 <div class="card col-md-10">
 <div class="card-body">
 <div class="contacto">
