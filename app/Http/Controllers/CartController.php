@@ -86,7 +86,7 @@ class CartController extends Controller
         $cart->product_id = $product->id;
         $cart->name = $product->name;
         $cart->price = $product->price;
-        $cart->quantity = $request->quantity;
+        $cart->cant_producto = $request->quantity;
         $cart->user_id = Auth::user()->id;
 
         $cart->save();
