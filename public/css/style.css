@@ -532,6 +532,17 @@ footer a:hover {
 }
 .card{
 background-color: rgba(255, 255, 255, 0.7);
+text-align: justify;
+}
+
+.card-body h3{
+  color: #148c75;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.card-body h4{
+  color: #148c75;
+  margin-top: 30px;
 }
 .card-title{
   color: #1aa086;
@@ -545,10 +556,21 @@ background-color: rgba(255, 255, 255, 0.7);
   margin: 0 auto;
 
 }
-.preg_frecuentes h3{
+.contacto h3{
+  color: #148c75;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.contacto h5{
+  color: #1aa086;
+  margin-top: 30px;
+}
+
+/* .preg_frecuentes h3{
   color: #1aa086;
   text-align: center;
 }
 .preg_frecuentes h5{
   color: #1aa086;
-}
+} */
+/*Boton back to top*/
