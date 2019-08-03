@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="formulario card">
-                <div class="titulo card-header">{{ __('Login') }}</div>
+                <div class="titulo-login-register card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
