@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cart extends Model
 {
+  protected $guarded = [];
+  protected $fillable = ['product_id','name','price','cant_producto','user_id',];
+
     use softDeletes;
 
     public function user()

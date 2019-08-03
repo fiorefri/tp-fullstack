@@ -11,7 +11,7 @@
       <div class="row">
         @forelse($products as $product)
         <div class="col-md-4 text-md-center">
-          <br><img style="width:170px; heigh:230px;"src="{{$product->imagen}}" alt="">
+          <br><img style="width:170px; heigh:230px;"src="/storage/productos/{{$product->imagen}}" alt="">
           <br><h4>{{$product->nombre}}</h4>
           <h4>Precio:{{number_format($product->precio,2)}}</h4>
           <a type="button" class="btn_detalle" href="{{route('product-detail', $product->id)}}">{{__('detalle')}}</a>
