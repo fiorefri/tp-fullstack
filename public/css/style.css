@@ -409,18 +409,9 @@ body {
   border-radius: 15px;
 }
 
-/*Pagina quiénes somos*/
-.about-us{
-  background-color: #fff;
-  margin: 30px 60px;
-  padding: 30px;
-  text-align: justify ;
-}
 
-.about-us h5{
-  margin-top: 50px;
-  margin-bottom: 15px;
-}
+
+
 /* footer --------*/
 footer{
   /* position: absolute; */
@@ -522,11 +513,35 @@ footer a:hover {
 .olvidaste:hover{
   color: #148c75;
 }
+
+/*Pagina quiénes somos, FAQS, Contacto*/
+/* .about-us{
+
+  margin: 30px 60px;
+  width: 85%;
+  padding: 30px;
+  text-align: justify ;
+} */
+/*
+.about-us h5{
+  margin-top: 50px;
+  margin-bottom: 15px;
+} */
+.quienessomos{
+  background-image: url(/img/hd-wallpaper-28.jpg);
+}
+.card{
+background-color: rgba(255, 255, 255, 0.7);
+}
+.card-title{
+  color: #1aa086;
+  margin-top: 40px;
+}
 .preg_frecuentes{
   box-sizing: border-box;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 17px;
-  /* background-image: url(../img/leaves.jpg); */
+  /*background-image: url(../img/leaves.jpg);*/
   margin: 0 auto;
 
 }
