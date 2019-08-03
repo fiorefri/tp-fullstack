@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
           $table->string('stock');
           $table->bigInteger('category_id')->unsigned();
           $table->foreign('category_id')->references('id')->on('categories');
-          $table->bigInteger('offer_id')->unsigned()->nullable();
+          $table->bigInteger('offer_id')->unsigned();
           $table->foreign('offer_id')->references('id')->on('offers');
           $table->string('imagen');
           $table->rememberToken();
