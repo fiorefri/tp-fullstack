@@ -36,6 +36,9 @@ Route::get('/cuenta', 'UserController@cuenta')->middleware('auth');
 Route::get('/direcciones', 'AddressController@index')->middleware('auth');
 Route::get('/direcciones/agregar', 'AddressController@create')->middleware('auth');
 Route::post('/direcciones/agregar', 'AddressController@store')->middleware('auth');
+Route::get('/direcciones/editar/{id}', 'AddressController@edit')->middleware('auth');
+Route::post('/direcciones/editar/{id}', 'AddressController@update')->middleware('auth');
+Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy');
 
 // PRODUCTOS
 Route::get('/productos', 'ProductController@index');

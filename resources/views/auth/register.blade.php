@@ -1,6 +1,6 @@
 @extends('plantilla')
 
-@section('titulo', 'Iniciar Sesión')
+@section('titulo', 'Registro')
 
 @section('class-body', 'login-register')
 
@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="formulario card col-xs-6 col-lg-12">
-                <div class="titulo card-header">{{ __('Registrarme') }}</div>
+                <div class="titulo-login-register card-header">{{ __('Registrarme') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
