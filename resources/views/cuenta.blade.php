@@ -10,5 +10,6 @@
     <p>Email:   {{$user->email}}</p>
     <p>Nombre:  {{$user->name}}</p>
   </div>
+  <a href="/cuenta/editar/{{$user->id}}">Editar Cuenta</a>
   <a href="/direcciones">Ir a Mis Direcciones</a>
 @endsection
