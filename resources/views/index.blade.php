@@ -45,12 +45,12 @@
   <div class="container">
     <section class="pagina-principal">
       <div class="producto row d-flex justify-content-around">
-        <div class="rostro categoria col-xs-3 pb-5 pb-md-0">
-          <img class="item img-fluid"src="/img/categoria-rostro.jpg" alt="">
+        <div class="rostro categoria col-xs-3 col-md-6">
+          <img class="item img-fluid"src="/img/categoria-rostro1.jpg" alt="">
           <a href="more">Rostro</a>
         </div>
-        <div class="cuerpo categoria col-xs-3">
-          <img class="item img-fluid"src="/img/categoria-cuerpo.jpg" alt="">
+        <div class="cuerpo categoria col-xs-3 col-md-6">
+          <img class="item img-fluid"src="/img/categoria-cuerpo1.jpg" alt="">
           <a href="more">Cuerpo</a>
         </div>
       </div>
@@ -60,28 +60,28 @@
       </div>
       <div class="articulosMasVendidos row">
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/crema-para-pies.jpg" alt="">
-          <a href="#">Crema para pies con aceite de coco</a>
+          <img class="img-fluid"src="/img/rostro/brumaDeArgan.png" alt="">
+          <a href="#">Bruma de Argan para el rostro</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/kit-cremas-cuerpo-y-pelo.jpg" alt="">
-          <a href="#">Kit cremas cuerpo y pelo</a>
+          <img class="img-fluid"src="/img/rostro/serumAcidoHialuronico.png" alt="">
+          <a href="#">Serum de Acido Hialuronico hidratante</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/serum-antiarrugas.jpg" alt="">
-          <a href="#">Serum antiarrugas con retinol</a>
+          <img class="img-fluid"src="/img/rostro/cremaGelDeNoche.png" alt="">
+          <a href="#">Crema gel de noche antiedad</a>
         </div>
         <div class="articulo  col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/crema-pelo.jpg" alt="">
-          <a href="#">Mascarilla para el pelo con aceite de oliva</a>
+          <img class="img-fluid"src="/img/cuerpo/cremaDeManosVainilla.png" alt="">
+          <a href="#">Crema de manos de Vainilla hidratante</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/mascarilla-carbon.jpg" alt="">
-          <a href="#">Mascarilla de carbon reductora de poros</a>
+          <img class="img-fluid"src="/img/cuerpo/bodyScrub.png" alt="">
+          <a href="#">Body scrub</a>
         </div>
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/tonico-facial.jpg" alt="">
-          <a href="#">Tónico de caléndula para piel sensible</a>
+          <img class="img-fluid"src="/img/cuerpo/bodySplashRelax.png" alt="">
+          <a href="#">Body splash relax</a>
         </div>
       </div>
     </section>
