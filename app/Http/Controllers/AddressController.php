@@ -16,8 +16,10 @@ class AddressController extends Controller
     public function index()
     {
         $user_id = Auth::user()->id;
-        $address = Address::where('user_id', '=', $user_id);
-        return view('direcciones', compact('address'));
+        $address = Address::where('user_id', '=', $user_id)->get();
+
+        // $address = collect($address);
+        return view('direcciones', compact('address', 'user_id'));
     }
 
     /**
@@ -27,7 +29,7 @@ class AddressController extends Controller
      */
     public function create()
     {
-        return view('agregar_direcciones');
+        return view('direcciones.agregar');
     }
 
     /**
@@ -38,28 +40,28 @@ class AddressController extends Controller
      */
     public function store(Request $request)
     {
-      $rules = [
-        "calle" => "filled|string",
-        "altura" => "filled|string",
-        "piso" => "filled|integer",
-        "depto" => "filled|string",
-        "codigo_postal" => "filled|integer|max:4",
-        "ciudad" => "filled|string"
-      ];
+        $rules = [
+          "calle"         => "filled|string",
+          "altura"        => "filled|string",
+          "piso"          => "filled|integer",
+          "depto"         => "filled|string",
+          "codigo_postal" => "filled|integer",
+          "ciudad"        => "filled|string"
+        ];
 
-      $this->validate($request, $rules);
+        $this->validate($request, $rules);
 
-      $address = new Address;
-      $address->user_id = Auth::user()->id;
-      $address->calle = $request->calle;
-      $address->altura = $request->altura;
-      $address->piso = $request->piso;
-      $address->depto = $request->depto;
-      $address->codigo_postal = $request->codigo_postal;
-      $address->ciudad = $request->ciudad;
+        $address = new Address;
+        $address->user_id       = Auth::user()->id;
+        $address->calle         = $request->calle;
+        $address->altura        = $request->altura;
+        $address->piso          = $request->piso;
+        $address->depto         = $request->depto;
+        $address->codigo_postal = $request->codigo_postal;
+        $address->ciudad        = $request->ciudad;
 
-      $address->save();
-      return redirect("direcciones");
+        $address->save();
+        return redirect("direcciones");
     }
 
     /**
@@ -68,9 +70,9 @@ class AddressController extends Controller
      * @param  \App\address  $address
      * @return \Illuminate\Http\Response
      */
-    public function show(address $address)
+    public function show($id)
     {
-        //
+      //
     }
 
     /**
@@ -79,9 +81,10 @@ class AddressController extends Controller
      * @param  \App\address  $address
      * @return \Illuminate\Http\Response
      */
-    public function edit(address $address)
+    public function edit($id)
     {
-        //
+        $address = Address::find($id);
+        return view('direcciones.editar', compact('address'));
     }
 
     /**
@@ -91,9 +94,29 @@ class AddressController extends Controller
      * @param  \App\address  $address
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, address $address)
+    public function update(Request $request, $id)
     {
-        //
+        $rules = [
+          "calle"         => "filled|string",
+          "altura"        => "filled|string",
+          "piso"          => "filled|integer",
+          "depto"         => "filled|string",
+          "codigo_postal" => "filled|integer",
+          "ciudad"        => "filled|string"
+        ];
+
+        $this->validate($request, $rules);
+
+        $address = Address::find($id);
+        $address->calle         = $request->calle;
+        $address->altura        = $request->altura;
+        $address->piso          = $request->piso;
+        $address->depto         = $request->depto;
+        $address->codigo_postal = $request->codigo_postal;
+        $address->ciudad        = $request->ciudad;
+
+        $address->save();
+        return redirect('direcciones');
     }
 
     /**
@@ -102,8 +125,10 @@ class AddressController extends Controller
      * @param  \App\address  $address
      * @return \Illuminate\Http\Response
      */
-    public function destroy(address $address)
+    public function destroy($id)
     {
-        //
+        $address = Address::find($id);
+        $address->delete();
+        return redirect('direcciones');
     }
 }
