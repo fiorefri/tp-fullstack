@@ -41,7 +41,7 @@ class CartsProductController extends Controller
       $product = Product::find($request->id);
 
       $cart = new CartsProduct; //Recordar que cada Cart es un item dentro del carrito.
-      $cart->id_product = $product->id;
+      $cart->product_id = $product->id;
       $cart->name = $product->nombre;
       $cart->price = $product->precio;
       $cart->cant_producto = $request->quantity;
