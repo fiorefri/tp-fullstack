@@ -21,7 +21,6 @@
             <input type="hidden" name="quantity" value="1">
             <button type="submit">Agregar al Carrito</button>
           </form>
-
         </div>
         @empty
          <p>No hay productos disponibles.</p>

@@ -5,8 +5,10 @@
 @section('class-body', 'container')
 
 @section('principal')
-<h2>Agregar producto</h2>
-<form class="" action="/productos" method="post" enctype="multipart/form-data">
+
+<form class="" action="/productos/agregar" method="post" enctype="multipart/form-data">
+<h2>Agregar producto producto</h2>
+<form class="" action="/productosAgregar" method="post" enctype="multipart/form-data">
   @csrf
   <p>
     <input type="text" name="nombre" value="" placeholder="nombre producto">

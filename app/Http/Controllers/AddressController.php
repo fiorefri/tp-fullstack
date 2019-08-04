@@ -17,8 +17,6 @@ class AddressController extends Controller
     {
         $user_id = Auth::user()->id;
         $address = Address::where('user_id', '=', $user_id)->get();
-
-        // $address = collect($address);
         return view('direcciones', compact('address', 'user_id'));
     }
 
