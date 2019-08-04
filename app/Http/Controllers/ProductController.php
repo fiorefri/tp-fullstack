@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Category;
+use App\Offer;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -15,9 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-      $products = Product::all(); //Traemos todos los productos.
-      return view('productos', compact('products')); //Pasamos el array a la vista.
-
+      $products = Product::all();
+      return view('productos', compact('products'));
     }
 
     /**
@@ -38,24 +38,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-      // $reglas=[];
-      // $mensajes=[];
-      // $this->validate($request, $reglas, $mensajes);
-      //
-
       $path = $request->file('imagen')->store('public/productos');
       $file = basename($path);
 
       $producto = new Product;
-      $producto->nombre = $request->nombre;
-      $producto->descripcion = $request->descripcion;
-      $producto->precio = $request->precio;
-      $producto->stock = $request->stock;
-      $producto->category_id = $request->category_id;
-      $producto->offer_id = $request->offer_id;
-      $producto->imagen = $file;
+      $producto->nombre       = $request->nombre;
+      $producto->descripcion  = $request->descripcion;
+      $producto->precio       = $request->precio;
+      $producto->stock        = $request->stock;
+      $producto->category_id  = $request->category_id;
+      $producto->offer_id     = $request->offer_id;
+      $producto->imagen       = $file;
+
       $producto->save();
-      return redirect('/productosAgregar');
+      return redirect('productos');
     }
 
     /**
@@ -66,8 +62,9 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-      $product = Product::find($id); //Identificamos el producto que queremos mostrar.
-      return view('product', compact('product')); //Pasamos el dato a la vista.
+      $product = Product::find($id);
+      $
+      return view('productos.producto', compact('product'));
     }
 
     /**

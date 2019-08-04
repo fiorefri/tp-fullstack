@@ -6,7 +6,7 @@
 
 @section('principal')
 
-<form class="" action="/productosAgregar" method="post" enctype="multipart/form-data">
+<form class="" action="/productos/agregar" method="post" enctype="multipart/form-data">
   @csrf
   <p>
     <input type="text" name="nombre" value="" placeholder="nombre producto">
