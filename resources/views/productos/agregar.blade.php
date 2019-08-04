@@ -5,13 +5,10 @@
 @section('class-body', 'container')
 
 @section('principal')
-<<<<<<< HEAD:resources/views/productos/agregar.blade.php
 
 <form class="" action="/productos/agregar" method="post" enctype="multipart/form-data">
-=======
 <h2>Agregar producto producto</h2>
 <form class="" action="/productosAgregar" method="post" enctype="multipart/form-data">
->>>>>>> 2c9b57372336a276a76d3bc70a1bb81d1d39e020:resources/views/formproductos.blade.php
   @csrf
   <p>
     <input type="text" name="nombre" value="" placeholder="nombre producto">
