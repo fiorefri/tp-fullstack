@@ -27,7 +27,7 @@
               <p>No hay direcciones para mostrar.</p>
             @endforelse
               <br>
-              <a href="/direcciones/agregar">Agregar direcciones / </a>
+              <a href="/direcciones/agregar">Agregar dirección</a><a href=""> /</a>
               <a href="/cuenta">Ir a Mi Cuenta</a>
             </div>
           </div>
