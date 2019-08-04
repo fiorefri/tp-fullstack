@@ -20,8 +20,9 @@ class CreateCartsTable extends Migration
             $table->timestamps();
             $table->bigInteger('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->integer('cantidad_total')->unsigned();
-            $table->decimal('precio_total', 6,2)->unsigned();
+            $table->string('nombre');
+            $table->integer('cantidad')->unsigned();
+            $table->decimal('precio', 6,2)->unsigned();
             $table->integer('estado')->default(0);
             $table->bigInteger('address_id')->unsigned();
             $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');

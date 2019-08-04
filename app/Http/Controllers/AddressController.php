@@ -49,7 +49,7 @@ class AddressController extends Controller
 
         $this->validate($request, $rules);
 
-        $address = new Address;
+        $address                = new Address;
         $address->user_id       = Auth::user()->id;
         $address->calle         = $request->calle;
         $address->altura        = $request->altura;
@@ -105,7 +105,7 @@ class AddressController extends Controller
 
         $this->validate($request, $rules);
 
-        $address = Address::find($id);
+        $address                = Address::find($id);
         $address->calle         = $request->calle;
         $address->altura        = $request->altura;
         $address->piso          = $request->piso;

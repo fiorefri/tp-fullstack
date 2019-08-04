@@ -12,14 +12,12 @@
 */
 
 // INDEX
-Route::get('/', 'UserController@index');
+Route::get('/',      'UserController@index');
 Route::get('/index', 'UserController@index');
+Route::get('/home',  'UserController@index');
 
 // LOGIN Y REGISTRO
 Auth::routes();
-
-// CARRITO
-Route::get('/carrito', 'CartController@index')->middleware('auth');
 
 // QUIENES SOMOS
 Route::get('/quienes_somos', 'UserController@quienes_somos');
@@ -31,26 +29,28 @@ Route::get('/faq', 'UserController@faq');
 Route::get('/contacto', 'UserController@contacto');
 
 // MI CUENTA
-Route::get('/cuenta', 'UserController@show')->middleware('auth');
-Route::get('/cuenta/editar/{id}', 'UserController@edit')->middleware('auth');
-Route::post('/cuenta/editar/{id}', 'UserController@update')->middleware('auth');
+Route::get('/cuenta',               'UserController@show')    ->middleware('auth');
+Route::get('/cuenta/editar/{id}',   'UserController@edit')    ->middleware('auth');
+Route::post('/cuenta/editar/{id}',  'UserController@update')  ->middleware('auth');
+Route::get('/cuenta/eliminar/{id}', 'UserController@destroy') ->middleware('auth');
 
 // DIRECCIONES
-Route::get('/direcciones', 'AddressController@index')->middleware('auth');
-Route::get('/direcciones/agregar', 'AddressController@create')->middleware('auth');
-Route::post('/direcciones/agregar', 'AddressController@store')->middleware('auth');
-Route::get('/direcciones/editar/{id}', 'AddressController@edit')->middleware('auth');
-Route::post('/direcciones/editar/{id}', 'AddressController@update')->middleware('auth');
-Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy')->middleware('auth');
+Route::get('/direcciones',               'AddressController@index')   ->middleware('auth');
+Route::get('/direcciones/agregar',       'AddressController@create')  ->middleware('auth');
+Route::post('/direcciones/agregar',      'AddressController@store')   ->middleware('auth');
+Route::get('/direcciones/editar/{id}',   'AddressController@edit')    ->middleware('auth');
+Route::post('/direcciones/editar/{id}',  'AddressController@update')  ->middleware('auth');
+Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy') ->middleware('auth');
 
 // PRODUCTOS
-Route::get('/productos', 'ProductController@index');
-Route::get('/productos/agregar', 'ProductController@create');
-Route::post('/productos/agregar', 'ProductController@store');
-Route::get('/productos/{id}', 'ProductController@show');
-Route::get('/productos/editar/{id}', 'ProductController@edit');
-Route::post('/productos/editar/{id}', 'ProductController@update');
+Route::get('/productos',               'ProductController@index');
+Route::get('/productos/agregar',       'ProductController@create');
+Route::post('/productos/agregar',      'ProductController@store');
+Route::get('/productos/{id}',          'ProductController@show');
+Route::get('/productos/editar/{id}',   'ProductController@edit');
+Route::post('/productos/editar/{id}',  'ProductController@update');
 Route::get('/productos/eliminar/{id}', 'ProductController@destroy');
 
 // CARRITO
-Route::post('/cart-add', 'CartsProductController@store')->name('cart-add')->middleware('auth');
+Route::get('/carrito', 'CartController@index')->middleware('auth');
+Route::post('/carrito/agregar', 'CartController@store')->middleware('auth');

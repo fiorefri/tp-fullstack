@@ -66,14 +66,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $rules = [
-          'name'     => "string|max:255|regex:/^[A-Za-z\s]+$/",
-          'password' => "string"
-        ];
-
-        $this->validate($request, $rules);
-
-        $user = User::find($id);
+        $user           = User::find($id);
         $user->name     = $request->name;
         $user->password = password_hash($request->password, PASSWORD_DEFAULT);
 
@@ -87,8 +80,10 @@ class UserController extends Controller
      * @param  \App\user  $address
      * @return \Illuminate\Http\Response
      */
-    public function destroy(user $user)
+    public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect('index');
     }
 }
