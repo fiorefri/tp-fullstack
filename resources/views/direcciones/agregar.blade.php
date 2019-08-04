@@ -29,7 +29,7 @@
 
               <label for="ciudad">Ciudad</label>
               <input type="text" name="ciudad" value="" class="col-md-4"><br>
-              <!-- <input type="submit" name="submit" value="Agregar Dirección"> -->
+            
             </div>
 
           </form>
