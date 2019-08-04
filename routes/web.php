@@ -27,6 +27,7 @@ Route::get('/quienes_somos', 'UserController@quienes_somos');
 // PREGUNTAS FRECUENTES
 Route::get('/faq', 'UserController@faq');
 
+// CONTACTO
 Route::get('/contacto', 'UserController@contacto');
 
 // MI CUENTA

@@ -42,13 +42,13 @@ class ProductController extends Controller
       $file = basename($path);
 
       $producto = new Product;
-      $producto->nombre       = $request->nombre;
-      $producto->descripcion  = $request->descripcion;
-      $producto->precio       = $request->precio;
-      $producto->stock        = $request->stock;
-      $producto->category_id  = $request->category_id;
-      $producto->offer_id     = $request->offer_id;
-      $producto->imagen       = $file;
+      $producto->nombre      = $request->nombre;
+      $producto->descripcion = $request->descripcion;
+      $producto->precio      = $request->precio;
+      $producto->stock       = $request->stock;
+      $producto->category_id = $request->category_id;
+      $producto->offer_id    = $request->offer_id;
+      $producto->imagen      = $file;
 
       $producto->save();
       return redirect('productos');
@@ -63,8 +63,9 @@ class ProductController extends Controller
     public function show($id)
     {
       $product = Product::find($id);
-      $
-      return view('productos.producto', compact('product'));
+      $category = Category::where('category', '=', Product::find('category_id'))->get();
+      $offer = Offer::where('offer', '=', Offer::find('offer_id'))->get();
+      return view('productos.producto', compact('product', 'category', 'offer'));
     }
 
     /**
