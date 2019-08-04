@@ -76,11 +76,11 @@ class ProductController extends Controller
      * @param  \App\product  $product
      * @return \Illuminate\Http\Response
      */
-    // public function edit(product $product)
-    // {
-    //   $product = Product::find($id);
-    //   return view('productEdit', compact('product'));
-    // }
+     public function edit($id)
+    {
+      $product = Product::find($id);
+      return view('productEdit', compact('product'));
+    }
 
     /**
      * Update the specified resource in storage.

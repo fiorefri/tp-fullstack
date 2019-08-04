@@ -44,8 +44,8 @@ Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy')->middlewar
 
 // PRODUCTOS
 Route::get('/productos', 'ProductController@index');
-Route::get('/productosAgregar', 'ProductController@create');
-Route::post('/productosAgregar', 'ProductController@store');
-Route::post('/products/edit/{id}', 'ProductController@edit');
+Route::get('/productosAgregar', 'ProductController@create')->middleware('auth');
+Route::post('/productosAgregar', 'ProductController@store')->middleware('auth');
+Route::get('/products/edit/{id}', 'ProductController@edit')->middleware('auth');
 Route::get('/product-detail/{id}', 'ProductController@show')->name('product-detail');
 Route::post('/cart-add', 'CartsProductController@store')->name('cart-add')->middleware('auth');
