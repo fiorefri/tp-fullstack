@@ -1,6 +1,6 @@
 @extends('plantilla')
 
-@section('titulo', '{{$product->nombre}}')
+@section('titulo', 'Descripción Producto')
 
 @section('principal')
   <img src="/storage/productos/{{$product->imagen}}" alt="">
@@ -8,7 +8,13 @@
   <p>Descripción: {{$product->descripcion}}</p>
   <p>Precio:      {{$product->precio}}</p>
   <p>Stock:       {{$product->stock}}</p>
-  <p>Categoria:   {{$category->nombre}}</p>
-  <p>Oferta:      {{$offer->nombre}}</p>
-  <a href="productos/{{$product->id}}/editar"></a>
+  @foreach ($category as $categoria)
+    <p>Categoria: {{$categoria->nombre}}</p>
+  @endforeach
+  @forelse ($offer as $oferta)
+    <p>Oferta:    {{$oferta->nombre}}</p>
+  @empty
+    <p>Oferta:    No hay ofertas para mostrar</p>
+  @endforelse
+  <a href="/productos/editar/{{$product->id}}">Editar Producto</a>
 @endsection

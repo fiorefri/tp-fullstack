@@ -16,8 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-      $products = Product::all();
-      return view('productos', compact('products'));
+        $products = Product::all();
+        return view('productos', compact('products'));
     }
 
     /**
@@ -26,8 +26,9 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   $categorias = Category::all();
-        return view('formproductos', compact('categorias'));
+    {
+        $categorias = Category::all();
+        return view('productos.agregar', compact('categorias'));
     }
 
     /**
@@ -38,20 +39,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-      $path = $request->file('imagen')->store('public/productos');
-      $file = basename($path);
+        $path = $request->file('imagen')->store('public/productos');
+        $file = basename($path);
 
-      $producto = new Product;
-      $producto->nombre      = $request->nombre;
-      $producto->descripcion = $request->descripcion;
-      $producto->precio      = $request->precio;
-      $producto->stock       = $request->stock;
-      $producto->category_id = $request->category_id;
-      $producto->offer_id    = $request->offer_id;
-      $producto->imagen      = $file;
+        $producto = new Product;
+        $producto->nombre      = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio      = $request->precio;
+        $producto->stock       = $request->stock;
+        $producto->category_id = $request->category_id;
+        $producto->offer_id    = $request->offer_id;
+        $producto->imagen      = $file;
 
-      $producto->save();
-      return redirect('productos');
+        $producto->save();
+        return redirect('productos');
     }
 
     /**
@@ -62,10 +63,12 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-      $product = Product::find($id);
-      $category = Category::where('category', '=', Product::find('category_id'))->get();
-      $offer = Offer::where('offer', '=', Offer::find('offer_id'))->get();
-      return view('productos.producto', compact('product', 'category', 'offer'));
+        $product     = Product::find($id);
+        $category_id = Product::find($id)->category_id;
+        $offer_id    = Product::find($id)->offer_id;
+        $category    = Category::where('id', '=', $category_id)->get();
+        $offer       = Offer::where('id', '=', $offer_id)->get();
+        return view('productos.producto', compact('product', 'category', 'offer'));
     }
 
     /**
@@ -74,11 +77,13 @@ class ProductController extends Controller
      * @param  \App\product  $product
      * @return \Illuminate\Http\Response
      */
-    // public function edit(product $product)
-    // {
-    //   $product = Product::find($id);
-    //   return view('productEdit', compact('product'));
-    // }
+    public function edit($id)
+    {
+        $product  = Product::find($id);
+        $category = Category::all();
+        $offer    = Offer::all();
+        return view('productos.editar', compact('product', 'category', 'offer'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -87,9 +92,26 @@ class ProductController extends Controller
      * @param  \App\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, product $product)
+    public function update(Request $request, $id)
     {
-        //
+        if (isset($request->imagen)) {
+          $path = $request->file('imagen')->store('public/productos');
+          $file = basename($path);
+        }
+
+        $producto = Product::find($id);
+        $producto->nombre      = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio      = $request->precio;
+        $producto->stock       = $request->stock;
+        $producto->category_id = $request->category_id;
+        $producto->offer_id    = $request->offer_id;
+        if (isset($request->imagen)) {
+          $producto->imagen      = $file;
+        }
+
+        $producto->save();
+        return redirect('productos');
     }
 
     /**
@@ -98,8 +120,10 @@ class ProductController extends Controller
      * @param  \App\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product $product)
+    public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+        return redirect('productos');
     }
 }

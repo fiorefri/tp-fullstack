@@ -14,7 +14,7 @@
           <br><img style="width:170px; heigh:230px;"src="/storage/productos/{{$product->imagen}}" alt="">
           <br><h4>{{$product->nombre}}</h4>
           <h4>Precio:{{number_format($product->precio,2)}}</h4>
-          <a type="button" class="btn_detalle" href="{{route('product-detail', $product->id)}}">{{__('detalle')}}</a>
+          <a type="button" class="btn_detalle" href="/productos/{{$product->id}}">{{__('detalle')}}</a>
           <form class="" action="{{route('cart-add')}}" method="post">
             @csrf
             <input type="hidden" name="id" value="{{$product->id}}">

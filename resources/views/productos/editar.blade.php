@@ -1,43 +1,47 @@
 @extends('plantilla')
 
-@section('titulo', 'Productos')
+@section('titulo', 'Editar Producto')
 
 @section('class-body', 'container')
 
 @section('principal')
 <h2>Editar producto</h2>
-<form class="" action="/product/edit/{{$product->id}}" method="post" enctype="multipart/form-data">
+<form class="" action="/productos/editar/{{$product->id}}" method="post" enctype="multipart/form-data">
   @csrf
   <p>
-    <input type="text" name="nombre" value="{{$product->name}}" placeholder="nombre producto">
+    <input type="text" name="nombre" value="{{$product->nombre}}" placeholder="nombre producto">
   </p>
   <p>
-    <input type="text" name="descripcion" value="{{$product->description}}" placeholder="descripción producto">
+    <input type="text" name="descripcion" value="{{$product->descripcion}}" placeholder="descripción producto">
   </p>
   <p>
-    <input type="number_format" name="precio" value="{{$product->price}}" placeholder="precio producto">
+    <input type="number_format" name="precio" value="{{$product->precio}}" placeholder="precio producto">
   </p>
   <p>
-    <input type="number" name="stock" value="" placeholder="stock">
-  </p>
+    <input type="number" name="stock" value="{{$product->stock}}" placeholder="stock">
+  </p
   <p>
     <select class="" name="category_id">
-      @foreach($categorias as $categoria)
-      <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+      @foreach($category as $categoria)
+      <option value="{{$categoria->id}}" selected="{{$product->category_id}}">{{$categoria->nombre}}</option>
       @endforeach
 
     </select>
   </p>
   <p>
-    <input type="text" name="offer_id" value="" placeholder="productos en oferta">
+    @foreach ($offer as $oferta)
+      <input type="text" name="offer_id" value="{{$oferta->nombre}}" placeholder="productos en oferta">
+    @endforeach
   </p>
   <p>
+    Cambiar Imagen:
     <input type="file" name="imagen" value="">
   </p>
   <p>Imagen actual</p>
-  <img src="/storage/products/{{$product->featured_img}}" alt="">
+  <img src="/storage/productos/{{$product->imagen}}" alt="">
   <button type="submit">Enviar</button>
   {{-- <button type="reset">Limpiar</button> --}}
 </form>
+<a href="/productos/eliminar/{{$product->id}}">Eliminar Producto</a>
 
 @endsection

@@ -45,13 +45,12 @@ Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy')->middlewar
 
 // PRODUCTOS
 Route::get('/productos', 'ProductController@index');
-// HEAD
 Route::get('/productos/agregar', 'ProductController@create');
 Route::post('/productos/agregar', 'ProductController@store');
-//=======
-Route::get('/productosAgregar', 'ProductController@create');
-Route::post('/productosAgregar', 'ProductController@store');
-Route::post('/products/edit/{id}', 'ProductController@edit');
-//>>>>>>> 2c9b57372336a276a76d3bc70a1bb81d1d39e020
-Route::get('/product-detail/{id}', 'ProductController@show')->name('product-detail');
+Route::get('/productos/{id}', 'ProductController@show');
+Route::get('/productos/editar/{id}', 'ProductController@edit');
+Route::post('/productos/editar/{id}', 'ProductController@update');
+Route::get('/productos/eliminar/{id}', 'ProductController@destroy');
+
+// CARRITO
 Route::post('/cart-add', 'CartsProductController@store')->name('cart-add')->middleware('auth');
