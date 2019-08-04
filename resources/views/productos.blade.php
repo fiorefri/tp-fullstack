@@ -15,10 +15,11 @@
           <br><h4>{{$product->nombre}}</h4>
           <h4>Precio:{{number_format($product->precio,2)}}</h4>
           <a type="button" class="btn_detalle" href="/productos/{{$product->id}}">{{__('detalle')}}</a>
+          
           <form class="" action="/carrito/agregar" method="post">
             @csrf
-            <input type="number" name="quantity" value="" placeholder="Cantidad">
-            {{$errors->first('quantity')}}
+            <input type="number" name="cantidad" value="" placeholder="Cantidad">
+            {{$errors->first('cantidad')}}
             <input type="hidden" name="id" value="{{$product->id}}">
             <p></p>
             <button type="submit">Agregar al carrito</button>

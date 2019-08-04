@@ -24,9 +24,9 @@ class CreateCartsTable extends Migration
             $table->integer('cantidad')->unsigned();
             $table->decimal('precio', 6,2)->unsigned();
             $table->integer('estado')->default(0);
-            $table->bigInteger('address_id')->unsigned();
+            $table->bigInteger('address_id')->unsigned()->nullable();
             $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
-            $table->bigInteger('payment_id')->unsigned();
+            $table->bigInteger('payment_id')->unsigned()->nullable();
             $table->foreign('payment_id')->references('id')->on('payments')->onDelete('cascade');
             $table->string('num_carrito')->nullable();
             $table->softDeletes();

@@ -20,18 +20,26 @@ class CartController extends Controller
     public function index()
     {
         $user_id     = Auth::user()->id;
-        $cart        = Cart::where('estado', '=', 0)
-          ->where('id', '=', $user_id)->get();
+        $cart        = Cart::all()->where('estado', '=', 0)
+          ->where('user_id', '=', $user_id);
 
-        if (isset($cart->product_id)) {
-          $product_id  = $cart->product_id;
-          $product     = Product::where('id', '=', $product_id);
-          $offer_id    = $cart->offer_id;
-          $offer       = Offer::where('id', '=', $offer_id);
-          // $address     = Address::all()->where('user_id', '=', $user_id);
+        foreach ($cart as $item) {
+          if (isset($item->product_id)) {
+            $product_id  = $item->product_id;
+            $product     = Product::where('id', '=', $product_id)->get();
+
+            // if ($product_id->count()) {
+            //   dd($cart);
+            // }
+          }
         }
 
-        return view('carrito', compact('cart'));
+        $total = 0;
+        foreach ($cart as $item) {
+          $total = $total +($item->cantidad * $item->precio);
+        }
+
+        return view('carrito', compact('cart', 'total', 'product'));
     }
 
     /**
@@ -59,16 +67,15 @@ class CartController extends Controller
         $this->validate($request, $rules);
         $product = Product::find($request->id);
 
-        $cart               = new Cart;
-        $cart->user_id      = Auth::user()->id;
-        $cart->product_id   = $product->id;
-        $cart->nombre       = $product->nombre;
-        $cart->cant_total   = $request->cant_total;
-        $cart->precio_total = $product->precio_total;
-        dd($cart);
+        $cart             = new Cart;
+        $cart->user_id    = Auth::user()->id;
+        $cart->product_id = $product->id;
+        $cart->nombre     = $product->nombre;
+        $cart->cantidad   = $request->cantidad;
+        $cart->precio     = $product->precio;
 
         $cart->save();
-        return redirect('/products');
+        return redirect('/productos');
     }
 
     /**
@@ -127,6 +134,7 @@ class CartController extends Controller
 
          return redirect('/cart');
      }
+
      public function cartClose(){
        $items = Cart::where('user_id',Auth::user()->id)
        ->where('status',0)->get();
@@ -147,8 +155,5 @@ class CartController extends Controller
        ->where('status',1)->get()->groupBy('cart_num');
 
        return view('history', compact('carts'));
-
-
      }
-
 }
