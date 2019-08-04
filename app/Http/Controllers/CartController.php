@@ -22,17 +22,16 @@ class CartController extends Controller
         $user_id     = Auth::user()->id;
         $cart        = Cart::all()->where('estado', '=', 0)
           ->where('user_id', '=', $user_id);
+        $product = Product::all();
 
-        foreach ($cart as $item) {
-          if (isset($item->product_id)) {
-            $product_id  = $item->product_id;
-            $product     = Product::where('id', '=', $product_id)->get();
-
-            // if ($product_id->count()) {
-            //   dd($cart);
-            // }
-          }
-        }
+        // foreach ($cart as $item) {
+        //   $product_id  = $item->product_id;
+        //   $product     = Product::where('id', '=', $product_id)->get();
+        //
+        //   // if ($product_id->count()) {
+        //   //   dd($cart);
+        //   // }
+        // }
 
         $total = 0;
         foreach ($cart as $item) {
@@ -70,6 +69,7 @@ class CartController extends Controller
         $cart             = new Cart;
         $cart->user_id    = Auth::user()->id;
         $cart->product_id = $product->id;
+        $cart->imagen     = $product->imagen;
         $cart->nombre     = $product->nombre;
         $cart->cantidad   = $request->cantidad;
         $cart->precio     = $product->precio;
