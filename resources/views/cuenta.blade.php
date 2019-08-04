@@ -5,11 +5,35 @@
 {{-- @section('class-body') --}}
 
 @section('principal')
-  <h3>Mi cuenta</h3>
-  <div class="datos">
-    <p>Email:   {{$user->email}}</p>
-    <p>Nombre:  {{$user->name}}</p>
+<div class="container">
+  <div class="row justify-contet-center">
+    <div class="col-md-8">
+      <div class="cuenta card">
+        <div class="titulo-cuenta card-header">Mi cuenta</div>
+        <div class="card-body">
+          <div class="datos">
+            <p>Email:   {{$user->email}}</p>
+            <p>Nombre:  {{$user->name}}</p>
+          </div>
+          <div class="form-group row mb-0">
+            <div class="col-md-8 offset-md-4">
+              <button type="button" name="button" ><a href="/cuenta/editar/{{$user->id}}">Editar Cuenta</a></button>
+              <a href="/direcciones">Ir a Mis Direcciones</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  <a href="/cuenta/editar/{{$user->id}}">Editar Cuenta</a>
-  <a href="/direcciones">Ir a Mis Direcciones</a>
+
+</div>
+
+
+
+
+
 @endsection
