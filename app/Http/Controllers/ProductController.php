@@ -62,7 +62,7 @@ class ProductController extends Controller
         $path = $request->file('imagen')->store('public/productos');
         $file = basename($path);
 
-        $producto = new Product;
+        $producto              = new Product;
         $producto->nombre      = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->precio      = $request->precio;
@@ -119,7 +119,7 @@ class ProductController extends Controller
           $file = basename($path);
         }
 
-        $producto = Product::find($id);
+        $producto              = Product::find($id);
         $producto->nombre      = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->precio      = $request->precio;
