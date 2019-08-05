@@ -47,11 +47,11 @@
       <div class="producto row d-flex justify-content-around">
         <div class="rostro categoria col-xs-3 col-md-6">
           <img class="item img-fluid"src="/img/categoria-rostro1.jpg" alt="">
-          <a href="more">Rostro</a>
+          <a href="/productos">Rostro</a>
         </div>
         <div class="cuerpo categoria col-xs-3 col-md-6">
           <img class="item img-fluid"src="/img/categoria-cuerpo1.jpg" alt="">
-          <a href="more">Cuerpo</a>
+          <a href="/productos">Cuerpo</a>
         </div>
       </div>
       <div class="separator">
@@ -60,7 +60,7 @@
       </div>
         @foreach ($products as $product)
           <div class="articulosMasVendidos row d-flex justify-content-around">
-            <div class="articulo col-xs-12 col-md-6 col-lg-4 my-3">
+            <div class="rostro categoria col-xs-12 col-md-6 col-lg-4 my-3">
               <img class="item img-fluid" src="/storage/productos/{{$product->imagen}}" alt="">
               <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
             </div>
