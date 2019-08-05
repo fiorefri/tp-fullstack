@@ -44,5 +44,6 @@
   {{-- <button type="reset">Limpiar</button> --}}
 </form>
 <a href="/productos/eliminar/{{$product->id}}">Eliminar Producto</a>
+<a href="/productos/{{$product->id}}">Ir atrás</a>
 
 @endsection
