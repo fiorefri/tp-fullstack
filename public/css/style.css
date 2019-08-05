@@ -113,7 +113,7 @@ header label:hover{
 }
 .logo-marca {
   /* flex */
-  min-width: 90%;
+  min-width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -403,11 +403,14 @@ body {
 }
 .articulosMasVendidos a{
   font-size: 15px;
+
 }
 .articulo{
   margin-top: 10px;
   padding-top: 20px;
+
 }
+
 
 .articulo img {
   border-radius: 15px;
