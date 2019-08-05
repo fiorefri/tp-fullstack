@@ -26,7 +26,7 @@ class ProductController extends Controller
         foreach ($categorys as $category) {
           $category_id = $category->id;
         }
-        $products      = Product::where('id', '=', $category_id)->get();
+        $products      = Product::where('category_id', '=', $category_id)->get();
         return view('productos', compact('products'));
     }
 
@@ -36,7 +36,7 @@ class ProductController extends Controller
         foreach ($categorys as $category) {
           $category_id = $category->id;
         }
-        $products      = Product::where('id', '=', $category_id)->get();
+        $products      = Product::where('category_id', '=', $category_id)->get();
         return view('productos', compact('products'));
     }
 
