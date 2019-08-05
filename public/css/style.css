@@ -515,7 +515,7 @@ footer a:hover {
 }
 .login-register{
   background-image: url("../img/flowerswallpaper-1900x1080.jpg");
-  background-size: contain;
+  background-size: stretch;
 }
 .ingresar-crear {
   background-color: #148c75;
