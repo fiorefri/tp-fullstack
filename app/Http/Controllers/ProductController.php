@@ -22,13 +22,21 @@ class ProductController extends Controller
 
     public function rostro()
     {
-        $products = Product::where('id', '=', 1)->get();
+        $categorys     = Category::select('id')->where('id', '=', 1)->get();
+        foreach ($categorys as $category) {
+          $category_id = $category->id;
+        }
+        $products      = Product::where('id', '=', $category_id)->get();
         return view('productos', compact('products'));
     }
 
     public function cuerpo()
     {
-        $products = Product::where('id', '=', 2)->get();
+        $categorys     = Category::select('id')->where('id', '=', 2)->get();
+        foreach ($categorys as $category) {
+          $category_id = $category->id;
+        }
+        $products      = Product::where('id', '=', $category_id)->get();
         return view('productos', compact('products'));
     }
 
