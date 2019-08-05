@@ -12,10 +12,10 @@
 */
 
 // RUTAS PARA PLESK
-// Route::get('/instalar', function(){
-//     Artisan::call("storage:link");
-//     Artisan::call("migrate");
-// });
+Route::get('/instalar', function(){
+    Artisan::call("storage:link");
+    Artisan::call("migrate");
+});
 
 // INDEX
 Route::get('/',      'UserController@index');
