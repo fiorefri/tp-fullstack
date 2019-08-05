@@ -9,6 +9,10 @@
   <div class= "card-header" align="center"><h4><b>Nuestros Productos<b></h4></div>
     <div class="card-body justify-content-center">
       <div class="row">
+        <div class="col-md-12 d-flex justify-content-around my-3">
+          <a class="" href="/productos/rostro">Rostro</a>
+          <a class="" href="/productos/cuerpo">Cuerpo</a>
+        </div>
         @forelse($products as $product)
         <div class="col-md-4 text-md-center">
           <br><img style="width:170px; heigh:230px;"src="/storage/productos/{{$product->imagen}}" alt="">
@@ -17,7 +21,7 @@
           <div class="form-group row mb-0">
             <div class="col-md-8 offset-md-2">
               <a type="button" class="btn_detalle" href="/productos/{{$product->id}}">{{__('detalle')}}</a>
-              
+
               <form class="" action="/carrito/agregar" method="post">
                 @csrf
                 <br>

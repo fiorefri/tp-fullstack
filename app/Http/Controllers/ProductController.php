@@ -20,6 +20,18 @@ class ProductController extends Controller
         return view('productos', compact('products'));
     }
 
+    public function rostro()
+    {
+        $products = Product::where('id', '=', 1)->get();
+        return view('productos', compact('products'));
+    }
+
+    public function cuerpo()
+    {
+        $products = Product::where('id', '=', 2)->get();
+        return view('productos', compact('products'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

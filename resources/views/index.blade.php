@@ -47,11 +47,11 @@
       <div class="producto row d-flex justify-content-around">
         <div class="rostro categoria col-xs-3 col-md-6">
           <img class="item img-fluid"src="/img/categoria-rostro1.jpg" alt="">
-          <a href="/productos">Rostro</a>
+          <a href="/productos/rostro">Rostro</a>
         </div>
         <div class="cuerpo categoria col-xs-3 col-md-6">
           <img class="item img-fluid"src="/img/categoria-cuerpo1.jpg" alt="">
-          <a href="/productos">Cuerpo</a>
+          <a href="/productos/cuerpo">Cuerpo</a>
         </div>
       </div>
       <div class="separator">
