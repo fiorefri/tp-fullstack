@@ -377,9 +377,11 @@ body {
 
 .rostro a, .cuerpo a {
   position: absolute;
-  left: 70px;
-  bottom: 135px;
-  color: #fff;
+  left: 60%;
+  bottom: 40%;
+  font-size: 40px;
+  color: #148c75;
+  font-weight: bolder;
 }
 
 .rostro:hover, .cuerpo:hover {
