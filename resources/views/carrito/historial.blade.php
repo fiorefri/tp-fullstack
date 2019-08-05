@@ -9,7 +9,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="historial card">
-        <div class="titulo-historial card-header">Datos de compras</div>
+        <div class="titulo-historial card-header"><b>Datos de compras</b></div>
         <div class="">
 
           @forelse ($carts as $key => $cart)
