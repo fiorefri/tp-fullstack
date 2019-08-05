@@ -60,7 +60,7 @@
       </div>
       @foreach ($products as $product)
         <div class="articulosMasVendidos row d-flex justify-content-around">
-          <div class="articulo col-xs-12 col-md-6 col-lg-3">
+          <div class="articulo col-xs-10 col-md-5 col-lg-3">
             <img class="img-fluid"src="/storage/productos/{{$product->imagen}}" alt="">
             <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
           </div>

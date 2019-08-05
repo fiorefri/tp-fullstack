@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $products = Product::all()->shuffle()->slice(6);
+        $products = Product::simplePaginated(6);
 
         return view('index', compact('products'));
     }
