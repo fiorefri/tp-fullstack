@@ -16,8 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $products = Product::all()->shuffle(6);
-        
+        $products = Product::all()->shuffle()->slice(6);
+
         return view('index', compact('products'));
     }
 
