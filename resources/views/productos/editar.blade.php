@@ -33,12 +33,13 @@
       <input type="text" name="offer_id" value="{{$oferta->nombre}}" placeholder="productos en oferta">
     @endforeach
   </p>
-  <p>
-    Cambiar Imagen:
+  <p>Imagen actual</p>
+  <img style="width:220px; heigh:280px;"
+  src="/storage/productos/{{$product->imagen}}" alt="">
+  <p>Cambiar Imagen:
     <input type="file" name="imagen" value="">
   </p>
-  <p>Imagen actual</p>
-  <img src="/storage/productos/{{$product->imagen}}" alt="">
+
   <button type="submit">Enviar</button>
   {{-- <button type="reset">Limpiar</button> --}}
 </form>
