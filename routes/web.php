@@ -11,6 +11,12 @@
 |
 */
 
+// RUTAS PARA PLESK
+// Route::get('/instalar', function(){
+//     Artisan::call("storage:link");
+//     Artisan::call("migrate");
+// });
+
 // INDEX
 Route::get('/',      'UserController@index');
 Route::get('/index', 'UserController@index');
@@ -44,13 +50,18 @@ Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy') ->middlewa
 
 // PRODUCTOS
 Route::get('/productos',               'ProductController@index');
-Route::get('/productos/agregar',       'ProductController@create');
-Route::post('/productos/agregar',      'ProductController@store');
+Route::get('/productos/agregar',       'ProductController@create') ->middleware('auth');
+Route::post('/productos/agregar',      'ProductController@store')  ->middleware('auth');
 Route::get('/productos/{id}',          'ProductController@show');
-Route::get('/productos/editar/{id}',   'ProductController@edit');
-Route::post('/productos/editar/{id}',  'ProductController@update');
-Route::get('/productos/eliminar/{id}', 'ProductController@destroy');
+Route::get('/productos/editar/{id}',   'ProductController@edit')   ->middleware('auth');
+Route::post('/productos/editar/{id}',  'ProductController@update') ->middleware('auth');
+Route::get('/productos/eliminar/{id}', 'ProductController@destroy')->middleware('auth');
 
 // CARRITO
-Route::get('/carrito', 'CartController@index')->middleware('auth');
-Route::post('/carrito/agregar', 'CartController@store')->middleware('auth');
+Route::get('/carrito',                'CartController@index')  ->middleware('auth');
+Route::post('/carrito/agregar',       'CartController@store')  ->middleware('auth');
+Route::post('/carrito/eliminar/{id}', 'CartController@destroy')->middleware('auth');
+Route::post('/carrito/cerrado',       'CartController@cerrado')->middleware('auth');
+
+// HISTORIAL
+Route::get('/historial', 'CartController@historial')->middleware('auth');

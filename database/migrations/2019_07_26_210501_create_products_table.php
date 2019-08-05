@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
           $table->string('nombre');
           $table->string('descripcion');
           $table->string('precio');
-          $table->string('stock');
+          $table->string('stock')->nullable();
           $table->bigInteger('category_id')->unsigned();
           $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
           $table->bigInteger('offer_id')->unsigned()->nullable();
