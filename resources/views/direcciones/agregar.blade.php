@@ -38,7 +38,7 @@
 
             <div class="form-group row mb-0">
               <div class="col-md-8 offset-md-4">
-                <button type="button" name="button" ><a href="/direcciones/agregar">Agregar dirección</a></button>
+                <button type="submit" name="button" >Agregar dirección</button>
 
                 <a href="/cuenta">Ir a Mi Cuenta</a>
                 <a href="/direcciones">Ir a Mis Direcciones</a>
