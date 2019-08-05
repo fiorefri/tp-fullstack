@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $products = Product::all()->shuffle(6);
+        
+        return view('index', compact('products'));
     }
 
     public function quienes_somos()

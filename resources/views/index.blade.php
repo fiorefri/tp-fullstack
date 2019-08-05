@@ -56,9 +56,17 @@
       </div>
       <div class="separator">
         <hr>
-        <h2>Productos Destacados</h2>
+        <h2>Alguno de nuestros productos</h2>
       </div>
-      <div class="articulosMasVendidos row">
+      @foreach ($products as $product)
+        <div class="articulosMasVendidos row">
+          <div class="articulo col-xs-12 col-md-6 col-lg-4">
+            <img class="img-fluid"src="/storage/productos/{{$product->imagen}}" alt="">
+            <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
+          </div>
+        </div>
+      @endforeach
+      {{-- <div class="articulosMasVendidos row">
         <div class="articulo col-xs-12 col-md-6 col-lg-4">
           <img class="img-fluid"src="/img/rostro/brumaDeArgan.png" alt="">
           <a href="#">Bruma de Argan para el rostro</a>
@@ -83,7 +91,7 @@
           <img class="img-fluid"src="/img/cuerpo/bodySplashRelax.png" alt="">
           <a href="#">Body splash relax</a>
         </div>
-      </div>
+      </div> --}}
     </section>
   </div>
 @endsection
