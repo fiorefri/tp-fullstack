@@ -1,8 +1,8 @@
 @extends('plantilla')
 
-@section('class-body', 'fondo-cuenta')
-
 @section('titulo', 'Agregar dirección')
+
+@section('class-body', 'fondo-cuenta')
 
 @section('principal')
 <div class="container">
