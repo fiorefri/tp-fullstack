@@ -62,7 +62,7 @@
         @foreach ($products as $product)
           <div class="articulosMasVendidos row">
             <div class="articulo col-xs-12 col-md-6 col-lg-4 my-3">
-              <img class="img-fluid" src="/storage/productos/{{$product->imagen}}" alt="">
+              <img class="img-fluid max-width: 100%; and height: auto" src="/storage/productos/{{$product->imagen}}" alt="">
               <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
             </div>
           </div>
