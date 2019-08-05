@@ -15,49 +15,6 @@
       <div class="container-full">
     		<div class="login-container ">
            <ul class="redes d-none d-md-inline-flex">
-             {{-- <div class="btn-group">
-              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i>
-              </button>
-              <div class="dropdown-menu">
-                @if (Auth::guest())
-                  <a class="dropdown-item" href="/login">Iniciar Sesión</a>
-                  <a class="dropdown-item" href="/register">Registrarme</a>
-                @else
-                  <a class="dropdown-item" href="#">Hola {{Auth::user()->name}}!</a>
-                  <a class="dropdown-item" href="/cuenta">Cuenta</a>
-                  <a class="dropdown-item" href="{{ route('logout') }}"
-                     onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();">
-                      {{ __('Cerrar Sesión') }}
-                  </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                  </form>
-                @endif
-              </div> --}}
-            {{-- </div>
-             <div class="tutorial">
-               <li><i class="fas fa-user"></i> <i class="fa fa-angle-down"></i></a>
-                  <ul>
-                    @if (Auth::guest())
-                      <li><a href="/login">Iniciar Sesión</a></li>
-                      <li><a href="/register">Registrarme</a></li>
-                    @else
-                      <li>Hola {{Auth::user()->name}}!</li>
-                      <li><a href="/cuenta">Cuenta</li>
-                      <li><a href="{{ route('logout') }}"
-                         onclick="event.preventDefault();
-                         document.getElementById('logout-form').submit();">
-                          {{ __('Cerrar Sesión') }}
-                      </a></li>
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                          @csrf
-                      </form>
-                    @endif
-                  </ul>
-                </li>
-             </div> --}}
     					<li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
            @if (Auth::user())
@@ -86,18 +43,17 @@
                  <li><a href="/register">Registrarme</a></li>
                @else
                  <li><a href="/cuenta">Cuenta</li>
-                 <li><a class="logout" href="/logout" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();"> Cerrar Sesión
-                 </a></li>
-                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                     @csrf
-                 </form>
+                 <li class="logout"><a href="/logout" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Cerrar Sesión</a></li>
                @endif
              </ul>
            </nav>
          </div>
       </div>
     </header>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+        @csrf
+    </form>
 
     <main>
       @yield('principal')
