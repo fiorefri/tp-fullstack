@@ -31,18 +31,19 @@
 
               <label for="ciudad">Ciudad</label>
               <input type="text" name="ciudad" value="" class="col-md-4"><br>
+              
+              <div class="form-group row mb-0">
+                <div class="col-md-8 offset-md-4">
+                  <button type="submit" name="button" >Agregar dirección</button>
 
+                  <a href="/cuenta">Ir a Mi Cuenta</a>
+                  <a href="/direcciones">Ir a Mis Direcciones</a>
+                </div>
             </div>
 
           </form>
 
-            <div class="form-group row mb-0">
-              <div class="col-md-8 offset-md-4">
-                <button type="submit" name="button" >Agregar dirección</button>
 
-                <a href="/cuenta">Ir a Mi Cuenta</a>
-                <a href="/direcciones">Ir a Mis Direcciones</a>
-              </div>
 
             </div>
 

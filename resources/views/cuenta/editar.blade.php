@@ -26,7 +26,7 @@
               <button type="submit" name="submit" value="Editar Usuario">Editar Usuario</a></button>
               <a href="/cuenta/eliminar/{{$user->id}}">Eliminar Cuenta</a>
             </div>
-
+          </form>
           </div>
           <a href="/cuenta">Ir Atrás</a>
 
