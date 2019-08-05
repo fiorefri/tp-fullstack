@@ -593,3 +593,9 @@ text-align: justify;
   color: #1aa086;
 } */
 /*Boton back to top*/
+
+/* Cuenta */
+.fondo-cuenta {
+  background-image: url("../img/9824wide.jpg");
+  background-size: strech;
+}

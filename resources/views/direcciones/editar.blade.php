@@ -1,5 +1,7 @@
 @extends('plantilla')
 
+@section('class-body', 'fondo-cuenta')
+
 @section('titulo', 'Editar Dirección')
 
 @section('principal')

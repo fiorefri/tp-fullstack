@@ -1,8 +1,8 @@
 @extends('plantilla')
 
-@section('titulo', 'Mi cuenta')
+@section('class-body', 'fondo-cuenta')
 
-{{-- @section('class-body') --}}
+@section('titulo', 'Mi cuenta')
 
 @section('principal')
 <div class="container">
