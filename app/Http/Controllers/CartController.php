@@ -60,7 +60,7 @@ class CartController extends Controller
       $carts   = Cart::where('product_id', '=', $request->id)->get();
 
       if (!count($carts) == 0) {
-        $cart = $carts[0];
+        $cart             = $carts[0];
         $cantidad_nueva   = $cart->cantidad + $request->cantidad;
         $cart->user_id    = $user->id;
         $cart->product_id = $product->id;
@@ -147,7 +147,7 @@ class CartController extends Controller
          $carts = Cart::where('user_id', '=', Auth::user()->id)
           ->where('estado', '=', 1)->get()->groupBy('num_carrito');
         $products = Product::all();
-        
+
         return view('carrito.historial', compact('carts', 'products'));
      }
 }
