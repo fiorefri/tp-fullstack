@@ -58,40 +58,16 @@
         <hr>
         <h2>Alguno de nuestros productos</h2>
       </div>
-      @foreach ($products as $product)
-        <div class="articulosMasVendidos row d-flex justify-content-around">
-          <div class="articulo col-xs-10 col-md-5 col-lg-3">
-            <img class="img-fluid"src="/storage/productos/{{$product->imagen}}" alt="">
-            <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
+      <div class="container">
+        @foreach ($products as $product)
+          <div class="articulosMasVendidos row d-flex justify-content-around">
+            <div class="articulo col-xs-12 col-md-6 col-lg-4">
+              <img class="img-fluid"src="/storage/productos/{{$product->imagen}}" alt="">
+              <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
+            </div>
           </div>
-        </div>
-      @endforeach
-      {{-- <div class="articulosMasVendidos row">
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/rostro/brumaDeArgan.png" alt="">
-          <a href="#">Bruma de Argan para el rostro</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/rostro/serumAcidoHialuronico.png" alt="">
-          <a href="#">Serum de Acido Hialuronico hidratante</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/rostro/cremaGelDeNoche.png" alt="">
-          <a href="#">Crema gel de noche antiedad</a>
-        </div>
-        <div class="articulo  col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/cuerpo/cremaDeManosVainilla.png" alt="">
-          <a href="#">Crema de manos de Vainilla hidratante</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/cuerpo/bodyScrub.png" alt="">
-          <a href="#">Body scrub</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/cuerpo/bodySplashRelax.png" alt="">
-          <a href="#">Body splash relax</a>
-        </div>
-      </div> --}}
+        @endforeach
+      </div>
     </section>
   </div>
 @endsection
