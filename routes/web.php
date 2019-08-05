@@ -52,7 +52,7 @@ Route::get('/direcciones/eliminar/{id}', 'AddressController@destroy') ->middlewa
 Route::get('/productos',               'ProductController@index');
 Route::get('/productos/rostro',        'ProductController@rostro');
 Route::get('/productos/cuerpo',        'ProductController@cuerpo');
-Route::get('/productos/agregar',       'ProductController@create') ->middleware('auth');
+// Route::get('/productos/agregar',       'ProductController@create') ->middleware('auth');
 Route::post('/productos/agregar',      'ProductController@store')  ->middleware('auth');
 Route::get('/productos/{id}',          'ProductController@show');
 Route::get('/productos/editar/{id}',   'ProductController@edit')   ->middleware('auth');
