@@ -10,7 +10,12 @@
         <img src="/storage/productos/{{$item->imagen}}" alt="">
         <p>Nombre:{{$item->nombre}}</p>
         <p>Cantidad: {{$item->cantidad}}</p>
-        <p>Precio total: {{$item->total}}</p>
+        @php
+        $total = 0;
+        $total = $total + ($item->cantidad * $item->precio);
+        @endphp
+        <p>Precio total: {{$total}}</p>
+        <p>Nº de compra: {{$item->num_carrito}}</p>
       @endforeach
     @empty
       <p>No hay productos para mostrar.</p>
