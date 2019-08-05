@@ -2,6 +2,8 @@
 
 @section('titulo', 'Editar Dirección')
 
+@section('class-body', 'fondo-cuenta')
+
 @section('principal')
 <div class="container">
   <div class="row justify-content-center">
@@ -43,6 +45,7 @@
 
             </div>
           </form>
+          <a href="/direcciones">Ir Atrás</a>
         </div>
       </div>
 

@@ -28,7 +28,7 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 990;
+  z-index: 800;
   padding: 15px 0 15px 0;
   /* margin-bottom: 5px; */
   max-width: 100%;
@@ -37,6 +37,14 @@ header{
   flex-wrap: wrap;
   flex-direction: column;
   background-color: rgba(255,255,255, 0.9);
+}
+
+.logout-form {
+  display: none;
+}
+
+.logout onclick {
+  display: none;
 }
 
 #btn-menu{
@@ -79,7 +87,7 @@ header label:hover{
   border-right: 1px solid #fff;
 } */
 .container-full{
-  height: 107px;
+  height: 175px;
 }
 .main-navigation li:hover{
   background: rgba(255,255,255, 0.6);
@@ -217,7 +225,7 @@ header label:hover{
 
 @media (max-width:768px){
   .container-full{
-    height: 70px;
+    height: 90px;
   }
   .login-container {
     justify-content: center;
@@ -240,7 +248,7 @@ header label:hover{
 
   .botones-inicio-registro-registrado span {
     float: left;
-    margin: 15px;
+    margin: 10px;
   }
 
   .botones-inicio-registro-registrado a {
@@ -304,7 +312,7 @@ header label:hover{
 
 /* main --------*/
 main {
-  margin: 200px 0 90px;;
+  margin: 250px 0 90px;;
 }
 /*.carousel-item { /* Eliminar si cambia la altura de las fotos */
 /*  height: 300px;
@@ -397,14 +405,18 @@ body {
   padding-bottom: 15px;
 }
 
-.articulosMasVendidos articulo{
+/* .articulosMasVendidos articulo{
   margin-top: 35px;
-  padding-top: 10px;
-}
+  padding-top: 10px; */
+/* } */
 .articulosMasVendidos a{
   font-size: 15px;
 
 }
+/* .articulosMasVendidos img{
+  width: 100%;
+} */
+
 .articulo{
   margin-top: 10px;
   padding-top: 20px;
@@ -412,9 +424,9 @@ body {
 }
 
 
-.articulo img {
+/* .articulo img {
   border-radius: 15px;
-}
+} */
 
 
 
@@ -503,7 +515,7 @@ footer a:hover {
 }
 .login-register{
   background-image: url("../img/flowerswallpaper-1900x1080.jpg");
-  background-size: strech;
+  background-size: contain;
 }
 .ingresar-crear {
   background-color: #148c75;
@@ -538,7 +550,7 @@ footer a:hover {
   background-image: url(/img/hd-wallpaper-28.jpg);
 }
 .card{
-background-color: rgba(255, 255, 255, 0.7);
+background-color: rgba(255, 255, 255, 0.9);
 text-align: justify;
 }
 
@@ -581,3 +593,9 @@ text-align: justify;
   color: #1aa086;
 } */
 /*Boton back to top*/
+
+/* Cuenta */
+.fondo-cuenta {
+  background-image: url("../img/aeonium-plants-2880x1620-hd-6077.jpg");
+  background-size: cover;
+}

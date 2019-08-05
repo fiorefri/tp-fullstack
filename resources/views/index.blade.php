@@ -47,43 +47,25 @@
       <div class="producto row d-flex justify-content-around">
         <div class="rostro categoria col-xs-3 col-md-6">
           <img class="item img-fluid"src="/img/categoria-rostro1.jpg" alt="">
-          <a href="more">Rostro</a>
+          <a href="/productos/rostro">Rostro</a>
         </div>
         <div class="cuerpo categoria col-xs-3 col-md-6">
           <img class="item img-fluid"src="/img/categoria-cuerpo1.jpg" alt="">
-          <a href="more">Cuerpo</a>
+          <a href="/productos/cuerpo">Cuerpo</a>
         </div>
       </div>
       <div class="separator">
         <hr>
-        <h2>Productos Destacados</h2>
+        <h2>Alguno de nuestros productos</h2>
       </div>
-      <div class="articulosMasVendidos row">
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/rostro/brumaDeArgan.png" alt="">
-          <a href="#">Bruma de Argan para el rostro</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/rostro/serumAcidoHialuronico.png" alt="">
-          <a href="#">Serum de Acido Hialuronico hidratante</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/rostro/cremaGelDeNoche.png" alt="">
-          <a href="#">Crema gel de noche antiedad</a>
-        </div>
-        <div class="articulo  col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/cuerpo/cremaDeManosVainilla.png" alt="">
-          <a href="#">Crema de manos de Vainilla hidratante</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/cuerpo/bodyScrub.png" alt="">
-          <a href="#">Body scrub</a>
-        </div>
-        <div class="articulo col-xs-12 col-md-6 col-lg-4">
-          <img class="img-fluid"src="/img/cuerpo/bodySplashRelax.png" alt="">
-          <a href="#">Body splash relax</a>
-        </div>
-      </div>
+        @foreach ($products as $product)
+          <div class="articulosMasVendidos row d-flex justify-content-around">
+            <div class="articulos col-xs-12 col-md-6 col-lg-4 my-3">
+              <img class="item img-fluid" src="/storage/productos/{{$product->imagen}}" alt="">
+              <a href="/productos/{{$product->id}}">{{$product->nombre}}</a>
+            </div>
+          </div>
+        @endforeach
     </section>
   </div>
 @endsection

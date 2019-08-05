@@ -2,6 +2,8 @@
 
 @section('titulo', 'Editar Usuario')
 
+@section('class-body', 'fondo-cuenta')
+
 @section('principal')
 <div class="container">
   <div class="row justify-content-center">
@@ -26,6 +28,7 @@
             </div>
 
           </div>
+          <a href="/cuenta">Ir Atrás</a>
 
         </div>
       </div>

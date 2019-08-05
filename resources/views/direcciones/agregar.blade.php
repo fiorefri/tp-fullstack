@@ -2,6 +2,8 @@
 
 @section('titulo', 'Agregar dirección')
 
+@section('class-body', 'fondo-cuenta')
+
 @section('principal')
 <div class="container">
   <div class="row justify-content-center">
@@ -29,7 +31,7 @@
 
               <label for="ciudad">Ciudad</label>
               <input type="text" name="ciudad" value="" class="col-md-4"><br>
-            
+
             </div>
 
           </form>
@@ -39,6 +41,7 @@
                 <button type="button" name="button" ><a href="/direcciones/agregar">Agregar dirección</a></button>
 
                 <a href="/cuenta">Ir a Mi Cuenta</a>
+                <a href="/direcciones">Ir a Mis Direcciones</a>
               </div>
 
             </div>

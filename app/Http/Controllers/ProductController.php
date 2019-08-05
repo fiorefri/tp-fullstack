@@ -20,6 +20,26 @@ class ProductController extends Controller
         return view('productos', compact('products'));
     }
 
+    public function rostro()
+    {
+        $categorys     = Category::select('id')->where('id', '=', 1)->get();
+        foreach ($categorys as $category) {
+          $category_id = $category->id;
+        }
+        $products      = Product::where('category_id', '=', $category_id)->get();
+        return view('productos', compact('products'));
+    }
+
+    public function cuerpo()
+    {
+        $categorys     = Category::select('id')->where('id', '=', 2)->get();
+        foreach ($categorys as $category) {
+          $category_id = $category->id;
+        }
+        $products      = Product::where('category_id', '=', $category_id)->get();
+        return view('productos', compact('products'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

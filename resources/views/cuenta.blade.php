@@ -2,7 +2,7 @@
 
 @section('titulo', 'Mi cuenta')
 
-{{-- @section('class-body') --}}
+@section('class-body', 'fondo-cuenta')
 
 @section('principal')
 <div class="container">
@@ -19,6 +19,7 @@
             <div class="col-md-8 offset-md-4">
               <button type="button" name="button" ><a href="/cuenta/editar/{{$user->id}}">Editar Cuenta</a></button>
               <a href="/direcciones">Ir a Mis Direcciones</a>
+              <a href="/historial">Ir a Mi Historial</a>
             </div>
 
           </div>

@@ -15,23 +15,13 @@
       <div class="container-full">
     		<div class="login-container ">
            <ul class="redes d-none d-md-inline-flex">
-             @if (Auth::guest())
-               <a href="/login">Iniciar Sesión</a>
-               <a href="/register">Registrarme</a>
-             @else
-               <p>Hola {{Auth::user()->name}}!</p>
-               <a href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                   {{ __('Cerrar Sesión') }}
-               </a>
-               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                   @csrf
-               </form>
-             @endif
-              <li><a href="/cuenta"><i class="fas fa-user"></i></a></li>
     					<li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
+           @if (Auth::user())
+             <div class="d-none d-m-inline">
+               <a class="" href="/cuenta">Hola {{Auth::user()->name}}!</a>
+             </div>
+           @endif
            <div class="logo-marca">
            	<a href="/">
              	<img src="/img/nature_logo.png" alt="logotipo" class="logo">
@@ -48,11 +38,22 @@
                <li><a href="/faq">Preguntas frecuentes</a></li>
                <li><a href="/quienes_somos">Quienes somos</a></li>
                <li><a href="/contacto">Contacto</a></li>
+               @if (Auth::guest())
+                 <li><a href="/login">Iniciar Sesión</a></li>
+                 <li><a href="/register">Registrarme</a></li>
+               @else
+                 <li><a href="/cuenta">Cuenta</li>
+                 <li class="logout"><a href="/logout" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Cerrar Sesión</a></li>
+               @endif
              </ul>
            </nav>
          </div>
       </div>
     </header>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+        @csrf
+    </form>
 
     <main>
       @yield('principal')
