@@ -15,23 +15,54 @@
       <div class="container-full">
     		<div class="login-container ">
            <ul class="redes d-none d-md-inline-flex">
-             @if (Auth::guest())
-               <a href="/login">Iniciar Sesión</a>
-               <a href="/register">Registrarme</a>
-             @else
-               <p>Hola {{Auth::user()->name}}!</p>
-               <a href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                   {{ __('Cerrar Sesión') }}
-               </a>
-               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                   @csrf
-               </form>
-             @endif
-              <li><a href="/cuenta"><i class="fas fa-user"></i></a></li>
+             {{-- <div class="btn-group">
+              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </button>
+              <div class="dropdown-menu">
+                @if (Auth::guest())
+                  <a class="dropdown-item" href="/login">Iniciar Sesión</a>
+                  <a class="dropdown-item" href="/register">Registrarme</a>
+                @else
+                  <a class="dropdown-item" href="#">Hola {{Auth::user()->name}}!</a>
+                  <a class="dropdown-item" href="/cuenta">Cuenta</a>
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
+                      {{ __('Cerrar Sesión') }}
+                  </a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+                @endif
+              </div> --}}
+            {{-- </div>
+             <div class="tutorial">
+               <li><i class="fas fa-user"></i> <i class="fa fa-angle-down"></i></a>
+                  <ul>
+                    @if (Auth::guest())
+                      <li><a href="/login">Iniciar Sesión</a></li>
+                      <li><a href="/register">Registrarme</a></li>
+                    @else
+                      <li>Hola {{Auth::user()->name}}!</li>
+                      <li><a href="/cuenta">Cuenta</li>
+                      <li><a href="{{ route('logout') }}"
+                         onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+                          {{ __('Cerrar Sesión') }}
+                      </a></li>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                    @endif
+                  </ul>
+                </li>
+             </div> --}}
     					<li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
+           @if (Auth::user())
+             <a href="/cuenta">Hola {{Auth::user()->name}}!</a>
+           @endif
            <div class="logo-marca">
            	<a href="/">
              	<img src="/img/nature_logo.png" alt="logotipo" class="logo">
@@ -48,6 +79,20 @@
                <li><a href="/faq">Preguntas frecuentes</a></li>
                <li><a href="/quienes_somos">Quienes somos</a></li>
                <li><a href="/contacto">Contacto</a></li>
+               @if (Auth::guest())
+                 <li><a href="/login">Iniciar Sesión</a></li>
+                 <li><a href="/register">Registrarme</a></li>
+               @else
+                 <li><a href="/cuenta">Cuenta</li>
+                 <li><a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                     {{ ('Cerrar Sesión') }}
+                 </a></li>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                     @csrf
+                 </form>
+               @endif
              </ul>
            </nav>
          </div>
