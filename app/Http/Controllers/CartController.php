@@ -24,18 +24,9 @@ class CartController extends Controller
           ->where('user_id', '=', $user_id);
         $product = Product::all();
 
-        // foreach ($cart as $item) {
-        //   $product_id  = $item->product_id;
-        //   $product     = Product::where('id', '=', $product_id)->get();
-        //
-        //   // if ($product_id->count()) {
-        //   //   dd($cart);
-        //   // }
-        // }
-
-        $total = 0;
+        $total   = 0;
         foreach ($cart as $item) {
-          $total = $total +($item->cantidad * $item->precio);
+          $total = $total + ($item->cantidad * $item->precio);
         }
 
         return view('carrito', compact('cart', 'total', 'product'));
@@ -59,13 +50,22 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = [
-          'quantity'=>"integer|min:1"
-        ];
+      $rules = [
+        'quantity'=>"integer|min:1"
+      ];
 
-        $this->validate($request, $rules);
-        $product = Product::find($request->id);
+      $this->validate($request, $rules);
+      $user    = Auth::user();
+      $product = Product::find($request->id);
+      $carts   = Cart::where('product_id', '=', $request->id)->get();
 
+      if (!count($carts) == 0) {
+        $cart = $carts[0];
+        $cantidad_nueva   = $cart->cantidad + $request->cantidad;
+        $cart->user_id    = $user->id;
+        $cart->product_id = $product->id;
+        $cart->cantidad   = $cantidad_nueva;
+      } else {
         $cart             = new Cart;
         $cart->user_id    = Auth::user()->id;
         $cart->product_id = $product->id;
@@ -73,9 +73,10 @@ class CartController extends Controller
         $cart->nombre     = $product->nombre;
         $cart->cantidad   = $request->cantidad;
         $cart->precio     = $product->precio;
+      }
 
-        $cart->save();
-        return redirect('/productos');
+      $cart->save();
+      return redirect('/productos');
     }
 
     /**
@@ -120,40 +121,33 @@ class CartController extends Controller
      */
      public function destroy($id)
      {
-         $item = Cart::where('id',$id)
-         ->where('user_id',Auth::user()->id)
-         ->where('status',0)->get(); //La consulta nos devuelve un array de datos con 1 solo item.
+         $cart = Cart::where('id', $id)
+           ->where('user_id', '=', Auth::user()->id)
+           ->where('estado', '=', 0)->get();
 
-         $item[0]->delete(); //El item está en la posición 0 del array. Lo eliminamos.
-
-         //Otra forma de traer el item a borrar es usando first():
-         // $item = Cart::where('id',$id)
-         // ->where('user_id',Auth::user()->id)
-         // ->where('status',0)->first();
-         // $item->delete();
-
-         return redirect('/cart');
+         $cart[0]->delete();
+         return redirect('/carrito');
      }
 
-     public function cartClose(){
-       $items = Cart::where('user_id',Auth::user()->id)
-       ->where('status',0)->get();
+    public function cerrado(){
+        $carts = Cart::where('user_id', '=', Auth::user()->id)
+          ->where('estado', '=', 0)->get();
+        $ultimo_carrito = Cart::max('num_carrito');
 
-       $lastCart = Cart::max('cart_num'); //Busca el último cerrado.
+         foreach ($carts as $cart) {
+           $cart->num_carrito = $ultimo_carrito + 1;
+           $cart->estado      = 1;
+           $cart->save();
+         }
 
-       foreach ($items as $item) {
-         $item->cart_num = $lastCart + 1;
-         $item->status = 1;
-         $item->save();
-       }
-
-       return redirect ('/products');
+         return redirect ('/historial');
      }
 
-     public function history(){
-       $carts = Cart::where('user_id',Auth::user()->id)
-       ->where('status',1)->get()->groupBy('cart_num');
+    public function historial(){
+         $carts = Cart::where('user_id', '=', Auth::user()->id)
+          ->where('estado', '=', 1)->get()->groupBy('num_carrito');
+        $products = Product::all();
 
-       return view('history', compact('carts'));
+        return view('carrito.historial', compact('carts', 'products'));
      }
 }

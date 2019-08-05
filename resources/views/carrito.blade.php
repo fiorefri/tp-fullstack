@@ -17,8 +17,15 @@
                   <li>Nombre: {{$item->nombre}} |
                   Cantidad: {{$item->cantidad}} |
                   Precio: {{$item->precio}} |
-                  sub-total: {{$item->precio * $item->cantidad}}
-                  <a href="/delete/{{$item->id}}">Eliminar</a></li>
+                  Sub-total: {{$item->precio * $item->cantidad}}
+                  <form class="" action="/carrito/eliminar/{{$item->id}}" method="post">
+                    @csrf
+                    <div class="row justify-content-center">
+                      <div class="div class="col-md-8 offset-md-4"">
+                        <button type="submit" name="submit"> Eliminar </button>
+                      </div>
+                    </div>
+                  </form>
               @empty
                 <p>Su carrito está vacío.</p>
               @endforelse
@@ -26,15 +33,13 @@
           </article>
           <p>Total: {{$total}}</p>
           @if (isset($cart))
-            <form class="" action="/cartclose" method="post">
+            <form class="" action="/carrito/cerrado" method="post">
               @csrf
               <div class="row justify-content-center">
                 <div class="div class="col-md-8 offset-md-4"">
                   <button type="submit" name="submit"> Comprar </button>
                 </div>
               </div>
-
-
             </form>
           @endif
         </section>
