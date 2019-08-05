@@ -39,8 +39,12 @@ header{
   background-color: rgba(255,255,255, 0.9);
 }
 
-.dropdown {
-  z-index: 900;
+.logout-form {
+  display: none;
+}
+
+.logout onclick {
+  display: none;
 }
 
 #btn-menu{
@@ -83,7 +87,7 @@ header label:hover{
   border-right: 1px solid #fff;
 } */
 .container-full{
-  height: 107px;
+  height: 175px;
 }
 .main-navigation li:hover{
   background: rgba(255,255,255, 0.6);
@@ -221,7 +225,7 @@ header label:hover{
 
 @media (max-width:768px){
   .container-full{
-    height: 70px;
+    height: 90px;
   }
   .login-container {
     justify-content: center;
@@ -244,7 +248,7 @@ header label:hover{
 
   .botones-inicio-registro-registrado span {
     float: left;
-    margin: 15px;
+    margin: 10px;
   }
 
   .botones-inicio-registro-registrado a {
@@ -308,7 +312,7 @@ header label:hover{
 
 /* main --------*/
 main {
-  margin: 200px 0 90px;;
+  margin: 250px 0 90px;;
 }
 /*.carousel-item { /* Eliminar si cambia la altura de las fotos */
 /*  height: 300px;

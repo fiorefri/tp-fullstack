@@ -61,7 +61,9 @@
     					<li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
            @if (Auth::user())
-             <a href="/cuenta">Hola {{Auth::user()->name}}!</a>
+             <div class="d-none d-m-inline">
+               <a class="" href="/cuenta">Hola {{Auth::user()->name}}!</a>
+             </div>
            @endif
            <div class="logo-marca">
            	<a href="/">
@@ -84,12 +86,10 @@
                  <li><a href="/register">Registrarme</a></li>
                @else
                  <li><a href="/cuenta">Cuenta</li>
-                 <li><a href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                     {{ ('Cerrar Sesión') }}
+                 <li><a class="logout" href="/logout" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"> Cerrar Sesión
                  </a></li>
-                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
                      @csrf
                  </form>
                @endif
