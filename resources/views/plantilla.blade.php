@@ -18,7 +18,7 @@
     					<li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
     	     </ul>
            @if (Auth::user())
-             <div class="d-none d-m-inline">
+             <div class="d-none d-md-inline">
                <a class="" href="/cuenta">Hola {{Auth::user()->name}}!</a>
              </div>
            @endif
