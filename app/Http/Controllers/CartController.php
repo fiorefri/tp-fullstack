@@ -147,7 +147,7 @@ class CartController extends Controller
          $carts = Cart::where('user_id', '=', Auth::user()->id)
           ->where('estado', '=', 1)->get()->groupBy('num_carrito');
         $products = Product::all();
-
+        
         return view('carrito.historial', compact('carts', 'products'));
      }
 }

@@ -5,11 +5,13 @@
 @section('principal')
   <div class="">
     <p>Datos de compra:</p>
-    @forelse ($carts as $cart)
-      <img src="/storage/productos/{{$cart->imagen}}" alt="">
-      <p>Nombre:{{$cart->nombre}}</p>
-      <p>Cantidad: {{$cart->cantidad}}</p>
-      <p>Precio total: {{$cart->total}}</p>
+    @forelse ($carts as $key => $cart)
+      @foreach ($cart as $item)
+        <img src="/storage/productos/{{$item->imagen}}" alt="">
+        <p>Nombre:{{$item->nombre}}</p>
+        <p>Cantidad: {{$item->cantidad}}</p>
+        <p>Precio total: {{$item->total}}</p>
+      @endforeach
     @empty
       <p>No hay productos para mostrar.</p>
     @endforelse
