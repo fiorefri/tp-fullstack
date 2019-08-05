@@ -413,6 +413,10 @@ body {
   font-size: 15px;
 
 }
+.articulosMasVendidos img{
+  width: 100%;
+}
+
 .articulo{
   margin-top: 10px;
   padding-top: 20px;
@@ -422,7 +426,6 @@ body {
 
 .articulo img {
   border-radius: 15px;
-  width: 100%;
 }
 
 
