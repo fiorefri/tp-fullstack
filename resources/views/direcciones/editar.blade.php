@@ -43,6 +43,7 @@
 
             </div>
           </form>
+          <a href="/direcciones">Ir Atrás</a>
         </div>
       </div>
 

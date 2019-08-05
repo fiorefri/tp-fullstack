@@ -26,6 +26,7 @@
             </div>
 
           </div>
+          <a href="/cuenta">Ir Atrás</a>
 
         </div>
       </div>

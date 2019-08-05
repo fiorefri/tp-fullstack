@@ -15,5 +15,7 @@
     @empty
       <p>No hay productos para mostrar.</p>
     @endforelse
+    <a href="/direcciones">Ir a Mis Direcciones</a>
+    <a href="/cuenta">Ir a Mi Cuenta</a>
   </div>
 @endsection
